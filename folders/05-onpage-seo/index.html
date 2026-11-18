@@ -18,9 +18,54 @@
       <span class="brand-mark">S</span>
       <span>SOP Library</span>
     </a>
+    <div class="searchbox">
+      <input type="search" class="search-input" placeholder="Search SOPs... (spelling off chale)" aria-label="Search SOPs" autocomplete="off">
+      <div class="search-results" hidden></div>
+    </div>
     <nav>
-      <a href="../../#library">All folders</a>
-      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Sections &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="#eeat">EEAT</a>
+          <a href="#robots-sitemap">Robots & sitemap</a>
+          <a href="#internal-linking">Internal linking</a>
+          <a href="#speed">Speed & CWV</a>
+          <a href="#must-have-pages">Must-have pages</a>
+          <a href="#orphan-pages">No orphan pages</a>
+          <a href="#aeo-geo">AEO & GEO</a>
+          <a href="#slug">Slug = keyword</a>
+          <a href="#title-meta">Title, meta & headings</a>
+          <a href="#keyword-mapping">Keyword mapping</a>
+          <a href="#content-quality">Content quality</a>
+          <a href="#new-playbook">New SEO playbook</a>
+          <a href="#prepublish-qa">Pre-publish QA</a>
+        </div>
+      </div>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Menu &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="../../train/">&#128642; SOP Train</a>
+        <a href="../../ai-visibility/">AI Visibility SOP</a>
+        <hr>
+        <a href="../../folders/01-client-ask/">01 Client Ask (R&D)</a>
+        <a href="../../folders/02-domain-research/">02 Domain Research</a>
+        <a href="../../folders/03-strategy/">03 Strategy</a>
+        <a href="../../folders/04-design-webdev/">04 Design & Web Dev</a>
+        <a href="../../folders/05-onpage-seo/">05 On-Page SEO</a>
+        <a href="../../folders/06-offpage-seo/">06 Off-Page SEO</a>
+        <a href="../../folders/07-setup-tracking/">07 Setup & Tracking</a>
+        <a href="../../folders/08-technical-seo/">08 Technical SEO</a>
+        <a href="../../folders/09-ecommerce-seo/">09 Ecommerce SEO</a>
+        <a href="../../folders/10-reporting-maintenance/">10 Reporting & Maintenance</a>
+        <a href="../../folders/11-client-reporting/">11 Client Reporting</a>
+        <a href="../../folders/12-seo-executive-rr/">12 SEO Executive RR</a>
+        <a href="../../folders/13-notebooklm-mindmaps/">13 NotebookLM Mind Maps</a>
+        <a href="../../folders/14-website-design/">14 Website Design</a>
+        <a href="../../folders/15-site-architecture/">15 Site Architecture</a>
+        <a href="../../folders/16-architecture-flows/">16 Architecture Flow PDFs</a>
+        </div>
+      </div>
+      <button class="theme-btn" aria-label="Switch to dark mode">&#9789;</button>
     </nav>
   </div>
 </header>
@@ -88,14 +133,14 @@
       <div class="detail">
         <h2 class="sec" id="eeat">EEAT Follow on All Pages</h2>
 <p>EEAT = Experience, Expertise, Authoritativeness, Trustworthiness. E-E-A-T Google na Quality Rater Guidelines no concept chhe (direct ranking factor nathi), pan Google na systems trustworthy ane helpful content ne reward kare chhe - khas karine jo site health, finance, ya shopping related hoy (YMYL - Your Money Your Life).</p>
-<h3>4 pillars practical ma</h3>
+<h3 id="eeat-s1">4 pillars practical ma</h3>
 <ol>
 <li>Experience: content lakhelu aeva vyakti pase thi jeney real experience chhe. Real photos, personal examples, "ame aa try karyu" style proof.</li>
 <li>Expertise: author bio with credentials, technical depth content ma, accurate information.</li>
 <li>Authoritativeness: industry ma recognition - backlinks, mentions, reviews, certifications.</li>
 <li>Trustworthiness: HTTPS, clear contact info, privacy policy, return/refund policy, real address/phone, ane secure payment.</li>
 </ol>
-<h3>Har page par implementation</h3>
+<h3 id="eeat-s2">Har page par implementation</h3>
 <ul>
 <li>Author name + bio har blog par</li>
 <li>Facts mate sources cite karo</li>
@@ -103,9 +148,9 @@
 <li>About Us ane Contact pages complete ane linked</li>
 <li>Reviews/testimonials real names sathe</li>
 </ul>
-<h3>Jadpi audit</h3>
+<h3 id="eeat-s3">Jadpi audit</h3>
 <p>Ek visitor tamari site par aave ane puche "saalo, aa site par bharoso kemu karu?" - je answer page par visible chhe te j EEAT chhe.</p>
-<h3>Checklist</h3>
+<h3 id="eeat-s4">Checklist</h3>
 <ul>
 <li>Badha content pages par author bios</li>
 <li>Trust pages complete chhe (About, Contact, Privacy, Refund)</li>
@@ -144,27 +189,27 @@
       <div class="detail">
         <h2 class="sec" id="robots-sitemap">Robots.txt &amp; Sitemap Properly</h2>
 <p>Robots.txt Google ne kahe chhe su crawl karvu ane su nahi. Sitemap.xml Google ne site na badha pages nu map aape chhe. Banne technical SEO nu base chhe - kharab robots.txt important pages ne crawl thi roki shake; sitemap index ni guarantee nathi aaptu, pan discovery fast kare.</p>
-<h3>Robots.txt na niyamo</h3>
+<h3 id="robots-sitemap-s1">Robots.txt na niyamo</h3>
 <ol>
 <li>Location: domain.com/robots.txt ma accessible hovu joiye.</li>
 <li>Crawl block karo: admin pages, cart, checkout, internal search result pages. Duplicate/filter URLs ane thank-you pages mate pehla canonical/noindex vaparo — robots.txt block fakt crawl waste motu hoy tyare (ane index mathi nikli gaya pachhi).</li>
 <li>Kyarey block na karo: CSS/JS files (Google render karvu joiye), main content pages.</li>
 <li>Sitemap line add karo: Sitemap: <a href="https://domain.com/sitemap.xml">https://domain.com/sitemap.xml</a></li>
 </ol>
-<h3>Sitemap na niyamo</h3>
+<h3 id="robots-sitemap-s2">Sitemap na niyamo</h3>
 <ol>
 <li>Generate karo: WordPress ma Yoast/RankMath auto-banave; custom site ma generator tool.</li>
 <li>Fakt 200-status, canonical URLs sitemap ma hova joiye - no 404s, no redirects, no noindex pages.</li>
 <li>Submit karo: Google Search Console → Sitemaps → submit. Bing Webmaster Tools ma pan.</li>
 <li>Update automatic hovu joiye new page add thay tyare.</li>
 </ol>
-<h3>Common mistakes (aa bhool na karo)</h3>
+<h3 id="robots-sitemap-s3">Common mistakes (aa bhool na karo)</h3>
 <ul>
 <li>"Disallow: /" staging ma hoy ane live site par j reh jay - site deindex!</li>
 <li>Dead URLs sathe nu old sitemap</li>
 <li>Sitemap submit karel pan GSC ma errors check na karela</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="robots-sitemap-s4">Checklist</h3>
 <ul>
 <li>robots.txt accessible ane sitemap line sathe</li>
 <li>Admin/cart/search pages block karela, content pages open</li>
@@ -198,7 +243,7 @@
       <div class="detail">
         <h2 class="sec" id="internal-linking">Internal Linking (3-5 Per Page)</h2>
 <p>Internal links = tamari site na pages vachche na connection. Google aena thi site structure samje, authority flow thay, ane users vadhare pages jove. Notebook rule: har page par 3-5 internal links minimum.</p>
-<h3>Rules (niyamo)</h3>
+<h3 id="internal-linking-s1">Rules (niyamo)</h3>
 <ol>
 <li>Darek page par 3-5 contextual links: content ma naturally fit thay aeva - footer/sidebar na links count ma nathi.</li>
 <li>Varietybharyu anchor text: "click here" nahi - "eggless cake delivery in Surat" jevu keyword-rich text.</li>
@@ -206,13 +251,13 @@
 <li>Deep pages ne pan link: fakt homepage/popular pages ne j nahi - nava ane deep pages ne pan.</li>
 <li>Anchor text ma variety: same page ne link karva different-different natural anchors use karo.</li>
 </ol>
-<h3>Structure nu example</h3>
+<h3 id="internal-linking-s2">Structure nu example</h3>
 <ul>
 <li>Homepage → Category pages → Product pages (parent-child sambandh)</li>
 <li>Blog "10 cake designs" mathi "chocolate truffle cake" product page ne link karo (contextual)</li>
 <li>Related blogs ek bija ne link kare (topic cluster)</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="internal-linking-s3">Checklist</h3>
 <ul>
 <li>Har page par 3-5 contextual internal links</li>
 <li>Descriptive anchor text use karelu chhe</li>
@@ -246,13 +291,13 @@
       <div class="detail">
         <h2 class="sec" id="speed">Page Speed &amp; Core Web Vitals (PageSpeed Insights)</h2>
 <p>Notebook rule: "PageSpeed Insight no use karine 90 ni upar hoy joiye". Slow site = users pacha jay ane sales ghate; Core Web Vitals Google na page experience signals no bhaag chhe (ranking ma nano factor, content pehla).</p>
-<h3>Kevi rite check karvu</h3>
+<h3 id="speed-s1">Kevi rite check karvu</h3>
 <ol>
 <li>pagespeed.web.dev ma URL nakho</li>
 <li>Mobile score juvo pehla (desktop score misleading hoy)</li>
 <li>Main target: Core Web Vitals "Good" — real users nu data (GSC → Core Web Vitals report / PSI field data): LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1. PSI score 90+ = saro goal, ranking rule nahi (Shopify par mobile 60–80 hoy pan CWV pass hoy to chale).</li>
 </ol>
-<h3>Common fixes (sauthi vadhare impact vala pehla)</h3>
+<h3 id="speed-s2">Common fixes (sauthi vadhare impact vala pehla)</h3>
 <ol>
 <li>Images optimize karo: WebP format, compressed (TinyPNG), lazy loading (fold niche ni images j — main/LCP image lazy nahi), yogya dimensions</li>
 <li>Caching on rakho: browser</li>
@@ -266,7 +311,7 @@
 <li>CDN use karo: Cloudflare free tier pan chale chhe</li>
 <li>Fonts limit: 2 fonts max, font-display: swap</li>
 </ol>
-<h3>Lighthouse 4 categories (juna SOP doc mathi)</h3>
+<h3 id="speed-s3">Lighthouse 4 categories (juna SOP doc mathi)</h3>
 <ul>
 <li>Performance (speed ane loading)</li>
 <li>Accessibility</li>
@@ -274,7 +319,7 @@
 <li>SEO</li>
 <li>charma 90+ target rakho</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="speed-s4">Checklist</h3>
 <ul>
 <li>Key pages par Core Web Vitals pass (field data); Mobile PSI 90+ jo shakya hoy</li>
 <li>Core Web Vitals green (GSC ma pan check)</li>
@@ -308,7 +353,7 @@
       <div class="detail">
         <h2 class="sec" id="must-have-pages">Must-Have Pages (About Us, Contact Us &amp; More)</h2>
 <p>Notebook: "All pages must be creation - About us, Contact us, many more". Google ane users banne ne trust mate aa basic pages jaruri chhe. Ena vagar site incomplete lage ane EEAT score ghate.</p>
-<h3>Essential pages list (koi pan website type)</h3>
+<h3 id="must-have-pages-s1">Essential pages list (koi pan website type)</h3>
 <ol>
 <li>About Us: kon chho, story, mission, team photos (real!), experience</li>
 <li>Contact Us: form + phone</li>
@@ -323,20 +368,20 @@
 <li>Shipping Policy: ecommerce mate (charges, timeline, areas)</li>
 <li>FAQ page: common questions (AEO/GEO mate bonus)</li>
 </ol>
-<h3>Extra trust pages (industry pramane)</h3>
+<h3 id="must-have-pages-s2">Extra trust pages (industry pramane)</h3>
 <ul>
 <li>Portfolio/Case Studies (services)</li>
 <li>Testimonials/Reviews nu page</li>
 <li>Certifications/Awards</li>
 <li>Careers (jo hiring karta hoy)</li>
 </ul>
-<h3>Rules (niyamo)</h3>
+<h3 id="must-have-pages-s3">Rules (niyamo)</h3>
 <ul>
 <li>Badha pages footer ma linked hova joiye</li>
 <li>Real content - "Lorem ipsum" ke thin 2-line page worst chhe</li>
 <li>About Us page par real photos - stock photo ni team photo nahi</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="must-have-pages-s4">Checklist</h3>
 <ul>
 <li>7 essential pages live ane footer ma linked</li>
 <li>Real content (placeholders vagar)</li>
@@ -369,25 +414,25 @@
       <div class="detail">
         <h2 class="sec" id="orphan-pages">No Orphan Pages</h2>
 <p>Notebook (Gujarati): "Koi pan new page banavo to orphan page na rahe - jarur bija blog ma te te link kari do." Orphan page = jene site na koi pan page mathi link nahi miltu. Google ene mushkel thi find kare (fakt sitemap/backlink thi) ane internal authority nathi malti, users pan nahi pahochta - dead page.</p>
-<h3>Rule (niyam)</h3>
+<h3 id="orphan-pages-s1">Rule (niyam)</h3>
 <ol>
 <li>Darek new page → tarat minimum 2-3 internal links: related blog mathi, category page mathi, ke related service page mathi.</li>
 <li>Sitemap ma hovu pan enough nathi - sitemap Google ne URL aape, pan internal link j authority aape.</li>
 <li>Banney taraf thi link karvu best: new page mathi pan related pages ne link aapo.</li>
 </ol>
-<h3>Orphan pages shodhva</h3>
+<h3 id="orphan-pages-s2">Orphan pages shodhva</h3>
 <ul>
 <li>Screaming Frog: XML sitemap sathe crawl karo (Configuration → Spider → Crawl Linked XML Sitemaps) → Crawl Analysis pachhi Sitemaps → Orphan URLs juo; GSC/GA4 pages list sathe pan compare karo</li>
 <li>GSC ma pages je impressions nathi aapta - suspect list</li>
 <li>Simple method: page nu URL site search karva try karo - kya thi link male te juvo</li>
 </ul>
-<h3>Nava page ni checklist (har vaar)</h3>
+<h3 id="orphan-pages-s3">Nava page ni checklist (har vaar)</h3>
 <ul>
 <li>Page publish thaya pachhi 24 hours ma 2-3 internal links added</li>
 <li>Related existing pages identify karela</li>
 <li>Sitemap ma auto-add thay te confirm</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="orphan-pages-s4">Checklist</h3>
 <ul>
 <li>Ek pan orphan page nahi (quarterly audit)</li>
 <li>New page → e j week ma internal linking complete</li>
@@ -425,7 +470,7 @@
       <div class="detail">
         <h2 class="sec" id="aeo-geo">AEO &amp; GEO Content</h2>
 <p>Notebook: "Site content must be AEO &amp; GEO content follow". AEO = Answer Engine Optimization (Google featured snippets, People Also Ask, voice search). GEO = Generative Engine Optimization (ChatGPT, Gemini, Perplexity ma tamaro content cite thay). 2026 ma AI Overviews, AI Mode ane AI assistants ghana searches ma pehla answer aape chhe - etle visibility mate aa jaruri chhe.</p>
-<h3>AEO - Answer Engine mate</h3>
+<h3 id="aeo-geo-s1">AEO - Answer Engine mate</h3>
 <ol>
 <li>Question-format na headings: H2/H3 ma real questions ("Eggless cake ketla divas fresh rahe?")</li>
 <li>Pehla direct answer: question pachhi 40-60 words ma direct answer, pachhi detail</li>
@@ -433,18 +478,18 @@
 <li>Bolchal ni language: loko jem bole tem lakho</li>
 <li>Lists/steps/tables: Google snippet ma aava formats prefer kare</li>
 </ol>
-<h3>GEO - AI search mate (juna SOP doc na 3 factors merged)</h3>
+<h3 id="aeo-geo-s2">GEO - AI search mate (juna SOP doc na 3 factors merged)</h3>
 <ol>
 <li>Data consistency, real data: facts accurate ane site bhar same (NAP, prices, claims)</li>
 <li>Trusted sources par presence: LLMs je sources trust kare tya tamaro content/presence hovo (Wikipedia, Reddit, Quora, industry sites, reviews)</li>
 <li>Machine-readable formats: Schema markup (Product, Article, Organization, LocalBusiness, Breadcrumb) - Technical SEO point 04 juvo</li>
 </ol>
-<h3>Priority na actions</h3>
+<h3 id="aeo-geo-s3">Priority na actions</h3>
 <ul>
 <li>Basic SEO pehla perfect, pachhi EEAT content, pachhi authority building, pachhi schema - aa order ma</li>
 <li>Har page: brief answer first section → conversational language → FAQ section</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="aeo-geo-s4">Checklist</h3>
 <ul>
 <li>Top pages par FAQ + direct answers</li>
 <li>Page type pramane schema implemented (FAQ schema optional)</li>
@@ -452,7 +497,7 @@
 <li>Reddit/Quora/review sites par brand presence build karo</li>
 </ul>
 <p>[Added] Advanced version (5 pillars, formulas, LLMs.txt status): 05 On-Page SEO → 12 New SEO Playbook.</p>
-<h3>Added 8 Nov 2026 — AI search no current status (sources sathe)</h3>
+<h3 id="aeo-geo-s5">Added 8 Nov 2026 — AI search no current status (sources sathe)</h3>
 <ul>
 <li>AI Overviews: US desktop searches na ~39% ma dekhay (June 2026, Comscore); Nov 2026 na data ma ~80% searches sudhi expand. [LIKELY — industry data]</li>
 <li>AI Overviews have Gemini 3 thi powered; follow-up question sidho AI Mode ma jay; 15 Oct 2026 update ma inline links + source context improve thaya — citations par click ni opportunity vadhi. [CONFIRMED — blog.google]</li>
@@ -487,7 +532,7 @@
       <div class="detail">
         <h2 class="sec" id="slug">Slug = Keyword (URL Structure)</h2>
 <p>Notebook point 8: "Slug all keyword + main". Slug = URL no last part. Clean, keyword-rich slug Google ne page nu topic instant samjave ane users ne pan trust aape.</p>
-<h3>Rules (niyamo)</h3>
+<h3 id="slug-s1">Rules (niyamo)</h3>
 <ol>
 <li>Primary keyword slug ma: /eggless-cake-delivery-surat (not /page?id=123 ke /post-45)</li>
 <li>Short ane clean: 3-5 words max. Stop words (and, the, nu, ke) remove karo.</li>
@@ -495,15 +540,15 @@
 <li>Lowercase j rakho: /About-Us nahi - /about-us</li>
 <li>Service/product slugs ma dates nahi: /best-cakes-2026 thay pan pachhi update karvu pade - evergreen rakho</li>
 </ol>
-<h3>Change karela slugs = redirects jaruri</h3>
+<h3 id="slug-s2">Change karela slugs = redirects jaruri</h3>
 <p>Old URL change karo to 301 redirect must. Redirect vagar = 404 = rankings lost + backlinks waste.</p>
-<h3>Examples (udaharan)</h3>
+<h3 id="slug-s3">Examples (udaharan)</h3>
 <ul>
 <li>Kharab: /index.php?cat=4&amp;id=99 | Sara: /birthday-cakes</li>
 <li>Kharab: /our-services-page | Sara: /seo-services</li>
 <li>Kharab: /blog/how-to-do-keyword-research-for-your-new-website-in-2026 | Sara: /keyword-research-guide</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="slug-s4">Checklist</h3>
 <ul>
 <li>Badha slugs: keyword + nana + lowercase + hyphens</li>
 <li>Badlela slugs par 301 redirects chhe</li>
@@ -536,21 +581,21 @@
       <div class="detail">
         <h2 class="sec" id="title-meta">Title, Meta Description &amp; H1-H6 Properly</h2>
 <p>Notebook point: "Title + description ma primary keyword + H1-H6 properly follow". Aa on-page SEO nu skeleton chhe - kharab hierarchy = Google confuse.</p>
-<h3>Title tag</h3>
+<h3 id="title-meta-s1">Title tag</h3>
 <ol>
 <li>Primary keyword pehla (beginning ma)</li>
 <li>50-60 characters (cutoff talva mate)</li>
 <li>Har page unique title</li>
 <li>Formula: Primary Keyword - Faydo/Modifier | Brand</li>
 </ol>
-<h3>Meta description</h3>
+<h3 id="title-meta-s2">Meta description</h3>
 <ol>
 <li>150-160 aksharo</li>
 <li>Primary keyword + faydo + CTA</li>
 <li>Unique per page, copy-paste nahi</li>
 <li>Direct ranking factor nathi - pan saru description CTR (clicks) vadhare chhe, ane vadhu clicks = vadhu traffic</li>
 </ol>
-<h3>Heading hierarchy (H1-H6)</h3>
+<h3 id="title-meta-s3">Heading hierarchy (H1-H6)</h3>
 <ol>
 <li>Ek j H1 per page - primary keyword sathe, page nu main topic</li>
 <li>H2 = mukhya sections (secondary keywords include karo)</li>
@@ -558,7 +603,7 @@
 <li>Levels kyarey skip na karo: H1 → H3 direct nahi, H1 → H2 → H3</li>
 <li>Styling mate headings use nahi: bold text joitu hoy to CSS, heading tag nahi</li>
 </ol>
-<h3>Udaharan structure</h3>
+<h3 id="title-meta-s4">Udaharan structure</h3>
 <ul>
 <li>H1: Eggless Cake Delivery in Surat</li>
 <li>H2: Why Choose Our Eggless Cakes</li>
@@ -566,7 +611,7 @@
 <li>H2: Delivery Areas in Surat</li>
 <li>H2: FAQ</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="title-meta-s5">Checklist</h3>
 <ul>
 <li>Darek page par primary keyword sathe 1 H1</li>
 <li>Title 50-60 chars, pehla keyword, unique</li>
@@ -600,30 +645,30 @@
       <div class="detail">
         <h2 class="sec" id="keyword-mapping">Keyword Mapping (Primary, Secondary, FAQ)</h2>
 <p>Notebook point 9: "Primary - secondary - FAQ all keywords properly follow in all pages". Har page ne clear keyword assignment hovi joiye - nahi to 2 pages same keyword mate fight kare (cannibalization) ane banna haray.</p>
-<h3>Darek page mate 3-tier structure</h3>
+<h3 id="keyword-mapping-s1">Darek page mate 3-tier structure</h3>
 <ol>
 <li>Primary keyword (1): page nu main target. Aa aama aave: title, H1, slug, first paragraph, meta description.</li>
 <li>Secondary keywords (3-5): sambandhit variations. Aama aave: H2s, body content, image alt.</li>
 <li>FAQ keywords (3-5): question format ma. FAQ section ma sidha jawab sathe aave.</li>
 </ol>
-<h3>Mapping sheet banavo</h3>
+<h3 id="keyword-mapping-s2">Mapping sheet banavo</h3>
 <ul>
 <li>Columns: Page URL | Primary keyword | Secondary keywords | FAQ keywords | Search intent | Status</li>
 <li>Rule: 1 keyword = 1 page. Same keyword 2 pages par = problem.</li>
 </ul>
-<h3>Keyword Placement (density nahi)</h3>
+<h3 id="keyword-mapping-s3">Keyword Placement (density nahi)</h3>
 <ul>
 <li>Primary keyword title, H1, slug ane first paragraph ma aave - te enough chhe</li>
 <li>Keyword density Google no ranking factor nathi - % target set na karo</li>
 <li>Stuffing (same word vaar-vaar, unnatural) avoid karo - synonyms ane related terms naturally vapro.</li>
 </ul>
-<h3>Example (cake site)</h3>
+<h3 id="keyword-mapping-s4">Example (cake site)</h3>
 <ul>
 <li>Primary: "eggless cake delivery surat"</li>
 <li>Secondary: "eggless birthday cake", "same day cake delivery", "order cake online surat"</li>
 <li>FAQ: "eggless cake ketla divas fresh rahe?", "surat ma kaya area ma delivery chhe?"</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="keyword-mapping-s5">Checklist</h3>
 <ul>
 <li>Keyword mapping sheet complete chhe</li>
 <li>Koi 2 pages ma same primary keyword nahi</li>
@@ -658,7 +703,7 @@
       <div class="detail">
         <h2 class="sec" id="content-quality">Content Quality &amp; Depth (Extra - Instinct added)</h2>
 <p>Google helpful content system pachhi thin content rank j nahi thay. Har page "koi pan AI 10 second ma lakhi shake" jeVu hoy to replace thai jashe. Depth + originality = survival.</p>
-<h3>Quality na markers</h3>
+<h3 id="content-quality-s1">Quality na markers</h3>
 <ol>
 <li>Search intent satisfy karo: user aa page par su expect kare te male - no clickbait mismatch</li>
 <li>Puri coverage: topic nu full answer - user ne pachho Google par javab shodhvu na pade</li>
@@ -666,16 +711,16 @@
 <li>Vanchi shakay evo format: nana paragraphs, subheadings, lists, tables, images</li>
 <li>Update karelu: juna facts = trust gumay. Dates + data regularly refresh karo</li>
 </ol>
-<h3>Thin content na signals (avoid karo)</h3>
+<h3 id="content-quality-s2">Thin content na signals (avoid karo)</h3>
 <ul>
 <li>300 words page je koi question fully answer na kare</li>
 <li>Same content multiple pages par (duplicate)</li>
 <li>Review/value-add vagar nu AI-generated text</li>
 <li>Keyword stuffing je read karva ma awkward lage</li>
 </ul>
-<h3>Test</h3>
+<h3 id="content-quality-s3">Test</h3>
 <p>Har page mate pucho: "Jo aa page internet par na hot, to koinu nuksan?" Answer "na" hoy to page improve karo ke remove karo.</p>
-<h3>Checklist</h3>
+<h3 id="content-quality-s4">Checklist</h3>
 <ul>
 <li>Top 20 pages nu quality audit thayelu</li>
 <li>Thin pages improve/merge/remove karela</li>
@@ -711,7 +756,7 @@
 <table>
 <tr><th>[Added] Senior note — Google shu kahe chhe (CONFIRMED) Google e 15 May 2026 na potana AI Search optimization guide ma kahyu ke Google Search mate AEO ane GEO "still SEO" chhe. AI Overviews ane AI Mode same Google index par chale chhe. Etle niche na badha pillars navi "trick" nathi — saru SEO + clear answers + trust j base chhe. Biji AI platforms (ChatGPT, Perplexity) mate bahar ni mentions/sources nu mahatva vadhare hoi shake.</th></tr>
 </table>
-<h3>PART A — SAMAJVANU</h3>
+<h3 id="new-playbook-s1">PART A — SAMAJVANU</h3>
 <h4>1. 5 Pillars — ek table ma badhu</h4>
 <table>
 <tr><th>Pillar</th><th>Shu means</th><th>Main signal</th><th>Example</th></tr>
@@ -739,7 +784,7 @@
 <table>
 <tr><th>Formulas AEO: ASK → ANSWER → FORMAT → PROVE → MEASURE GEO: ENTITY → ANSWER → ORIGINAL → TRUST → SOURCES → TEST</th></tr>
 </table>
-<h3>PART B — KARVANU (blog/page par)</h3>
+<h3 id="new-playbook-s2">PART B — KARVANU (blog/page par)</h3>
 <h4>4. AEO — page checklist</h4>
 <p>Example: "Does piles medicine work immediately?" (health topic = YMYL, etle expert review jaruri)</p>
 <ul>
@@ -787,7 +832,7 @@
 <tr><th>Golden rule User + AI banne ne clear, useful, trustworthy answer aapo. Flow: Structure → Retrieve → Cite → Trust → Convert.</th></tr>
 </table>
 <p>Related SOP: 05 On-Page SEO → 01 EEAT, 07 AEO &amp; GEO Content; 08 Technical SEO → 04 Schema Markup; 06 Off-Page SEO → 01 Reddit &amp; Quora.</p>
-<h3>Added 8 Nov 2026 — 2026 update check</h3>
+<h3 id="new-playbook-s3">Added 8 Nov 2026 — 2026 update check</h3>
 <ul>
 <li>Google nu official AI search guidance (May 2026) same chhe: AI Overviews/AI Mode mate koi alag optimization nathi — saru SEO + clear answers + trust j base. [CONFIRMED]</li>
 <li>AI Overviews Gemini 3 powered; AIO follow-up → AI Mode direct; Oct 2026 ma inline links/context improve thaya. [CONFIRMED — blog.google]</li>
@@ -795,7 +840,7 @@
 <li>GA4 native 'AI Assistants' channel — AI referral tracking have default ma, regex ni jarur nahi. [CONFIRMED]</li>
 <li>AI referral: ChatGPT ~80-92% share; overall AI traffic ~0.3% of web traffic (2026, ~16x growth). LLMs.txt status unchanged — Google use nathi kartu; low priority optional j rahe. [LIKELY]</li>
 </ul>
-<h3>Added 11 Nov 2026 — strategy expansion links</h3>
+<h3 id="new-playbook-s4">Added 11 Nov 2026 — strategy expansion links</h3>
 <ul>
 <li><p>Fast ranking nu sachu picture (1-2 divas myth + realistic timeline table</p></li>
 <li><p>10 speed levers): 03 → 10 Fast Ranking Strategy.</p></li>
@@ -835,33 +880,33 @@
       </div>
 
       <div class="detail">
-        <h2 class="sec" id="prepublish-qa">Pre-publish QA</h2><h3>A. Content</h3>
+        <h2 class="sec" id="prepublish-qa">Pre-publish QA</h2><h3 id="prepublish-qa-s1">A. Content</h3>
 <ul>
 <li>Search intent match: user aa page par je expect kare te male chhe.</li>
 <li>Original wording (competitor/AI text copy nahi). Facts sachi, source link sathe.</li>
 <li>EEAT: author name, real photo/example, date (published + updated).</li>
 <li>Primary keyword title, H1, slug, first paragraph ma; secondary + FAQ keywords naturally.</li>
 </ul>
-<h3>B. On-page</h3>
+<h3 id="prepublish-qa-s2">B. On-page</h3>
 <ul>
 <li>Title ~50-60 char, meta description ~140-160 char, ek j H1, H2/H3 order.</li>
 <li>Slug short + keyword. Canonical self-referencing.</li>
 <li>3-5 internal links; pillar ne link; page ne 2-3 jagya thi link (no orphan).</li>
 <li>Images: real, compressed (WebP), alt text, filename keyword.</li>
 </ul>
-<h3>C. Technical</h3>
+<h3 id="prepublish-qa-s3">C. Technical</h3>
 <ul>
 <li>Index-able: noindex nathi, robots.txt block nathi (staging noindex hatavyu).</li>
 <li>Mobile ma check; PageSpeed Insights ma real-user (field) data joyu.</li>
 <li>Schema valid (Rich Results Test); product ma price + availability.</li>
 <li>No broken links, no redirect chain.</li>
 </ul>
-<h3>D. Tracking</h3>
+<h3 id="prepublish-qa-s4">D. Tracking</h3>
 <ul>
 <li>GA4 / GTM fire thay chhe (Preview mode ma).</li>
 <li>Key events (form, buy click) page par kaam kare chhe.</li>
 </ul>
-<h3>E. After live</h3>
+<h3 id="prepublish-qa-s5">E. After live</h3>
 <ol>
 <li>Sitemap ma URL; GSC URL Inspection.</li>
 <li>Page Audit &amp; Fix log ma date + shu badlyu.</li>
@@ -883,6 +928,8 @@
   </div>
 </footer>
 
+<script>window.SOP_BASE = "../../";</script>
 <script src="../../assets/app.js"></script>
+<script src="../../assets/search.js" defer></script>
 </body>
 </html>
