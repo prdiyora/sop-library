@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>07 Setup & Tracking — SOP Library</title>
+<meta name="description" content="Tracking setup: Google Search Console, GA4 & GTM, Microsoft Clarity, Bing ane scroll depth, step by step.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../">
+      <span class="brand-mark">S</span>
+      <span>SOP Library</span>
+    </a>
+    <nav>
+      <a href="../../#library">All folders</a>
+      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+    <div class="hero">
+      <p class="kicker">Folder 07</p>
+      <h1>Setup & Tracking</h1>
+      <p class="lede">GSC, GA4/GTM, Clarity, Bing setup — measurement vagar SEO andhara ma kariye chhiye. Aa folder dar project nu pehlu kaam: tracking pehla, kaam pachhi.</p>
+      <div class="hero-meta">
+        <span class="pill">6 docs</span>
+        <span class="pill">Flow first, then numbered steps</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="toc">
+        <a href="#gsc">Search Console</a>
+        <a href="#ga4-gtm">GA4 & GTM</a>
+        <a href="#clarity">Microsoft Clarity</a>
+        <a href="#bing">Bing & others</a>
+        <a href="#scroll-depth">Scroll depth</a>
+        <a href="#gtm-events">GTM event list</a>
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Google Search Console setup — 4 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Verify the domain property</p>
+            <p class="node-sub">Setup steps in the doc, one by one.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">↻</span>Use it 10 minutes every week</p>
+            <p class="node-sub">A small weekly habit catches problems early.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">⌕</span>Find the position 4-10 pages</p>
+            <p class="node-sub">These feed the quick-win strategy in folder 03.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">4</span>
+            <p class="node-name"><span class="ico">✦</span>Check the 2026 features note</p>
+            <p class="node-sub">New GSC features added 8 Nov 2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="gsc">Google Search Console Setup</h2>
+<p>Notebook Setup point 1: "Search console - sitemap submit, robot.txt". GSC = free Google tool je batave ke Google tamari site ne kevi rite jove chhe. SEO nu stethoscope.</p>
+<h3>Setup na steps</h3>
+<ol>
+<li>search.google.com/search-console → property add karo (Domain property best - DNS verify)</li>
+<li>Sitemap submit: Sitemaps → sitemap.xml URL submit karo → "Success" status check karo</li>
+<li>Robots.txt verify: URL Inspection thi key pages crawlable chhe te confirm</li>
+<li>Email alerts on rakho (coverage issues, manual actions)</li>
+</ol>
+<h3>Dar hafta use (10 minutes)</h3>
+<ul>
+<li>Performance: clicks, impressions, CTR, position - trend upar jai rahyo chhe?</li>
+<li>Pages report: indexed vs not-indexed reasons check karo</li>
+<li>Queries: new keywords jo tya rank thay chhe - content update opportunities</li>
+</ul>
+<p>Dar mahine use</p>
+<ul>
+<li><h3>Position 4-10 pages identify (Strategy point 1 mate)</h3></li>
+<li><p>Position 10-20 pages (Strategy point 2 mate)</p></li>
+<li><p>Core Web Vitals status</p></li>
+<li><p>Coverage errors fix karo</p></li>
+</ul>
+<p>Checklist</p>
+<ul>
+<li><h3>Domain property verify thayu chhe</h3></li>
+<li><p>Sitemap submit thayu + Success status</p></li>
+<li><p>Dar hafta 10-min review ni habit</p></li>
+<li><p>Alerts enable chhe</p></li>
+<li><h3>Added 8 Nov 2026 — GSC na 2026 navi features</h3></li>
+<li><p>Search Generative AI performance report: AI Overviews ane AI Mode na clicks/impressions alag — 31 Aug 2026 thi badha websites mate. Weekly review ma add karo. [CONFIRMED — Google Search Central blog]</p></li>
+<li><p>Multimodal filter: Search type ma 'multimodal' (Google Lens/visual search) — Sept 2026. [CONFIRMED]</p></li>
+<li><p>Platform properties: Instagram, TikTok, X ane YouTube na posts Google Search/Discover/News ma keva perform kare te track — July 2026. Social content vala clients mate. [CONFIRMED]</p></li>
+<li><p>Multi-select filters: countries ane device types ek sathe select thay — Oct/Nov</p></li>
+</ul>
+<ol start="2026">
+<li>[CONFIRMED]</li>
+</ol>
+<ul>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">GA4 & GTM setup — 4 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Set up GA4</p>
+            <p class="node-sub">The main analytics brain.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Set up GTM</p>
+            <p class="node-sub">The tag manager that feeds it events.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">▤</span>Use the reports that matter</p>
+            <p class="node-sub">Not every report — the ones in the doc.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">4</span>
+            <p class="node-name"><span class="ico">✓</span>Checklist + 2026 updates</p>
+            <p class="node-sub">Includes the exact GTM event list added 16 Nov 2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="ga4-gtm">GA4 &amp; GTM Setup</h2>
+<p>Notebook Setup point 2: "GA4 &amp; GTM". GA4 = users su kare chhe te track kare. GTM = tracking codes manage kare without code editing. Banne saathe = complete analytics system.</p>
+<h3>GA4 setup</h3>
+<ol>
+<li>analytics.google.com → GA4 property banao → data stream (website)</li>
+<li>Measurement ID (G-XXXXXXX) site ma install (GTM thi ke direct)</li>
+<li>Enhanced measurement ON: scrolls, outbound clicks, site search, video engagement nu auto-tracking</li>
+<li>Key events (conversions) mark karo: form submit, purchase, call click, WhatsApp click</li>
+<li>Internal traffic filter (potana visits exclude)</li>
+</ol>
+<h3>GTM setup</h3>
+<ol>
+<li>tagmanager.google.com → account + container banao</li>
+<li>GTM code site ma install (head + body)</li>
+<li>GA4 tag GTM through deploy karo</li>
+<li>Custom events: button clicks, form submissions, scroll depth (GA4 Scroll Depth doc juvo)</li>
+<li>Preview mode ma test karo, pachhi publish</li>
+</ol>
+<h3>Reports je matter kare</h3>
+<ul>
+<li>Traffic sources (organic search vadhi rahyu chhe?)</li>
+<li>Landing pages nu performance</li>
+<li>Conversion events ni sankhya</li>
+<li>User flow / engagement</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li><p>GA4 installed + enhanced measurement ON</p></li>
+<li><p>3-5 conversion events mark karela chhe</p></li>
+<li><p>GTM container GA4 tag sathe live chhe</p></li>
+<li><p>Internal traffic filter thayelu chhe</p></li>
+<li><h3>Added 8 Nov 2026 — GA4 na 2026 updates</h3></li>
+<li><p>Native 'AI Assistants' channel: Default Channel Group ma Google ChatGPT, Gemini, Perplexity vagere nu traffic auto-identify kare — reports ma alag dekhay, manual setup nahi. [CONFIRMED — Google Analytics changelog]</p></li>
+<li><p>Data Manager (beta, Nov 2026): product links, data streams ane first-party data ek jagya e manage; connection health/diagnostics pan. [CONFIRMED]</p></li>
+<li><p>GA4 UI ma native custom dashboards (Aug 2026 rollout) — quick reporting mate; client reporting mate Looker Studio j best rahe. [CONFIRMED]</p></li>
+<li><h3>Added 16 Nov 2026 - Exact GTM event list</h3></li>
+<li><p>Exact event names (view_item, add_to_cart, begin_checkout, purchase, generate_lead, click_buy_etsy ...) ane step-by-step: <a href="(team Drive ma doc)
+<li><p>Rule: dar nava site par GSC + GA4 + GTM trino connect karo, GTM Preview ma events test karo, pachhi live report ma site umero.</p></li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Microsoft Clarity — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Set it up</p>
+            <p class="node-sub">Free heatmaps and session recordings.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⌕</span>Watch 15 minutes weekly</p>
+            <p class="node-sub">See where real visitors click, scroll and rage-quit.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">➜</span>Turn findings into fixes</p>
+            <p class="node-sub">The doc's action examples show what to change.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="clarity">Microsoft Clarity</h2>
+<p>Notebook Setup point 4: "Microsoft clarity". Clarity etle free heatmaps + session recordings. GA4 number batave ("kitla aavya"), Clarity behaviour batave ("su karyu ane kya stuck thaya").</p>
+<h3>Setup</h3>
+<ol>
+<li>clarity.microsoft.com → project create</li>
+<li>Tracking code site ma (GTM thi easiest - Clarity template available). EU/UK visitors hoy to cookie consent (Clarity consent) jaruri; forms ma sensitive data masking on rakho</li>
+<li>GA4 sathe connect karo (integration option) - combined insights male</li>
+</ol>
+<h3>Su jovo (weekly 15 min)</h3>
+<ol>
+<li>Heatmaps: users kya click kare chhe? Important CTA par clicks chhe? Koi non-clickable element par try kare chhe (design fix)?</li>
+<li>Scroll maps: loko kya sudhi scroll kare? Important content fold ni niche chhe?</li>
+<li>Session recordings: 5-10 recordings/week juvo - rage clicks, dead clicks, confusion spots shodho</li>
+<li>Rage/dead click reports: frustration na signals = UX fix priority</li>
+</ol>
+<h3>Action na examples</h3>
+<ul>
+<li>Users image par click try kare (link nathi) → image ne clickable banao</li>
+<li>80% users 50% scroll pachhi drop → important content upar lao</li>
+<li>Form ma field par struggle → form simplify karo</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>GTM thi Clarity install karyu</li>
+<li>GA4 connect karyu</li>
+<li>Weekly recording/heatmap review schedule karyu</li>
+<li>Top 3 UX fixes identify kari ne action ma mukya</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Bing & search engine submission — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Set up Bing Webmaster Tools</p>
+            <p class="node-sub">Free traffic most people ignore.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">➜</span>Submit to the other engines</p>
+            <p class="node-sub">The doc's list beyond Google and Bing.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">↻</span>IndexNow for new pages</p>
+            <p class="node-sub">Exact working of IndexNow added 11 Nov 2026.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="bing">Bing &amp; All Search Engine Submission</h2>
+<p>Notebook Setup point 5: "Bing submission - all search engine to index site submission". Google 90%+ share dharave, pan Bing free traffic chhe je 15 minute na effort ma male. Bing index Copilot ane amuk AI search tools (ChatGPT search pan, partly) vapre chhe - GEO mate useful [LIKELY].</p>
+<h3>Bing Webmaster Tools setup karo</h3>
+<ol>
+<li>bing.com/webmasters → sign up karo</li>
+<li>GSC import option use karo - 1 click ma site + sitemaps import (easiest)</li>
+<li>Ya manual: site add karo → verify (meta tag/DNS) karo → sitemap submit karo</li>
+</ol>
+<h3>Bija submissions</h3>
+<ul>
+<li>Yandex Webmaster: jo international/Russia traffic relevant hoy</li>
+<li>DuckDuckGo: submission nahi - Bing index use kare, Bing ma chho to ethe chho</li>
+<li>IndexNow: Bing/Yandex ne navu/badlayelu URL turant notify kare (plugin/API) - jaldi discovery, indexing guarantee nahi. Google IndexNow use nathi kartu.</li>
+</ul>
+<h3>Indexing requests (nava/updated pages)</h3>
+<ul>
+<li>GSC: URL Inspection → Request Indexing (priority pages)</li>
+<li>Bing: URL submit karo (100/day limit)</li>
+<li>IndexNow: automatic on publish</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li><p>Bing Webmaster verified + sitemap submit karelu chhe</p></li>
+<li><p>IndexNow active (jo possible hoy)</p></li>
+<li><p>New pages mate indexing workflow define karelu chhe</p></li>
+<li><h3>Added 11 Nov 2026 — IndexNow nu exact kaam</h3></li>
+<li><ul>
+<li>IndexNow ek var on karo (Cloudflare/Shopify/Wix/SEO plugin ma toggle, ke key file site root ma) — pachhi dar navo/updated URL Bing, Yandex, Seznam, Naver ne instant notify thay. 10,000 URLs per POST. Free.</li>
+</ul></li>
+<li><ul>
+<li>Dhyaan: IndexNow Google ma kaam j nahi kartu. Google mate sitemap + Request Indexing j channel chhe.</li>
+</ul></li>
+<li><ul>
+<li>200/202 response = notification receive thayu — crawl ke indexing ni guarantee nahi. Same URL var-var resubmit na karo (spam filter).</li>
+</ul></li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">GA4 scroll depth check — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">✓</span>Option A: default 90% check</p>
+            <p class="node-sub">Already built into GA4 — the quick way.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Option B: custom depths in GTM</p>
+            <p class="node-sub">25/50/75/100% when you need the detail.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">▶</span>Read the results right</p>
+            <p class="node-sub">The 'Samjan' section explains what the numbers mean.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="scroll-depth">GA4 Scroll Depth Check (Merged from old SEO SOP doc)</h2>
+<p>Low scroll depth = content improve karvano signal. (Aa doc Priyank na juna SEO SOP folder na doc mathi merged chhe.)</p>
+<h3>Jaruri vaat</h3>
+<p>GA4 nu automatic scroll event fakt 90% depth par j fire thay (page na 90% sudhi scroll thay tyare). Etle default GA4 batave kitla users 90% sudhi pohcha - pan 25/50/75% breakdown NATHI male. Finer tracking mate GTM setup jaruri.</p>
+<h3>Option A: Default 90% check</h3>
+<ol>
+<li>GA4 → Reports → Engagement → Pages and screens</li>
+<li>Explore → free form → "Percent scrolled" dimension add karo (pehla Admin → Custom definitions ma percent_scrolled event-scoped dimension register karo)</li>
+<li>Page-wise 90% scrollers no % compare karo</li>
+</ol>
+<h3>Option B: GTM custom scroll depths (25/50/75/100)</h3>
+<ol>
+<li>GTM → Trigger → Scroll Depth → vertical 25,50,75,100 percentages</li>
+<li>GA4 event tag connect karo (event name: scroll_depth)</li>
+<li>Publish → GA4 Explore ma event data available</li>
+</ol>
+<h3>Samjan</h3>
+<ul>
+<li>&lt;25% scroll = intro weak/wrong audience - headline ane first paragraph fix karo</li>
+<li>25-50% drop = middle content boring - subheadings, images, lists add karo</li>
+<li>75%+ = content engaging - CTA placement end ma perfect</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>GTM scroll depth trigger configure karel chhe</li>
+<li>Top 10 pages nu scroll data review karyu chhe</li>
+<li>Low-scroll pages na content improvements list karela chhe</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">GTM events (exact names) — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Follow the GTM steps</p>
+            <p class="node-sub">Step by step, click by click.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">☰</span>Use the exact event names</p>
+            <p class="node-sub">Separate lists for ecommerce, lead/service and Etsy-style sites.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✓</span>Run the final check</p>
+            <p class="node-sub">Events firing correctly before you trust the data.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="gtm-events">GTM event list</h2><h3>Step by step (GTM)</h3>
+<ol>
+<li>GTM container ma GA4 Configuration tag (Measurement ID) - All Pages.</li>
+<li>Niche ni list pramane GA4 Event tag + trigger banavo.</li>
+<li>GTM Preview mode ma test; GA4 DebugView ma event dekhay chhe?</li>
+<li>Publish. Version name ma date lakho.</li>
+<li>GA4 Admin → Events ma jo key event mark karvo hoy to "Mark as key event".</li>
+</ol>
+<h3>Ecommerce site (GA4 recommended event names)</h3>
+<p>| | | | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | Event name | Kyare fire thay | | view_item_list | Category / collection page par products list dekhay | | select_item | User list mathi product par click kare | | view_item | Product page khule | | add_to_cart | Add to cart click | | begin_checkout | Checkout sharu | | purchase | Order success (value + currency + transaction_id) | | search / view_search_results | Site search |</p>
+<h3>Lead / service site</h3>
+<p>| | | | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | generate_lead | Form submit success | | click_call (custom) | Phone link click | | click_whatsapp (custom) | WhatsApp link click | | click_email (custom) | mailto click |</p>
+<h3>Etsy-style / outbound-sale site</h3>
+<p>| | | | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | click_buy_etsy (custom) | "Buy on Etsy" button click (item + page parameters) | | click_outbound_marketplace (custom) | Amazon/other marketplace link click |</p>
+<h3>Badhi sites</h3>
+<ul>
+<li>scroll depth 25/50/75/90 (06 GA4 Scroll Depth Check), file_download, newsletter_signup (sign_up), video_play.</li>
+<li>Internal traffic filter ON, cross-domain jo checkout alag domain par hoy.</li>
+</ul>
+<h3>Check</h3>
+<ul>
+<li>Event names lowercase + underscore, ek j spelling dar site par.</li>
+<li>Dar event par page_location auto aave; item/button name parameter lakho.</li>
+<li>Key events 3-5 j (badhu nahi).</li>
+</ul>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../../#library">← Back to the SOP Library</a></p>
+    <p class="fmono">Folder 07 · SOP Library</p>
+  </div>
+</footer>
+
+<script src="../../assets/app.js"></script>
+</body>
+</html>
