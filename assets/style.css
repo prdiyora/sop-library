@@ -754,3 +754,28 @@ footer .fmono { font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
   .path-cols { columns: 2; column-gap: 40px; }
   .path-folder { break-inside: avoid; }
 }
+
+/* numbered steps inside the Menu dropdown */
+.menu-panel a { max-width: 320px; overflow: hidden; text-overflow: ellipsis; }
+.menu-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  display: inline-block;
+  min-width: 26px;
+  margin-right: 8px;
+  text-align: right;
+}
+.path-extra a { color: var(--ink-soft); font-size: 13.5px; }
+.path-extra .path-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10.5px;
+  color: var(--accent);
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 6px;
+  padding: 0 5px;
+  margin-left: 30px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
