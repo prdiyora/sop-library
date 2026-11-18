@@ -541,3 +541,24 @@ footer .fmono { font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
 .detail td, .detail th { border: 1px solid var(--line); padding: 9px 13px; text-align: left; vertical-align: top; }
 .detail tbody tr:first-child td { font-weight: 600; background: var(--bg-sunken); }
 @media (max-width: 640px) { .detail table { font-size: 13px; display: block; overflow-x: auto; } }
+
+/* ---------- SOP Train ---------- */
+.route-picker { display: flex; gap: 16px; margin: 0 0 34px; flex-wrap: wrap; }
+.route-btn { flex: 1; min-width: 240px; display: block; background: var(--bg-raised); border: 2px solid var(--line); border-radius: var(--radius); padding: 18px 22px; font-family: Fraunces, serif; font-size: 22px; font-weight: 600; color: var(--ink); text-decoration: none; box-shadow: var(--shadow); }
+.route-btn span { display: block; font-family: Inter, sans-serif; font-size: 14px; font-weight: 400; color: var(--ink-soft); margin-top: 4px; }
+.route-btn.active { border-color: var(--accent); background: var(--accent-soft); }
+.route-title { font-family: Fraunces, serif; font-size: 26px; margin: 8px 0 22px; }
+.rail { position: relative; padding-left: 34px; }
+.rail::before { content: ""; position: absolute; left: 13px; top: 8px; bottom: 8px; width: 3px; background: var(--line-strong); border-radius: 2px; }
+.coach { position: relative; display: flex; margin-bottom: 26px; }
+.coach-badge { position: absolute; left: -34px; top: 2px; width: 29px; height: 29px; border-radius: 50%; background: var(--accent); color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; border: 3px solid var(--bg); }
+.coach-body { background: var(--bg-raised); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; box-shadow: var(--shadow); flex: 1; }
+.coach-body h2.sec { margin-top: 0; }
+.coach-words { color: var(--ink-soft); margin: 6px 0 10px; }
+.coach-start { background: var(--teal-soft); border-radius: 8px; padding: 8px 12px; font-size: 14.5px; margin: 0 0 10px; }
+.coach-links { margin: 0 0 10px; }
+.coach-link { display: inline-block; border: 1px solid var(--line-strong); border-radius: 999px; padding: 6px 14px; margin: 0 8px 8px 0; text-decoration: none; font-weight: 600; font-size: 14px; color: var(--accent-ink); background: var(--bg); }
+.coach-next { border-top: 1px dashed var(--line-strong); padding-top: 10px; margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+.train-footer { border: 1px solid var(--line); border-left: 4px solid var(--accent); background: var(--bg-raised); border-radius: var(--radius); padding: 14px 18px; margin: 40px 0 0; font-size: 15px; }
+.train-footer a { font-weight: 600; }
+.train-footer .tf-line { margin: 4px 0; }
