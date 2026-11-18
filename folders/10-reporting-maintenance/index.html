@@ -18,9 +18,49 @@
       <span class="brand-mark">S</span>
       <span>SOP Library</span>
     </a>
+    <div class="searchbox">
+      <input type="search" class="search-input" placeholder="Search SOPs... (spelling off chale)" aria-label="Search SOPs" autocomplete="off">
+      <div class="search-results" hidden></div>
+    </div>
     <nav>
-      <a href="../../#library">All folders</a>
-      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Sections &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="#traffic-drop">Traffic Drop Playbook</a>
+          <a href="#content-refresh">Content Refresh / Merge / Remove</a>
+          <a href="#maintenance-routine">Maintenance Routine</a>
+          <a href="#core-update">Core Update Playbook</a>
+          <a href="#tool-stack">Tool Stack & Access</a>
+          <a href="#handover">Handover & Offboarding</a>
+          <a href="#daily-report">Daily Report Reading</a>
+          <a href="#forecasting">SEO Forecasting</a>
+        </div>
+      </div>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Menu &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="../../train/">&#128642; SOP Train</a>
+        <a href="../../ai-visibility/">AI Visibility SOP</a>
+        <hr>
+        <a href="../../folders/01-client-ask/">01 Client Ask (R&D)</a>
+        <a href="../../folders/02-domain-research/">02 Domain Research</a>
+        <a href="../../folders/03-strategy/">03 Strategy</a>
+        <a href="../../folders/04-design-webdev/">04 Design & Web Dev</a>
+        <a href="../../folders/05-onpage-seo/">05 On-Page SEO</a>
+        <a href="../../folders/06-offpage-seo/">06 Off-Page SEO</a>
+        <a href="../../folders/07-setup-tracking/">07 Setup & Tracking</a>
+        <a href="../../folders/08-technical-seo/">08 Technical SEO</a>
+        <a href="../../folders/09-ecommerce-seo/">09 Ecommerce SEO</a>
+        <a href="../../folders/10-reporting-maintenance/">10 Reporting & Maintenance</a>
+        <a href="../../folders/11-client-reporting/">11 Client Reporting</a>
+        <a href="../../folders/12-seo-executive-rr/">12 SEO Executive RR</a>
+        <a href="../../folders/13-notebooklm-mindmaps/">13 NotebookLM Mind Maps</a>
+        <a href="../../folders/14-website-design/">14 Website Design</a>
+        <a href="../../folders/15-site-architecture/">15 Site Architecture</a>
+        <a href="../../folders/16-architecture-flows/">16 Architecture Flow PDFs</a>
+        </div>
+      </div>
+      <button class="theme-btn" aria-label="Switch to dark mode">&#9789;</button>
     </nav>
   </div>
 </header>
@@ -83,7 +123,7 @@
       <div class="detail">
         <h2 class="sec" id="traffic-drop">Traffic Drop Diagnosis</h2>
 <p>Client kahe "traffic ghati gayu" - panic nahi, step-by-step investigation. Pehla confirm karo ke real drop chhe, pachhi kya ane kem.</p>
-<h3>Step-by-step</h3>
+<h3 id="traffic-drop-s1">Step-by-step</h3>
 <ol>
 <li>Data confirm: GA4 tracking tuti to nathi? GSC ma pan drop chhe? (GA4 drop + GSC stable = mostly tracking/consent issue).</li>
 <li>Seasonality: last year same mahina sathe compare.</li>
@@ -94,19 +134,19 @@
 <li>Manual actions + Security issues (GSC).</li>
 <li>Competitors: SERP ma kon upar aavyu ane temni page tamara thi kem better chhe.</li>
 </ol>
-<h3>Pattern → sambhavit karan</h3>
+<h3 id="traffic-drop-s2">Pattern → sambhavit karan</h3>
 <ul>
 <li>Achanak site-wide 80% drop → technical (noindex/robots/migration) ke manual action</li>
 <li>Dhime dhime drop amuk pages par → content outdated / competitors better</li>
 <li>Update date sathe match → quality issue - content ane EEAT improve (quick fix nathi)</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="traffic-drop-s3">Checklist</h3>
 <ul>
 <li>Drop size + date + affected pages document karela chhe</li>
 <li>Evidence sathe cause hypothesis</li>
 <li>Client ne clear explanation + action plan</li>
 </ul>
-<h3>Added 8 Nov 2026 — 2026 Google updates timeline + AI check</h3>
+<h3 id="traffic-drop-s4">Added 8 Nov 2026 — 2026 Google updates timeline + AI check</h3>
 <ul>
 <li>2026 updates: Feb — Discover core update (~22 days) · March — core update + spam update · May — broad core update (complete ~2 June) · June — spam update (complete 26 June). Drop ni dates updates sathe match thay to: quick fix nahi, content quality + helpfulness improve karo ane next update sudhi monitor. Source: Google Search Status Dashboard.</li>
 <li>Impressions same pan clicks ghata hoy to: GSC → Search Generative AI report check karo — AI Overviews/AI Mode ma site cite thay pan clicks ochha aave (zero-click effect). Action: direct answers, clear structure, original data, brand building (05 → 07 ane 05 → 12 juo).</li>
@@ -143,11 +183,11 @@
       <div class="detail">
         <h2 class="sec" id="content-refresh">Content Refresh, Merge ya Remove (Decision)</h2>
 <p>Junu content ignore karvu = slow decline. Dar quarter content audit karo ane dar page mate ek decision lo: Keep, Update, Merge, Remove ke Create new.</p>
-<h3>Data levo</h3>
+<h3 id="content-refresh-s1">Data levo</h3>
 <ul>
 <li>Pages ni list (sitemap/crawl) + GSC clicks/impressions (12 months) + GA4 key events + backlinks</li>
 </ul>
-<h3>Decision rules (nirnayo na niyamo)</h3>
+<h3 id="content-refresh-s2">Decision rules (nirnayo na niyamo)</h3>
 <ol>
 <li>Keep: saru traffic + conversions - fakt monitor.</li>
 <li>Update: impressions chhe pan position 5-20 ke traffic ghatyu - content refresh (Strategy point 2).</li>
@@ -155,18 +195,18 @@
 <li>Remove: no traffic, no links, no business value, outdated - 404/410 (ya relevant hoy to 301).</li>
 <li>Create new: navu intent je koi page cover nathi kartu.</li>
 </ol>
-<h3>Cannibalization kevi rite olkhvo</h3>
+<h3 id="content-refresh-s3">Cannibalization kevi rite olkhvo</h3>
 <ul>
 <li>GSC → query select → Pages tab: same query par 2+ pages alternately rank thay</li>
 <li>Fakt be pages dekhay etle cannibalization nathi - intent same hoy ane banne weak hoy tyare j problem</li>
 </ul>
-<h3>Common mistakes (aa bhool na karo)</h3>
+<h3 id="content-refresh-s4">Common mistakes (aa bhool na karo)</h3>
 <ul>
 <li>Fakt word count vadharvu = refresh nathi; information gain (navu data, example, experience) add karo</li>
 <li>Date badli ne kai change nahi - misleading</li>
 <li>Traffic vagar pan conversion vala pages delete karva</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="content-refresh-s5">Checklist</h3>
 <ul>
 <li>Dar quarter ni content audit sheet: URL | metrics | nirnay | puru</li>
 <li>Merged pages par 301 + internal links updated</li>
@@ -203,14 +243,14 @@
       <div class="detail">
         <h2 class="sec" id="maintenance-routine">SEO Maintenance Routine (Weekly / Monthly / Quarterly)</h2>
 <p>SEO ek vaar karine bhuli javanu kaam nathi. Fixed routine hoy to problems nana hoy tyare j pakdaay - client pehla tame jaano.</p>
-<h3>Dar hafta (darek site par 30-45 min)</h3>
+<h3 id="maintenance-routine-s1">Dar hafta (darek site par 30-45 min)</h3>
 <ul>
 <li>GSC Performance: clicks/impressions trend, achanak ghatado?</li>
 <li>GSC Pages: nava indexing errors?</li>
 <li>Nava published pages: index thayela + 2-3 internal links (No Orphan doc)</li>
 <li>Clarity: 5-10 recordings</li>
 </ul>
-<h3>Dar mahine</h3>
+<h3 id="maintenance-routine-s2">Dar mahine</h3>
 <ul>
 <li>Screaming Frog crawl: 4xx, redirects, missing titles</li>
 <li>Core Web Vitals + PageSpeed key pages</li>
@@ -218,20 +258,20 @@
 <li>Backlinks: nava links, lost links</li>
 <li>Client report (11 → 06 Monthly Client Report Format)</li>
 </ul>
-<h3>Dar quarter</h3>
+<h3 id="maintenance-routine-s3">Dar quarter</h3>
 <ul>
 <li>Content audit (Refresh/Merge/Remove doc)</li>
 <li>Keyword mapping + competitor gap fari check</li>
 <li>Strategy review: su work karyu, su nahi, next quarter priorities</li>
 <li>Google updates nu review (Search Status Dashboard, Search Central blog)</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="maintenance-routine-s4">Checklist</h3>
 <ul>
 <li>Har client mate routine calendar ma set</li>
 <li>Maintenance log sheet: date | check | issue | action</li>
 </ul>
 <p>[Added] Daily/weekly/monthly reporting routine: 11 Client Reporting System → 00 Start Here.</p>
-<h3>Added 16 Nov 2026 - 10 sites rota + new links</h3>
+<h3 id="maintenance-routine-s5">Added 16 Nov 2026 - 10 sites rota + new links</h3>
 <p>10 sites rule: dar Monday 30 min x site (daily report joyu, 3 actions). Site ni list + owner + last-reviewed date ek sheet ma. Roj 5 min: live report (roj 5:30 PM IST update) - &lt;(team Drive ma doc)</p>
 <p>Update thayu hoy to: &lt;(team Drive ma doc)</p>
 <p>Dar mahine: brand check &lt;(team Drive ma doc) ane forecast review &lt;(team Drive ma doc)</p>
@@ -261,7 +301,7 @@
       </div>
 
       <div class="detail">
-        <h2 class="sec" id="core-update">Core Update Playbook</h2><h3>Steps</h3>
+        <h2 class="sec" id="core-update">Core Update Playbook</h2><h3 id="core-update-s1">Steps</h3>
 <ol>
 <li>Update nu status joyu: Google Search Status Dashboard (status.search.google.com). Update chalu hoy tyare changes na karo; complete thay pachhi data compare.</li>
 <li>Compare window: update shuru thaya pehla ni 1-2 week vs update complete thaya pachhi ni 1-2 week (GSC, same weekdays).</li>
@@ -272,7 +312,7 @@
 <li>Manual action? GSC → Security &amp; Manual actions check. Hoy to alag process (fix + reconsideration request).</li>
 <li>Wait: improvements nu asar ghanu vakhat laage; next core update sudhi pan. Result 4-6 week thi vadhu nu ummid rakho.</li>
 </ol>
-<h3>Client ne kevi rite kehvu</h3>
+<h3 id="core-update-s2">Client ne kevi rite kehvu</h3>
 <ul>
 <li>Data sathe: "Update ma aa pages gaya, aa karan lage chhe, aa plan chhe". Guarantee nahi (Google: koi pan #1 guarantee na aape).</li>
 </ul>
@@ -307,7 +347,7 @@
 <tr><td>Schema test</td><td>Rich Results Test, Schema validator</td><td>-</td></tr>
 <tr><td>Etsy research</td><td>Etsy search suggestions</td><td>Alura, eRank</td></tr>
 </table>
-<h3>Access security (dar site)</h3>
+<h3 id="tool-stack-s1">Access security (dar site)</h3>
 <ol>
 <li>Passwords password manager ma - sheet, doc ke chat ma nahi.</li>
 <li>Client ni property ma tamne "Owner" nahi, pan jaruri role (GSC: Full/Restricted, GA4: Editor). Offboarding vakhte remove.</li>
@@ -340,7 +380,7 @@
       </div>
 
       <div class="detail">
-        <h2 class="sec" id="handover">Handover & Offboarding</h2><h3>Handover pack</h3>
+        <h2 class="sec" id="handover">Handover & Offboarding</h2><h3 id="handover-s1">Handover pack</h3>
 <ol>
 <li>Access list (tool, email, role) - passwords nahi, password manager ma vault share.</li>
 <li>Report links: Tracking Sheet, live report, Looker, monthly report.</li>
@@ -349,13 +389,13 @@
 <li>Backlink list ane submissions done list.</li>
 <li>Open issues + next 30-day plan (3 priority).</li>
 </ol>
-<h3>Offboarding (jyare team member jay)</h3>
+<h3 id="handover-s2">Offboarding (jyare team member jay)</h3>
 <ul>
 <li>GSC, GA4, GTM, Semrush, hosting ma access remove ke transfer.</li>
 <li>Shared passwords change.</li>
 <li>Pending tasks owner badlo, 30 min walkthrough call.</li>
 </ul>
-<h3>Client offboarding</h3>
+<h3 id="handover-s3">Client offboarding</h3>
 <ul>
 <li>Ownership client ne transfer (GSC/GA4/GTM), final report, 30-day support note.</li>
 </ul>
@@ -396,7 +436,7 @@
 <tr><td>New page impressions 0</td><td>Index nathi / orphan</td><td>05/06 Orphan, sitemap, URL Inspection</td></tr>
 <tr><td>Branded queries up</td><td>Brand awareness vadhyu</td><td>06/08 Brand, keep going</td></tr>
 </table>
-<h3>Weekly Monday review (30 min)</h3>
+<h3 id="daily-report-s1">Weekly Monday review (30 min)</h3>
 <ol>
 <li>Month goal: pending clicks, roj ketla joiye (Super Report).</li>
 <li>Top 5 gainers + top 5 losers pages.</li>
@@ -423,7 +463,7 @@
       </div>
 
       <div class="detail">
-        <h2 class="sec" id="forecasting">SEO Forecasting</h2><h3>Steps</h3>
+        <h2 class="sec" id="forecasting">SEO Forecasting</h2><h3 id="forecasting-s1">Steps</h3>
 <ol>
 <li>Baseline: gaya 3 mahina na GSC clicks ane GA4 organic sessions, key events. Seasonality mate gaya varas same mahino.</li>
 <li>Growth source: (a) Quick wins position 4-20 pages, (b) navi pages (pillar + sub), (c) content improvement, (d) CTR sudharo.</li>
@@ -432,7 +472,7 @@
 <li>Target: navi site pehla 3 mahina ma ochho; 6 mahina pachhi vadhu. Existing site ma +10% to +30% mahine base par situation pramane.</li>
 <li>Review: dar mahine actual vs target, kaaran lakho; target adjust dar quarter.</li>
 </ol>
-<h3>Rules</h3>
+<h3 id="forecasting-s2">Rules</h3>
 <ul>
 <li>Koi ranking guarantee nahi. Estimate label lagavo.</li>
 <li>Period</li>
@@ -454,6 +494,8 @@
   </div>
 </footer>
 
+<script>window.SOP_BASE = "../../";</script>
 <script src="../../assets/app.js"></script>
+<script src="../../assets/search.js" defer></script>
 </body>
 </html>

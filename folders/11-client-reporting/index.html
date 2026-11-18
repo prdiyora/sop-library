@@ -18,9 +18,50 @@
       <span class="brand-mark">S</span>
       <span>SOP Library</span>
     </a>
+    <div class="searchbox">
+      <input type="search" class="search-input" placeholder="Search SOPs... (spelling off chale)" aria-label="Search SOPs" autocomplete="off">
+      <div class="search-results" hidden></div>
+    </div>
     <nav>
-      <a href="../../#library">All folders</a>
-      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Sections &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="#start-here">Start Here</a>
+          <a href="#tracking-sheet">Tracking Sheet SOP</a>
+          <a href="#tracking-template">01A Tracking Sheet TEMPLATE</a>
+          <a href="#dashboard-handbook">02 Dashboard Handbook</a>
+          <a href="#live-report">Live Report</a>
+          <a href="#looker">Looker Studio Dashboard</a>
+          <a href="#super-report">Super Report</a>
+          <a href="#monthly-report">Monthly Report</a>
+          <a href="#strategy-thinking">Report Strategy & Thinking</a>
+        </div>
+      </div>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Menu &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="../../train/">&#128642; SOP Train</a>
+        <a href="../../ai-visibility/">AI Visibility SOP</a>
+        <hr>
+        <a href="../../folders/01-client-ask/">01 Client Ask (R&D)</a>
+        <a href="../../folders/02-domain-research/">02 Domain Research</a>
+        <a href="../../folders/03-strategy/">03 Strategy</a>
+        <a href="../../folders/04-design-webdev/">04 Design & Web Dev</a>
+        <a href="../../folders/05-onpage-seo/">05 On-Page SEO</a>
+        <a href="../../folders/06-offpage-seo/">06 Off-Page SEO</a>
+        <a href="../../folders/07-setup-tracking/">07 Setup & Tracking</a>
+        <a href="../../folders/08-technical-seo/">08 Technical SEO</a>
+        <a href="../../folders/09-ecommerce-seo/">09 Ecommerce SEO</a>
+        <a href="../../folders/10-reporting-maintenance/">10 Reporting & Maintenance</a>
+        <a href="../../folders/11-client-reporting/">11 Client Reporting</a>
+        <a href="../../folders/12-seo-executive-rr/">12 SEO Executive RR</a>
+        <a href="../../folders/13-notebooklm-mindmaps/">13 NotebookLM Mind Maps</a>
+        <a href="../../folders/14-website-design/">14 Website Design</a>
+        <a href="../../folders/15-site-architecture/">15 Site Architecture</a>
+        <a href="../../folders/16-architecture-flows/">16 Architecture Flow PDFs</a>
+        </div>
+      </div>
+      <button class="theme-btn" aria-label="Switch to dark mode">&#9789;</button>
     </nav>
   </div>
 </header>
@@ -87,7 +128,7 @@
 <tr><td>3</td><td>SEO Live Report (Shu update karvu)</td><td>Data pramane aa week kaya pages rewrite, kaya nava blogs, kaya fixes?</td><td>Team + client (action plan)</td><td>WEEKLY (Monday) + MONTHLY ideas</td><td>Composio/Chrome + GA4 + Semrush → artifact / Next.js</td><td>SOP: (team Drive ma doc) Example: (team internal link)
 <tr><td>4</td><td>Looker Studio Dashboard</td><td>Traffic kyathi, ketlo, kya thi, kaya pages ane ketla goals?</td><td>Client (visual, monthly PDF)</td><td>Always live + monthly email</td><td>Looker Studio (GA4 + GSC + Sheet)</td><td>Build guide: (team Drive ma doc)
 </table>
-<h3>Ek client mate routine (badhu ek sathe)</h3>
+<h3 id="start-here-s1">Ek client mate routine (badhu ek sathe)</h3>
 <table>
 <tr><th>Kyare</th><th>Kaam</th><th>Report</th></tr>
 <tr><td>Roj (10 min)</td><td>GSC Daily row bharo (aaj − 2), Page Audit & Fix + Backlink log</td><td>1</td></tr>
@@ -103,7 +144,7 @@
 <table>
 <tr><th>Security Passwords/tokens kyarey sheet, doc, chat ke screenshot ma nahi. Tokens fakt Vercel Environment Variables ma; logins password manager ma.</th></tr>
 </table>
-<h3>Knowledge base</h3>
+<h3 id="start-here-s2">Knowledge base</h3>
 <p>SEO Executive RR (original, 8 tabs — Checklist, Seo Principal, Strategies, GEO &amp; AEO, Monitoring &amp; Analytics, Discover, Interview Answer, SEMrush): 12 SEO Executive RR (Knowledge Base) → &lt;(team Drive ma doc)</p>
 
       </div>
@@ -143,7 +184,7 @@
 <table>
 <tr><th>3 golden rules • Blue = tame bharo, Black = formula (haath na lagadvo). • Password kyarey sheet ma nahi — password manager ma. • Data na hoy to khali rakho, 0 nahi. GSC ma 2 divas no lag hoy chhe.</th></tr>
 </table>
-<h3>1. DAILY kaam (5–10 min per client)</h3>
+<h3 id="tracking-sheet-s1">1. DAILY kaam (5–10 min per client)</h3>
 <table>
 <tr><th>Tab</th><th>Shu bharvu</th><th>Kyathi (exact path)</th></tr>
 <tr><td>GSC Daily</td><td>Date (aaj − 2) ni row ma: Clicks, Impressions, Avg Position. CTR auto.</td><td>GSC → Performance → Search results → Date → Custom → ek j divas. Athva Report 2 dashboard (your-dashboard.vercel.app) ma te divas no data.</td></tr>
@@ -152,14 +193,14 @@
 <tr><td>Backlink</td><td>Aaje banavel links: platform, live URL, target page, anchor, type, DA, status.</td><td>Tamaru kaam; DA Moz checker thi</td></tr>
 <tr><td>Monthly Goal</td><td>Kai bharvanu nathi — "Pending clicks" ane "Roj ketla clicks joiye" auto update thay. Fakt joi lo.</td><td>Auto</td></tr>
 </table>
-<h3>2. WEEKLY kaam (dar Monday, 15 min)</h3>
+<h3 id="tracking-sheet-s2">2. WEEKLY kaam (dar Monday, 15 min)</h3>
 <table>
 <tr><th>Tab</th><th>Shu bharvu</th><th>Kyathi</th></tr>
 <tr><td>Technical SEO (left table)</td><td>Date + Not indexed + Indexed count</td><td>GSC → Indexing → Pages (upar na 2 numbers)</td></tr>
 <tr><td>Keyword Position</td><td>(Optional weekly) top 10 keywords ni position</td><td>Semrush → Position Tracking → Overview</td></tr>
 <tr><td>Blog Publish</td><td>Navi publish thayeli blog: Indexed? Y/N</td><td>GSC → URL Inspection</td></tr>
 </table>
-<h3>3. MONTHLY kaam (mahina ni 1–3 tarikh, 45–60 min per client)</h3>
+<h3 id="tracking-sheet-s3">3. MONTHLY kaam (mahina ni 1–3 tarikh, 45–60 min per client)</h3>
 <h4>3A. Dashboard tab — mahina na column ma</h4>
 <table>
 <tr><th>Row</th><th>Kyathi levu (step-by-step)</th><th>Dhyan</th></tr>
@@ -187,7 +228,7 @@
 <tr><td>Page Meta Audit</td><td>Navi pages add, filled Yes/No update; summary auto</td><td>Shopify/WordPress admin ke Screaming Frog export</td></tr>
 <tr><td>Competitor Analysis</td><td>QUARTERLY: top competitors refresh</td><td>Semrush → Organic Research → Competitors → Export</td></tr>
 </table>
-<h3>4. Semrush thi data — quick map</h3>
+<h3 id="tracking-sheet-s4">4. Semrush thi data — quick map</h3>
 <table>
 <tr><th>Jarur</th><th>Semrush tool</th><th>Sheet ma kya</th></tr>
 <tr><td>Domain strength</td><td>Domain Overview → Authority Score</td><td>Dashboard</td></tr>
@@ -199,7 +240,7 @@
 <tr><td>Navi keywords</td><td>Keyword Magic Tool</td><td>Keyword Research</td></tr>
 <tr><td>Site issues</td><td>Site Audit</td><td>Technical SEO note + Page Audit & Fix</td></tr>
 </table>
-<h3>5. GSC thi data — quick map</h3>
+<h3 id="tracking-sheet-s5">5. GSC thi data — quick map</h3>
 <table>
 <tr><th>Jarur</th><th>GSC jagya</th><th>Sheet ma kya</th></tr>
 <tr><td>Daily clicks/impr/position</td><td>Performance → Search results (date filter)</td><td>GSC Daily</td></tr>
@@ -209,7 +250,7 @@
 <tr><td>Blog performance</td><td>Performance → Pages filter</td><td>Blog Publish</td></tr>
 <tr><td>Navo page index?</td><td>URL Inspection</td><td>Blog Publish (Indexed?)</td></tr>
 </table>
-<h3>6. Common mistakes</h3>
+<h3 id="tracking-sheet-s6">6. Common mistakes</h3>
 <ul>
 <li>Daily CTR nu average lai ne monthly CTR lakhvu — khotu. CTR = mahina na clicks ÷ impressions (sheet auto kare chhe).</li>
 <li>Daily position nu average — khotu. GSC no month value lo.</li>
@@ -218,7 +259,7 @@
 <li>Semrush ma khoto country database — client na market no j lo.</li>
 <li>Passwords sheet ma — security risk. Sheet share thay chhe.</li>
 </ul>
-<h3>7. Checklist</h3>
+<h3 id="tracking-sheet-s7">7. Checklist</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 Daily: GSC Daily row (aaj − 2) bharyo</li>
@@ -262,14 +303,14 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 
       <div class="detail">
         <h2 class="sec" id="tracking-template">01A Tracking Sheet TEMPLATE</h2><p>Aa Google Sheet template chhe — website par teni structure ane steps. Original Drive ma "Make a copy" kari ne darek client mate vaprvanu.</p>
-<h3>Setup — 4 steps</h3>
+<h3 id="tracking-template-s1">Setup — 4 steps</h3>
 <ol>
 <li>Drive ma template kholi <strong>"Make a copy"</strong> karo — darek client mate alag copy.</li>
 <li>Dashboard tab ma <strong>C1</strong> ma domain ane <strong>D2</strong> ma pehlo mahino (e.g. 01-Nov-2026) bharo. Baki badhi dates ane months automatic bane.</li>
 <li><strong>Blue text</strong> = tame bharvo chho. <strong>Gray italic row</strong> = automatic, touch na karvo.</li>
 <li><strong>Password aa sheet ma KYAREY na lakho.</strong> Login details password manager ma rakho.</li>
 </ol>
-<h3>Tabs — kayu tab kyare update karvu ane data kyathi lavvo</h3>
+<h3 id="tracking-template-s2">Tabs — kayu tab kyare update karvu ane data kyathi lavvo</h3>
 <table>
 <tr><th>Tab</th><th>Kyare update</th><th>Data kyathi</th></tr>
 <tr><td>GSC Daily</td><td>DAILY (aaj − 2 divas ni date)</td><td>GSC → Performance → Search results → Date filter ek divas · ke Report 2 dashboard</td></tr>
@@ -322,10 +363,10 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <h2 class="sec" id="dashboard-handbook">Client A – GSC + Vercel Full Implementation Handbook</h2>
 <p>Gujarati-English | Updated 06 Nov 2026</p>
 <p>Boundary: Current Netlify production is untouched. Vercel is Preview/migration only. Do not change production branch, domain, alias, or promote without owner approval.</p>
-<h3>0. One-line architecture</h3>
+<h3 id="dashboard-handbook-s1">0. One-line architecture</h3>
 <p>GSC → daily scheduler (05:30 IST) → GitHub main/data.json → Vercel API → dashboard.</p>
 <p>Vercel is hosting/deployment + serverless API. It is not the current GSC data scheduler. Existing scheduled automation fetches 13 GSC properties, merges historical rows and commits data.json.</p>
-<h3>1. Current known setup</h3>
+<h3 id="dashboard-handbook-s2">1. Current known setup</h3>
 <table>
 <tr><th>Item</th><th>Value</th></tr>
 <tr><td>GitHub repo</td><td>client-a-store/gsc (private)</td></tr>
@@ -343,7 +384,7 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <tr><td>Scheduler</td><td>Daily 05:30 Asia/Kolkata</td></tr>
 </table>
 <p>Last documented manual GSC sync: 04 Nov 2026; commit (commit ref). Vercel Preview health passed after that sync (13/13 projects valid). Netlify live endpoint was not independently verified in that environment; this does not mean Netlify is down.</p>
-<h3>2. What Vercel does</h3>
+<h3 id="dashboard-handbook-s3">2. What Vercel does</h3>
 <ul>
 <li>Hosts static HTML/CSS/JS.</li>
 <li>Connects to GitHub and deploys on push.</li>
@@ -353,7 +394,7 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <li>Environment Variables store secrets server-side.</li>
 </ul>
 <p>Important: Current 05:30 GSC collection is done by existing scheduled automation, not Vercel Cron. A Vercel Cron hitting /api/gsc-health only checks data; it does not fetch GSC or update GitHub.</p>
-<h3>3. Connect the repo to Vercel</h3>
+<h3 id="dashboard-handbook-s4">3. Connect the repo to Vercel</h3>
 <ol>
 <li>Sign in at <a href="https://vercel.com/dashboard">https://vercel.com/dashboard</a>.</li>
 <li>Select team (team slug), not personal account.</li>
@@ -375,7 +416,7 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 </ul>
 <p>Example push:</p>
 <p>git checkout migration/vercel git pull origin migration/vercel git status git diff git add api/gsc.js api/gsc-health.js index.html git commit -m "fix: update GSC dashboard API" git push origin migration/vercel</p>
-<h3>4. GitHub token → Vercel Environment Variable</h3>
+<h3 id="dashboard-handbook-s5">4. GitHub token → Vercel Environment Variable</h3>
 <p>The API reads private GitHub main/data.json, so Vercel needs a server-side GITHUB_TOKEN.</p>
 <ol>
 <li>GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.</li>
@@ -389,14 +430,14 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <li>Test /api/gsc-health; expected ok:true, 13 expected/checked projects, allProjectsValid true.</li>
 </ol>
 <p>Token must never be returned to browser. Rotate it if exposed or expired.</p>
-<h3>5. API route map</h3>
+<h3 id="dashboard-handbook-s6">5. API route map</h3>
 <table>
 <tr><th>File</th><th>Route</th><th>Purpose</th></tr>
 <tr><td>api/gsc.js</td><td>/api/gsc?site=Client A&start=2026-10-01&end=2026-10-31</td><td>Reads private GitHub snapshot and filters daily rows</td></tr>
 <tr><td>api/gsc-health.js</td><td>/api/gsc-health</td><td>Validates 13 projects and numeric daily rows</td></tr>
 <tr><td>index.html</td><td>/</td><td>Dashboard UI; calls /api/gsc</td></tr>
 </table>
-<h3>6. Copy/paste: api/gsc.js</h3>
+<h3 id="dashboard-handbook-s7">6. Copy/paste: api/gsc.js</h3>
 <p>Create file path exactly api/gsc.js:</p>
 <p>const SITES = { /* mapping removed */ };</p>
 <p>export default async function handler(req, res) { res.setHeader("Cache-Control", "no-store, max-age=0"); res.setHeader("Content-Type", "application/json; charset=utf-8"); if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." });</p>
@@ -409,7 +450,7 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 </ul>
 <p>const daily = (project.daily || []) .filter(row =&gt; row.date &gt;= start &amp;&amp; row.date &lt;= end) .map(row =&gt; ({ date: row.date, clicks: Number(row.clicks || 0), impressions: Number(row.impressions || 0), ctr: Number(row.ctr || 0), position: Number(row.position || 0) }));</p>
 <p>return res.status(200).json({ ok: true, project: project.name, siteUrl: project.siteUrl, start, end, fetchedAt: snapshot.updatedAt, daily, pages: [], source: "github-api-private-snapshot" }); } catch (error) { console.error("GSC snapshot load failed:", error); return res.status(502).json({ ok: false, error: "Could not load the scheduled GSC snapshot. Check the GitHub token permissions and Vercel Function logs." }); } }</p>
-<h3>7. Copy/paste: api/gsc-health.js</h3>
+<h3 id="dashboard-handbook-s8">7. Copy/paste: api/gsc-health.js</h3>
 <p>Create file path exactly api/gsc-health.js:</p>
 <p>const EXPECTED = ["Client A","client_d","client_d","client_e","client_f","client_g","Client Bbox","client_h","client_i","client_j","client_k","client_l","client_m"];</p>
 <p>export default async function handler(req, res) { res.setHeader("Cache-Control", "no-store, max-age=0"); res.setHeader("Content-Type", "application/json; charset=utf-8"); if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." }); const token = process.env.GITHUB_TOKEN; if (!token) return res.status(500).json({ ok: false, error: "GitHub read token is not configured." }); try { const url = "<a href="https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=">https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=</a>"</p>
@@ -417,15 +458,15 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <li>Date.now(); const response = await fetch(url, { cache: "no-store", headers: { Accept: "application/vnd.github+json", Authorization: "Bearer " + token, "X-GitHub-Api-Version": "2022-11-28", "Cache-Control": "no-cache, no-store", Pragma: "no-cache" } }); if (!response.ok) throw new Error("GitHub snapshot request failed ("</li>
 <li>response.status + ")."); const file = await response.json(); if (file.encoding !== "base64" || !file.content) throw new Error("GitHub snapshot content is missing or not base64 encoded."); const snapshot = JSON.parse(Buffer.from(file.content.replace(/\s/g, ""), "base64").toString("utf8")); const projects = snapshot.projects || {}; const checks = EXPECTED.map(key =&gt; { const project = projects[key]; const daily = project &amp;&amp; Array.isArray(project.daily) ? project.daily : []; const latestDate = daily.reduce((latest, row) =&gt; row.date &gt; latest ? row.date : latest, ""); const validRows = daily.every(row =&gt; /^\d{4}-\d{2}-\d{2}$/.test(row.date) &amp;&amp; Number.isFinite(Number(row.clicks)) &amp;&amp; Number.isFinite(Number(row.impressions)) &amp;&amp; Number.isFinite(Number(row.ctr)) &amp;&amp; Number.isFinite(Number(row.position)) ); return { key, present: Boolean(project), rows: daily.length, latestDate, validRows }; }); const ok = checks.every(item =&gt; item.present &amp;&amp; item.validRows); return res.status(ok ? 200 : 503).json({ ok, source: "github-api-private-snapshot", branch: "main", fetchedAt: snapshot.updatedAt || null, expectedProjects: EXPECTED.length, checkedProjects: checks.length, allProjectsValid: ok, projects: checks }); } catch (error) { console.error("GSC health check failed:", error); return res.status(502).json({ ok: false, error: "Could not verify the GitHub GSC snapshot. Check GitHub token permissions and Vercel Function logs." }); } }</li>
 </ul>
-<h3>8. data.json schema</h3>
+<h3 id="dashboard-handbook-s9">8. data.json schema</h3>
 <p>Root keys: updatedAt, projects. Each project has name, siteUrl, daily. Daily fields: date, clicks, impressions, ctr, position. CTR stored as decimal ratio (0.01 = 1%).</p>
 <p>{ "updatedAt": "2026-11-04T05:55:52.339Z", "projects": { "Client A": { "name": "Client A Products", "siteUrl": "<a href="https://client-a-store.com/">https://client-a-store.com/</a>", "daily": [ {"date":"2026-11-01","clicks":29,"impressions":2500,"ctr":0.0116,"position":8.4} ] } } }</p>
 <p>This is a one-project abbreviated schema sample, not full production data.</p>
-<h3>9. Front-end API fetch example</h3>
+<h3 id="dashboard-handbook-s10">9. Front-end API fetch example</h3>
 <p>Browser calls the same-origin Vercel API; never call GitHub private API from browser:</p>
 <p>async function loadGsc(site, start, end) { const params = new URLSearchParams({ site, start, end }); const response = await fetch(`/api/gsc?${params.toString()}`, { method: "GET", cache: "no-store", headers: { "Accept": "application/json" } }); const data = await response.json(); if (!response.ok || !data.ok) { throw new Error(data.error || `GSC API failed (${response.status})`); } return data; }</p>
 <p>This is a reference helper; preserve existing dashboard rendering logic in index.html.</p>
-<h3>10. Daily 05:30 scheduler workflow</h3>
+<h3 id="dashboard-handbook-s11">10. Daily 05:30 scheduler workflow</h3>
 <ol>
 <li>05:30 Asia/Kolkata trigger.</li>
 <li>Query 13 GSC properties.</li>
@@ -437,9 +478,9 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <li>Smoke-test /api/gsc and dashboard.</li>
 </ol>
 <p>GSC reporting can be delayed. Do not fill missing dates with zero. Next scheduled run should backfill/merge when data becomes available. Existing scheduler ID: (scheduler ID). Do not create duplicate schedules unless replacing the current workflow with an approved tested migration.</p>
-<h3>11. Vercel Cron – optional, not current data-fetch system</h3>
+<h3 id="dashboard-handbook-s12">11. Vercel Cron – optional, not current data-fetch system</h3>
 <p>Vercel Cron sends an HTTP request to a deployed route. It does not magically connect GSC or write GitHub. If a cron calls /api/gsc-health, it only checks the snapshot. Full GSC ETL requires OAuth/service-account auth, API query code, merge/write logic, retries, idempotency/locking, and monitoring. Keep current working scheduler until replacement is tested end-to-end.</p>
-<h3>12. Verification URLs</h3>
+<h3 id="dashboard-handbook-s13">12. Verification URLs</h3>
 <table>
 <tr><th>Check</th><th>Request</th><th>Expected</th></tr>
 <tr><td>Homepage</td><td>Preview URL /</td><td>HTTP 200, HTML</td></tr>
@@ -449,7 +490,7 @@ Monthly report (10 Reporting → 01) ane Report 2/3 sathe numbers match</li>
 <tr><td>Unknown site</td><td>site=unknown with valid dates</td><td>HTTP 400</td></tr>
 <tr><td>One date missing</td><td>only start supplied</td><td>HTTP 400</td></tr>
 </table>
-<h3>13. Daily checklist</h3>
+<h3 id="dashboard-handbook-s14">13. Daily checklist</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 Today's 05:30 run completed?</li>
@@ -468,7 +509,7 @@ Health endpoint HTTP 200 / ok true / allProjectsValid true?</li>
 <li><input type="checkbox" disabled="" />
 GA4/Shopify business conversions sourced separately?</li>
 </ul>
-<h3>14. Troubleshooting</h3>
+<h3 id="dashboard-handbook-s15">14. Troubleshooting</h3>
 <table>
 <tr><th>Error</th><th>Likely cause</th><th>Fix</th></tr>
 <tr><td>API 500 token missing</td><td>Preview env var missing</td><td>Add GITHUB_TOKEN to Preview; redeploy</td></tr>
@@ -481,7 +522,7 @@ GA4/Shopify business conversions sourced separately?</li>
 <tr><td>Preview current, Netlify stale</td><td>Separate hosting pipelines</td><td>Do not assume Preview updates Netlify</td></tr>
 <tr><td>Latest date absent</td><td>GSC delay</td><td>Leave absent; backfill on next run</td></tr>
 </table>
-<h3>15. Security</h3>
+<h3 id="dashboard-handbook-s16">15. Security</h3>
 <ul>
 <li>No secrets in code/docs/chat/screenshots.</li>
 <li>GitHub fine-grained token limited to selected repo + Contents Read-only.</li>
@@ -492,7 +533,7 @@ GA4/Shopify business conversions sourced separately?</li>
 <li>Do not deploy unreviewed code with production secrets.</li>
 <li>Never promote Preview or change domain/alias without approval.</li>
 </ul>
-<h3>16. GSC metrics vs business goals</h3>
+<h3 id="dashboard-handbook-s17">16. GSC metrics vs business goals</h3>
 <ul>
 <li>Clicks, impressions, CTR, position → GSC.</li>
 <li>Organic Search sessions/users and engagement → GA4.</li>
@@ -502,9 +543,9 @@ GA4/Shopify business conversions sourced separately?</li>
 <li>Use GSC period-level average position; don't average daily average positions manually.</li>
 <li>Example goal: 700 clicks baseline, 770 target (+10%); actual/target × 100 = achievement. Targets are team-defined.</li>
 </ul>
-<h3>17. Production cutover / rollback</h3>
+<h3 id="dashboard-handbook-s18">17. Production cutover / rollback</h3>
 <p>Current state is Preview only. Before cutover: test all 13 properties, historical data, API, mobile/desktop, analytics, env vars, domain, SSL, and rollback. Get written approval for production branch/domain/alias changes. Keep existing Netlify deployment available until Vercel production proven stable. Do not change production in this SOP.</p>
-<h3>18. Minimum-deployment strategy – reusable across all projects</h3>
+<h3 id="dashboard-handbook-s19">18. Minimum-deployment strategy – reusable across all projects</h3>
 <p>Goal: reliable dashboard with minimum unnecessary Vercel deployments, GitHub API reads/writes, GSC queries, automation runs and AI/token usage.</p>
 <h4>18.1 Recommended architecture: deploy code rarely, update data separately</h4>
 <table>
@@ -562,7 +603,7 @@ GA4/Shopify business conversions sourced separately?</li>
 <li>Current API reads private GitHub main/data.json per request. The safest savings are reducing duplicate browser fetches, not removing authorization or hiding failures.</li>
 </ul>
 <p>Reusable principle: one scheduler → one batch fetch → one merge → one commit → one health check; deploy only when code changes.</p>
-<h3>19. Onboarding checklist</h3>
+<h3 id="dashboard-handbook-s20">19. Onboarding checklist</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 GitHub repo and correct branch access</li>
@@ -585,7 +626,7 @@ GA4/Shopify conversion sources documented</li>
 <li><input type="checkbox" disabled="" />
 Production remains untouched without approval</li>
 </ul>
-<h3>Official references</h3>
+<h3 id="dashboard-handbook-s21">Official references</h3>
 <ul>
 <li>Vercel Deployments: <a href="https://vercel.com/docs/deployments">https://vercel.com/docs/deployments</a></li>
 <li>Vercel Git: <a href="https://vercel.com/docs/git">https://vercel.com/docs/git</a></li>
@@ -631,7 +672,7 @@ Production remains untouched without approval</li>
 <h2 class="sec" id="live-report">SEO Live Report — Universal SOP (koi pan client / project mate)</h2>
 <p>Aa SOP ma Client A Products no report jem banavyo, e j flow step-by-step lakhyo chhe. Navo client hoy to aa j order ma follow karo: Setup → Data → Analysis → Content → Build → QA → Deploy.</p>
 <hr />
-<h3>0. Akho flow ek nazar ma</h3>
+<h3 id="live-report-s1">0. Akho flow ek nazar ma</h3>
 <p>[Client profile]  →  [GSC data: 7 / 28 / 90 days]  →  [GA4 Organic data] ↓                       ↓                              ↓ [Site live audit: top 10 pages]  →  [Analysis rules: what changed, striking, low CTR] ↓ [Rewrites + New ideas + Fixes (data na reason sathe)] ↓ [Website build: Next.js (live) ane/athva HTML artifact (snapshot)] ↓ [QA checklist]  →  [GitHub → Vercel]  →  [Client ne link]</p>
 <p>Be output banave chhe:</p>
 <table>
@@ -640,7 +681,7 @@ Production remains untouched without approval</li>
 <tr><td>Snapshot artifact / HTML</td><td>Aaj na saacha numbers HTML ma fix</td><td>Turant client ne batavvu hoy, ke Composio connect na hoy</td></tr>
 </table>
 <hr />
-<h3>1. Golden rules (kyarey todvana nahi)</h3>
+<h3 id="live-report-s2">1. Golden rules (kyarey todvana nahi)</h3>
 <ol>
 <li>Ek pan number banavvano nahi. Darek number GSC ke GA4 mathi j aavvo joie. Dummy/demo data hoy to page par upar mota akshar ma "DEMO DATA" lakho.</li>
 <li>Saachu account check karo. Composio / Chrome je Google account thi connected chhe ema client ni property chhe ke nahi, e pehla check karo (Client A vakhte connected account ma Client A j na hatu).</li>
@@ -650,7 +691,7 @@ Production remains untouched without approval</li>
 <li>Content (rewrites/ideas/fixes) ma darek suggestion sathe "Why (data)" reason — impressions, position, CTR na number sathe.</li>
 </ol>
 <hr />
-<h3>2. Step 1 — Client profile (5 minute)</h3>
+<h3 id="live-report-s3">2. Step 1 — Client profile (5 minute)</h3>
 <p>Navo client hoy to aa table bharo:</p>
 <table>
 <tr><th>Field</th><th>Example (Client A)</th><th>Tamaro client</th></tr>
@@ -668,7 +709,7 @@ Production remains untouched without approval</li>
 </table>
 <p>GA4 property ID kevi rite shodhvu: GA4 kholo → property picker ma client nu naam search karo → URL ma #/a&lt;ACCOUNT&gt;p&lt;PROPERTY&gt;/ dekhashe. p pachhi no number e property ID chhe.</p>
 <hr />
-<h3>3. Step 2 — Date ranges nakki karo</h3>
+<h3 id="live-report-s4">3. Step 2 — Date ranges nakki karo</h3>
 <p>GSC data ma 2 divas no lag hoy chhe, etle end date = aaj − 2 divas.</p>
 <table>
 <tr><th>Period</th><th>Current</th><th>Comparison (same length, just pehla)</th></tr>
@@ -678,7 +719,7 @@ Production remains untouched without approval</li>
 </table>
 <p>Example (end = 2 Nov 2026): 7d = Oct 27–Nov 2 vs Oct 20–26 · 28d = Oct 6–Nov 2 vs Sep 8–Oct 5 · 90d = Aug 5–Nov 2 vs May 7–Aug 4.</p>
 <hr />
-<h3>4. Step 3 — GSC data levo</h3>
+<h3 id="live-report-s5">4. Step 3 — GSC data levo</h3>
 <h4>Option A: Composio thi (automatic, live website mate)</h4>
 <ol>
 <li>Composio ma google_search_console connect karo — je Google account ma client ni property chhe e j account thi.</li>
@@ -710,7 +751,7 @@ Production remains untouched without approval</li>
 <li>Totals "65K" jem rounded aave chhe — e j rite batavo, "approx" lakho.</li>
 </ul>
 <hr />
-<h3>5. Step 4 — GA4 data levo</h3>
+<h3 id="live-report-s6">5. Step 4 — GA4 data levo</h3>
 <h4>Option A: Composio</h4>
 <p>GOOGLE_ANALYTICS_LIST_ACCOUNT_SUMMARIES → property check. Pachhi GOOGLE_ANALYTICS_RUN_REPORT:</p>
 <p>{ "property": "properties/558018808", "dateRanges": [{"startDate":"2026-10-06","endDate":"2026-11-02"}], "dimensions": [{"name":"landingPage"}], "metrics": [{"name":"sessions"},{"name":"activeUsers"},{"name":"transactions"},{"name":"purchaseRevenue"}], "dimensionFilter": {"filter":{"fieldName":"sessionDefaultChannelGroup","stringFilter":{"value":"Organic Search"}}}, "limit": 500 }</p>
@@ -725,7 +766,7 @@ Production remains untouched without approval</li>
 </ol>
 <p>Check karo: Total revenue ane Key events 0 hoy to → ecommerce tracking set nathi. Report ma "Orders/Revenue: 0 — tracking not set up" lakho ane Fixes ma High priority.</p>
 <hr />
-<h3>6. Step 5 — Site live audit (top 10 pages)</h3>
+<h3 id="live-report-s7">6. Step 5 — Site live audit (top 10 pages)</h3>
 <p>GSC mathi top impressions vali ~10 pages lo (homepage, top collections, top blogs, low-CTR pages). Client ni site browser ma kholi ne same-origin JS chalavo (server mathi fetch block thay to aa j rasto):</p>
 <p>const U=["/","/collections/x","/blogs/news/y"];const out=[]; for(const u of U){const h=await (await fetch(u)).text();const d=new DOMParser().parseFromString(h,'text/html'); const m=d.querySelector('main')||d.body;const imgs=[...m.querySelectorAll('img')]; out.push({u,t:d.title.trim(),tl:d.title.trim().length, md:(d.querySelector('meta[name=description]')?.content||'').trim(), h1:[...d.querySelectorAll('h1')].map(x=&gt;x.textContent.trim()), words:(m.textContent||'').trim().split(/\s+/).length, img:imgs.length,noalt:imgs.filter(i=&gt;!(i.getAttribute('alt')||'').trim()).length, schema:[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=&gt;{try{const j=JSON.parse(s.textContent);return [].concat(j['']||j['']?.map(x=&gt;x[''])).join('/')}catch{return '?'}}), canonical:d.querySelector('link[rel=canonical]')?.href})} const p=document.createElement('pre');p.textContent=JSON.stringify(out);document.body.replaceChildren(p);</p>
 <h4>Audit checklist (darek page par)</h4>
@@ -742,7 +783,7 @@ Production remains untouched without approval</li>
 <tr><td>(not set) landing page</td><td>Ghana sessions</td><td>Low</td></tr>
 </table>
 <hr />
-<h3>7. Step 6 — Analysis rules (data mathi decision)</h3>
+<h3 id="live-report-s8">7. Step 6 — Analysis rules (data mathi decision)</h3>
 <p>Aa rules code ma pan chhe (lib/analyze.js) ane manually pan aa j rite karo:</p>
 <table>
 <tr><th>Section</th><th>Rule</th></tr>
@@ -760,7 +801,7 @@ Production remains untouched without approval</li>
 <tr><td>Keyword band</td><td>≤3 Top 3 · ≤10 Page 1 · ≤20 Page 2 · >20 Beyond</td></tr>
 </table>
 <hr />
-<h3>8. Step 7 — Content sections (rewrites, ideas, fixes)</h3>
+<h3 id="live-report-s9">8. Step 7 — Content sections (rewrites, ideas, fixes)</h3>
 <h4>8.1 Page rewrites for this week (3 pages)</h4>
 <p>Kai page pasand karvi:</p>
 <ol>
@@ -791,7 +832,7 @@ Production remains untouched without approval</li>
 <h4>8.3 Fixes spotted on the site</h4>
 <p>Table format: Priority | Page | Problem | Reason | Fix / rewrite (exact navo title/meta/alt/H1 lakho, fakt "fix karo" nahi).</p>
 <hr />
-<h3>9. Step 8 — Report structure (website sections, upar thi niche)</h3>
+<h3 id="live-report-s10">9. Step 8 — Report structure (website sections, upar thi niche)</h3>
 <ol>
 <li>Hero — client, date range vs comparison, 7/28/90 buttons, Download PDF</li>
 <li>Overview — Clicks, Impressions, CTR, Avg position (prev + % change) + trend chart</li>
@@ -812,7 +853,7 @@ Production remains untouched without approval</li>
 </ol>
 <p>Client type pramane badlo: Lead-gen → revenue ni jagyae form submits/calls · Local → city keywords · Blog site → GA4 revenue kadhi nakho.</p>
 <hr />
-<h3>10. Step 9 — Build</h3>
+<h3 id="live-report-s11">10. Step 9 — Build</h3>
 <h4>10.1 Live website (Next.js + Composio + ChatGPT)</h4>
 <p>Folder structure:</p>
 <p>seo-report/ ├─ app/ │  ├─ page.js            ← UI (tabs, tables, buttons) │  ├─ layout.js          ← noindex meta │  ├─ globals.css        ← brand colour, dark mode, print CSS │  └─ api/ │     ├─ report/route.js ← GSC + GA4 fetch via Composio (?days=7|28|90) │     └─ ai/route.js     ← rewrites / ideas / fixes via ChatGPT + live page audit ├─ lib/ │  ├─ composio.js        ← Composio execute + date ranges │  └─ analyze.js         ← blog/other split, branded, what-changed rules ├─ .env.example ├─ package.json └─ README.md</p>
@@ -847,7 +888,7 @@ Production remains untouched without approval</li>
 <li>Artifact tarike publish karo ke ZIP ma index.html tarike mukho.</li>
 </ol>
 <hr />
-<h3>11. Step 10 — QA checklist (publish pehla)</h3>
+<h3 id="live-report-s12">11. Step 10 — QA checklist (publish pehla)</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 Darek number source sathe match (GSC/GA4 ma 3–4 random numbers cross-check)</li>
@@ -873,7 +914,7 @@ Links client ni site par saacha khule chhe</li>
 Dark mode ma text vanchay chhe</li>
 </ul>
 <hr />
-<h3>12. Step 11 — Deploy (GitHub → Vercel)</h3>
+<h3 id="live-report-s13">12. Step 11 — Deploy (GitHub → Vercel)</h3>
 <ol>
 <li>GitHub → New private repo (e.g. client-seo-report).</li>
 <li>ZIP extract karo → files upload karo (ZIP nahi). node_modules ane .next na mukvana.</li>
@@ -884,7 +925,7 @@ Dark mode ma text vanchay chhe</li>
 </ol>
 <p>Note: repo private chhe pan live link jene male e joi shake. noindex thi Google ma nahi aave. Client data chhe etle REPORT_PASSWORD (ke Vercel password protection) jaruri add karo.</p>
 <hr />
-<h3>13. Common problems &amp; solutions (Client A mathi shikhyu)</h3>
+<h3 id="live-report-s14">13. Common problems &amp; solutions (Client A mathi shikhyu)</h3>
 <table>
 <tr><th>Problem</th><th>Karan</th><th>Solution</th></tr>
 <tr><td>Composio ma client ni site nathi</td><td>Biju Google account connected</td><td>Client access vala account thi navu connection (COMPOSIO_MANAGE_CONNECTIONS → add)</td></tr>
@@ -898,11 +939,11 @@ Dark mode ma text vanchay chhe</li>
 <tr><td>Demo data thi client confuse</td><td>Preview ma fake numbers</td><td>Hamesha saacha data thi j final banavo</td></tr>
 </table>
 <hr />
-<h3>14. Navo report — ready prompt (copy-paste)</h3>
+<h3 id="live-report-s15">14. Navo report — ready prompt (copy-paste)</h3>
 <p>Act as Senior SEO Analyst + Dashboard Developer. Client: &lt;NAME&gt; | Site: &lt;URL&gt; | GSC property: &lt;PROPERTY&gt; | GA4 property: &lt;ID&gt; Platform: &lt;Shopify/WordPress&gt; | Market: &lt;USA/UK/IN&gt; | Brand terms: &lt;a,b,c&gt;</p>
 <p>Follow my "SEO Live Report SOP": 1. GSC data 7/28/90 days (pages + queries, with comparison) — Composio ke Chrome. 2. GA4 Organic Search landing pages: sessions, users, orders, revenue. 3. Live audit of top 10 pages (title, meta, H1, alt, schema). 4. Sections: Overview, Blog traffic, Other pages, What changed, Keywords (Branded/Non-branded), GA4 blog + other landing revenue, Page rewrites (full + SEO-focused), New blog &amp; collection ideas (90d, with reasons), Fixes spotted (priority + reason + exact fix). 5. Never invent numbers. Label every period. 6. Output: artifact (snapshot) + Next.js ZIP for GitHub/Vercel. Chat with me in Gujlish; report content in English.</p>
 <hr />
-<h3>15. Monthly routine (live website hoy to)</h3>
+<h3 id="live-report-s16">15. Monthly routine (live website hoy to)</h3>
 <table>
 <tr><th>Kyare</th><th>Shu karvu</th><th>Time</th></tr>
 <tr><td>Darek Monday</td><td>7-day view kholo → What changed + Striking distance note karo</td><td>10 min</td></tr>
@@ -946,7 +987,7 @@ Dark mode ma text vanchay chhe</li>
 <table>
 <tr><th>Ek var banavo, pachhi copy Pehla ek client mate puro dashboard banavo = Master Template. Navo client: report → ⋮ → Make a copy → navi copy ma data sources badlo (GA4 property, GSC property, tracking sheet). 10 minute ma navo dashboard taiyar.</th></tr>
 </table>
-<h3>1. Data sources (3 connect karo)</h3>
+<h3 id="looker-s1">1. Data sources (3 connect karo)</h3>
 <table>
 <tr><th>Source</th><th>Connector</th><th>Setting</th><th>Shu mate</th></tr>
 <tr><td>GA4</td><td>Google Analytics</td><td>Client ni GA4 property</td><td>Sessions, users, channels, source, country, device, landing page, key events, revenue</td></tr>
@@ -955,7 +996,7 @@ Dark mode ma text vanchay chhe</li>
 <tr><td>Tracking Sheet</td><td>Google Sheets</td><td>Report 1 sheet → "Monthly Goal" tab (ane Dashboard tab)</td><td>Target vs actual, Semrush/Moz monthly numbers</td></tr>
 </table>
 <p>Steps: lookerstudio.google.com → Blank report → Add data → upar na connectors ek pachhi ek → Add to report.</p>
-<h3>2. Calculated fields (ek var banavo)</h3>
+<h3 id="looker-s2">2. Calculated fields (ek var banavo)</h3>
 <table>
 <tr><th>Field name</th><th>Data source</th><th>Formula</th><th>Kem</th></tr>
 <tr><td>Branded vs Non-branded</td><td>GSC Site</td><td>CASE WHEN REGEXP_MATCH(LOWER(Query), ".*(brandname|brand name).*") THEN "Branded" ELSE "Non-branded" END</td><td>Brand traffic alag (Report 3 golden rule 5). brandname badlo.</td></tr>
@@ -964,7 +1005,7 @@ Dark mode ma text vanchay chhe</li>
 <tr><td>Traffic Source Group</td><td>GA4</td><td>CASE WHEN REGEXP_MATCH(Session source, ".*(chatgpt|openai|perplexity|gemini|copilot|claude).*") THEN "AI Assistants" ELSE Session default channel group END</td><td>Backup — GA4 native "AI Assistant" channel (May 2026) sathe Perplexity jeva sources pan cover kare</td></tr>
 </table>
 <p>Note: field names tamari connector language pramane thoda alag dekhay — dropdown mathi select karo. Regex ma site na URL pattern (Shopify /collections/, WordPress /product-category/) pramane badlo.</p>
-<h3>3. Pages ane charts (aa j order ma banavo)</h3>
+<h3 id="looker-s3">3. Pages ane charts (aa j order ma banavo)</h3>
 <h4>Page 1 — Overview (client mate sauthi important)</h4>
 <ul>
 <li>Header bar: client logo + naam + "Organic SEO Dashboard" + Date range control (default: Last 28 days, comparison: Previous period).</li>
@@ -1010,7 +1051,7 @@ Dark mode ma text vanchay chhe</li>
 <li>Combo chart (Google Sheet): Month → Target clicks vs Actual clicks + Achievement % (Report 1 "Monthly Goal" tab).</li>
 <li>Scorecards (Sheet): Authority Score, Referring Domains, DA — chhello mahino.</li>
 </ul>
-<h3>4. Design rules (attractive + saaf)</h3>
+<h3 id="looker-s4">4. Design rules (attractive + saaf)</h3>
 <ul>
 <li>Theme: Theme and layout → Extract theme from image (client logo) → brand colors. Background white/light, 1 primary + 1 accent color.</li>
 <li>Layout: upar header bar (logo + date control) badha pages par same — header select → "Make report-level".</li>
@@ -1021,13 +1062,13 @@ Dark mode ma text vanchay chhe</li>
 <li>Number format: CTR %, revenue currency, position 1 decimal.</li>
 <li>Mobile: View mode ma phone par check karo.</li>
 </ul>
-<h3>5. Sharing ane schedule</h3>
+<h3 id="looker-s5">5. Sharing ane schedule</h3>
 <ul>
 <li>Share → client email → Viewer (Editor kyarey nahi).</li>
 <li>Share → Schedule email delivery → dar mahine 3 tarikh → PDF client + manager ne.</li>
 <li>Report settings ma data freshness (GA4 ~12 hours) — "Data last updated" text box muko.</li>
 </ul>
-<h3>6. Dhyan rakho (common problems)</h3>
+<h3 id="looker-s6">6. Dhyan rakho (common problems)</h3>
 <table>
 <tr><th>Problem</th><th>Karan</th><th>Fix</th></tr>
 <tr><td>GSC clicks ≠ GA4 sessions</td><td>Alag metrics (click vs session), consent, bots</td><td>Normal. Banne alag scorecard ma, mix na karo.</td></tr>
@@ -1036,7 +1077,7 @@ Dark mode ma text vanchay chhe</li>
 <tr><td>Revenue 0</td><td>GA4 ecommerce tracking nathi</td><td>Report 3 Fix list ma High; Shopify Google & YouTube app.</td></tr>
 <tr><td>Branded regex kaam nathi kartu</td><td>Spelling variations</td><td>Brand na badha variations regex ma (sky line|Client A).</td></tr>
 </table>
-<h3>7. Checklist</h3>
+<h3 id="looker-s7">7. Checklist</h3>
 <ul class="task-list">
 <li><input type="checkbox" disabled="" />
 GA4 + GSC Site + GSC URL + Sheet connected</li>
@@ -1056,12 +1097,12 @@ Client ne Viewer access + monthly email schedule</li>
 Master Template tarike copy saved</li>
 </ul>
 <p>Related: 11 Client Reporting System → 00 Start Here, 01 Tracking Sheet (Monthly Goal tab data), 03 Report 3; 07 Setup &amp; Tracking → 02 GA4 &amp; GTM.</p>
-<h3>Added 8 Nov 2026 — AI channel note</h3>
+<h3 id="looker-s8">Added 8 Nov 2026 — AI channel note</h3>
 <ul>
 <li>Section 2 nu 'Traffic Source Group' regex field have optional: GA4 Default Channel Group ma native 'AI Assistants' channel aavyu chhe (ChatGPT, Gemini, Perplexity auto-identify). Donut/table ma direct channel use kari shako; regex field pan kaam kare.</li>
 <li>GSC 'Search Generative AI' report (AI Overviews/AI Mode data) GSC UI ma available (31 Aug 2026 thi); Looker connector ma hju nathi — client report mate GSC screenshot/export add karo.</li>
 </ul>
-<h3>8. Review routine ane red flags (merged: juna 07 → 03 Looker Studio Dashboard mathi)</h3>
+<h3 id="looker-s9">8. Review routine ane red flags (merged: juna 07 → 03 Looker Studio Dashboard mathi)</h3>
 <ul>
 <li>Weekly (5 min): trends check karo. Monthly (30 min): full review + client report (11 → 06 Monthly Client Report Format).</li>
 </ul>
@@ -1070,7 +1111,7 @@ Master Template tarike copy saved</li>
 <ul>
 <li>Red flags: impressions ma 20%+ drop, ek week sudhi key events 0, achanak traffic spike (spam/bot check).</li>
 </ul>
-<h3>9. AI traffic update (Nov 2026)</h3>
+<h3 id="looker-s10">9. AI traffic update (Nov 2026)</h3>
 <ul>
 <li>GA4 ma 13 May 2026 thi native "AI Assistant" channel chhe (Default Channel Group; medium = ai-assistant) — ChatGPT, Gemini, Copilot, DeepSeek, Grok jeva sources [CONFIRMED]. Perplexity jeva amuk sources haju Referral ma rahi shake, ane referrer vagar ni visits Direct ma jay — etle number minimum maano.</li>
 </ul>
@@ -1122,7 +1163,7 @@ Master Template tarike copy saved</li>
         <h2 class="sec" id="super-report">SEO Super Report (All-in-One) — Ek j Report</h2>
 <p>Goal: darek site/client mate ek j report — pehla goal &amp; target, pachhi badha changes ane routine. Aa doc Report 1 (Tracking Sheet) + Report 2 (Live Dashboard) + Report 3 (SEO Live Report) ne merge kare chhe; Report 4 (Looker Studio) simple/optional section che. Original 4 SOP docs emna j folder ma j chhe (koi delete nathi) — code-level detail mate te j links vaparvanu.</p>
 <p>10 sites rule: darek site mate aa j structure nu report — same sections, same routine. Site change = fakt data source/property badlo, report nu style same rahe. Setup niche "10 Sites Rollout" ma.</p>
-<h3>1. GOAL &amp; TARGET (pehla aa juvo)</h3>
+<h3 id="super-report-s1">1. GOAL &amp; TARGET (pehla aa juvo)</h3>
 <ul>
 <li>Monthly Goal: baseline = gaya mahina na clicks, target = default +10% (team decision thi badli shako). Tracking Sheet → "Monthly Goal" tab ma baseline auto aave chhe, "Pending clicks" ane "Roj ketla clicks joiye" auto update thay.</li>
 <li>Achievement: actual ÷ target × 100 = achievement %. Live dashboard (your-dashboard.vercel.app) ma daily goal progress dekhay; mahina na end ma sheet ma final.</li>
@@ -1134,7 +1175,7 @@ Master Template tarike copy saved</li>
 <tr><td>Live dashboard — your-dashboard.vercel.app</td><td>Roj 05:30 IST e update — clicks/impressions/CTR/position + goal progress</td></tr>
 <tr><td>SEO Live Report (weekly)</td><td>Goal pramane aa week na changes (rewrites, blogs, fixes)</td></tr>
 </table>
-<h3>2. Ek site mate routine (badhu ek sathe)</h3>
+<h3 id="super-report-s2">2. Ek site mate routine (badhu ek sathe)</h3>
 <table>
 <tr><th>Kyare</th><th>Kaam</th><th>Section</th></tr>
 <tr><td>Roj (10 min)</td><td>GSC Daily row bharo (aaj − 2), Page Audit & Fix + Backlink log</td><td>A</td></tr>
@@ -1144,7 +1185,7 @@ Master Template tarike copy saved</li>
 <tr><td>Mahina ni 3 tarikh</td><td>(Optional) Looker Studio PDF email + 11 Client Reporting → 06 Monthly Client Report Format ma summary</td><td>D</td></tr>
 <tr><td>3 mahine</td><td>Competitor Analysis refresh · content audit</td><td>A</td></tr>
 </table>
-<h3>PART A — SEO Tracking Sheet (Report 1)</h3>
+<h3 id="super-report-s3">PART A — SEO Tracking Sheet (Report 1)</h3>
 <p>Template: [01A SEO Tracking Sheet TEMPLATE]((team Drive ma doc)) · Full SOP: [01 SEO Tracking Sheet SOP]((team Drive ma doc))</p>
 <h4>Navi site — setup (10 min)</h4>
 <ol>
@@ -1205,7 +1246,7 @@ Master Template tarike copy saved</li>
 <li>Semrush ane GSC traffic compare na karvu — Semrush estimate chhe.</li>
 <li>Khoto country database; passwords sheet ma — banne na.</li>
 </ul>
-<h3>PART B — Live Click + Impression + Goal Dashboard (Report 2)</h3>
+<h3 id="super-report-s4">PART B — Live Click + Impression + Goal Dashboard (Report 2)</h3>
 <p>Live: [your-dashboard.vercel.app](https://www.google.com/url?q=(team internal link)) — badhi sites nu GSC data (clicks, impressions, CTR, position) roj 05:30 IST e auto update thay. Monthly goal (target clicks) ane achievement % mate vaparo. Full handbook (code, tokens, API): [02 Report 2 Handbook]((team Drive ma doc))</p>
 <h4>Architecture (ek line)</h4>
 <p>GSC → daily scheduler (05:30 IST) → GitHub main/data.json → Vercel API → dashboard. Ek scheduler → ek batch fetch → ek merge → ek commit → ek health check. Data refresh mate redeploy NA karvano; deploy fakt code/config change par.</p>
@@ -1246,7 +1287,7 @@ GA4/Shopify conversions alag source thi (dashboard fakt GSC aape).</li>
 <li>GitHub token = fine-grained, fakt gsc repo, Contents Read-only. Leak thay to rotate.</li>
 <li>Netlify production untouched; Vercel Preview j. Production promotion/domain change mate written approval.</li>
 </ul>
-<h3>PART C — SEO Live Report: "Shu update karvu" (Report 3)</h3>
+<h3 id="super-report-s5">PART C — SEO Live Report: "Shu update karvu" (Report 3)</h3>
 <p>Example: [Client B SEO Weekly](https://www.google.com/url?q=(team internal link)) · Full SOP (code, prompts): [03 SEO Live Report SOP]((team Drive ma doc))</p>
 <h4>Golden rules (kyarey todvana nahi)</h4>
 <ol>
@@ -1326,7 +1367,7 @@ GA4/Shopify conversions alag source thi (dashboard fakt GSC aape).</li>
 <tr><td>Mahina ni shuruat</td><td>28d + 90d view → ideas → 2–4 nava blogs/collections plan</td><td>30 min</td></tr>
 <tr><td>Mahina ma ek var</td><td>Fixes scan → High priority pehla</td><td>1 kalak</td></tr>
 </table>
-<h3>PART D — Looker Studio Dashboard (Report 4 — simple / optional)</h3>
+<h3 id="super-report-s6">PART D — Looker Studio Dashboard (Report 4 — simple / optional)</h3>
 <p>Status: optional. Ek visual client-facing dashboard joiye to j banavo; nahi to Part A+B+C j purta chhe. Full guide: [04 Looker Studio Build Guide]((team Drive ma doc))</p>
 <ul>
 <li>Ek var Master Template banavo, pachhi copy: navi site = report → ⋮ → Make a copy → data sources badlo (GA4, GSC property, tracking sheet). 10 minute ma taiyar.</li>
@@ -1335,7 +1376,7 @@ GA4/Shopify conversions alag source thi (dashboard fakt GSC aape).</li>
 <li>Sharing: client ne Viewer (Editor kyarey nahi) · Schedule email: dar mahine 3 tarikh PDF.</li>
 <li>Dhyan: GSC clicks ≠ GA4 sessions (alag metrics, normal) · Revenue 0 = tracking fix High · GA4 quota error aave to ochha charts.</li>
 </ul>
-<h3>PART E — SEO Report: Strategy &amp; Thinking SOP (Data → Decision → Content → Deploy)</h3>
+<h3 id="super-report-s7">PART E — SEO Report: Strategy &amp; Thinking SOP (Data → Decision → Content → Deploy)</h3>
 <p>Original .md file (as-is, same folder): [SEO Report — Strategy &amp; Thinking SOP]((team Drive ma doc))</p>
 <p>Aa file shu chhe: Client A no report ([artifact](https://www.google.com/url?q=(team internal link))) banavati vakhte me je mind ane strategy vapri, e akhi aa file ma lakhi chhe. Kayo data joyo, emathi shu samjayu, ane pachhi rewrite, nava blog, nava collection ke fix nu suggestion kem aapyu, e badhu ahi chhe.</p>
 <p>Aa file vanchi ne tame koi pan client (Shopify, WordPress, lead-gen, blog) no report same logic thi banavi shako.</p>
@@ -1748,12 +1789,12 @@ Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karv
 <li>Darek suggestion data thi. Data na hoy to suggestion na aapo, athva "hypothesis" lakho.</li>
 <li>Measure karo: rewrite pachhi 2–4 week ma same page na CTR, position ane clicks sarkhavo, ane aavta report ma "Rewrite impact" section umero.</li>
 </ul>
-<h3>Numbers match rule + Security (badha reports mate)</h3>
+<h3 id="super-report-s8">Numbers match rule + Security (badha reports mate)</h3>
 <ul>
 <li>Sheet, dashboard, live report, Looker — clicks/impressions/sessions GSC/GA4 mathi j aave (Semrush/Moz third-party estimates chhe). Client ne mokalta pehla 3–4 numbers cross-check karo; mismatch hoy to date range ane timezone pehla check karo.</li>
 <li>Passwords/tokens kyarey sheet, doc, chat ke screenshot ma nahi. Tokens Vercel Environment Variables ma; logins password manager ma.</li>
 </ul>
-<h3>10 Sites Rollout — darek site mate same report</h3>
+<h3 id="super-report-s9">10 Sites Rollout — darek site mate same report</h3>
 <p>Navi site add karo tyare aa 4 steps — style same rahe, fakt data badlay:</p>
 <ol>
 <li>Tracking Sheet: template ni copy "[Site] — SEO Tracking Sheet" (Part A setup).</li>
@@ -1762,7 +1803,7 @@ Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karv
 <li>(Optional) Looker: Master Template ni copy → 3 data sources badlo — Part D.</li>
 </ol>
 <p>Result: darek site nu report same sections (Goal → Overview → What changed → Rewrites/Ideas/Fixes), same routine (daily/weekly/monthly), etle 10 sites hoy to pan vanchvanu ek j pattern ma.</p>
-<h3>Related links</h3>
+<h3 id="super-report-s10">Related links</h3>
 <ul>
 <li>00 Start Here — Client Reporting System: [link]((team Drive ma doc))</li>
 <li>01 SEO Tracking Sheet SOP (full): [link]((team Drive ma doc)) · Template sheet: [link]((team Drive ma doc))</li>
@@ -1801,7 +1842,7 @@ Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karv
       <div class="detail">
         <h2 class="sec" id="monthly-report">Monthly SEO Client Report</h2>
 <p>Looker Studio dashboard data batave chhe; report te data no matlab samjave chhe. Client ne graphs nahi, jawab joiye: su thayu, kem thayu, aagal su.</p>
-<h3>Report nu structure (1-2 page)</h3>
+<h3 id="monthly-report-s1">Report nu structure (1-2 page)</h3>
 <ol>
 <li>Summary (3-4 lines): mukhya result + business par asar - "Organic se 42 inquiries aavi, last month thi 18% vadhare".</li>
 <li>KPIs: GSC clicks, impressions, CTR, avg position; GA4 organic sessions, key events (leads/sales), revenue.</li>
@@ -1816,14 +1857,14 @@ Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karv
 <li>Issues/risks: koi drop hoy to honestly + reason + plan.</li>
 <li>Next month plan: 3-5 priorities.</li>
 </ol>
-<h3>Rules (niyamo)</h3>
+<h3 id="monthly-report-s2">Rules (niyamo)</h3>
 <ul>
 <li>Vanity metrics (impressions only) par focus nahi - leads/sales sathe connect karo</li>
 <li>Drop chhupavo nahi - reason sathe explain karo, trust vadhe</li>
 <li>Average position ekla par conclusion na kadho - nava keywords aave to avg niche jay</li>
 <li>Client ni bhasha ma lakho, jargon ochu</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="monthly-report-s3">Checklist</h3>
 <ul>
 <li>Same date range dar mahine (1st to last)</li>
 <li>MoM</li>
@@ -1866,7 +1907,7 @@ Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karv
 <p><strong>Aa file shu chhe:</strong> Client A no report ([artifact]((team internal link))) banavati vakhte me je <em>mind</em> ane <em>strategy</em> vapri, e akhi aa file ma lakhi chhe. Kayo data joyo, emathi shu samjayu, ane pachhi rewrite, nava blog, nava collection ke fix nu suggestion kem aapyu, e badhu ahi chhe. &gt; Aa file vanchi ne tame koi pan client (Shopify, WordPress, lead-gen, blog) no report <strong>same logic thi</strong> banavi shako. &gt; &gt; Technical setup (Composio, JS extractor code, env vars) mate juo: <code>SEO-Live-Report-SOP.md</code>. Aa file <strong>thinking + content + deploy</strong> mate chhe.</p>
 </blockquote>
 <hr />
-<h3>PART A — Akho process 1 page ma</h3>
+<h3 id="strategy-thinking-s1">PART A — Akho process 1 page ma</h3>
 <pre><code>1. Client ne samjo        → shu vechay chhe, paisa kya thi aave chhe, brand naam shu chhe
 2. Data lo (3 period)     → GSC pages + queries (7 / 28 / 90 days, comparison sathe), GA4 Organic
 3. Data ne 6 sawal pucho  → (PART C) — darek sawal ek report section banave chhe
@@ -2208,6 +2249,8 @@ Title (≤60):   &lt;Primary keyword (plural)&gt; for &lt;use 1&gt; &amp; &lt;us
   </div>
 </footer>
 
+<script>window.SOP_BASE = "../../";</script>
 <script src="../../assets/app.js"></script>
+<script src="../../assets/search.js" defer></script>
 </body>
 </html>

@@ -18,9 +18,44 @@
       <span class="brand-mark">S</span>
       <span>SOP Library</span>
     </a>
+    <div class="searchbox">
+      <input type="search" class="search-input" placeholder="Search SOPs... (spelling off chale)" aria-label="Search SOPs" autocomplete="off">
+      <div class="search-results" hidden></div>
+    </div>
     <nav>
-      <a href="../#library">All folders</a>
-      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Sections &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="#route-new">NAVI site route</a>
+        <a href="#route-existing">JUNI site route</a>
+        <a href="../#library">All 16 folders</a>
+        </div>
+      </div>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Menu &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="../train/">&#128642; SOP Train</a>
+        <a href="../ai-visibility/">AI Visibility SOP</a>
+        <hr>
+        <a href="../folders/01-client-ask/">01 Client Ask (R&D)</a>
+        <a href="../folders/02-domain-research/">02 Domain Research</a>
+        <a href="../folders/03-strategy/">03 Strategy</a>
+        <a href="../folders/04-design-webdev/">04 Design & Web Dev</a>
+        <a href="../folders/05-onpage-seo/">05 On-Page SEO</a>
+        <a href="../folders/06-offpage-seo/">06 Off-Page SEO</a>
+        <a href="../folders/07-setup-tracking/">07 Setup & Tracking</a>
+        <a href="../folders/08-technical-seo/">08 Technical SEO</a>
+        <a href="../folders/09-ecommerce-seo/">09 Ecommerce SEO</a>
+        <a href="../folders/10-reporting-maintenance/">10 Reporting & Maintenance</a>
+        <a href="../folders/11-client-reporting/">11 Client Reporting</a>
+        <a href="../folders/12-seo-executive-rr/">12 SEO Executive RR</a>
+        <a href="../folders/13-notebooklm-mindmaps/">13 NotebookLM Mind Maps</a>
+        <a href="../folders/14-website-design/">14 Website Design</a>
+        <a href="../folders/15-site-architecture/">15 Site Architecture</a>
+        <a href="../folders/16-architecture-flows/">16 Architecture Flow PDFs</a>
+        </div>
+      </div>
+      <button class="theme-btn" aria-label="Switch to dark mode">&#9789;</button>
     </nav>
   </div>
 </header>
@@ -324,7 +359,9 @@
   </div>
 </footer>
 
+<script>window.SOP_BASE = "../";</script>
 <script src="../assets/app.js"></script>
+<script src="../assets/search.js" defer></script>
 <script>
 function showRoute(id){
   document.querySelectorAll('.route').forEach(function(r){ r.style.display = r.id === id ? '' : 'none'; });

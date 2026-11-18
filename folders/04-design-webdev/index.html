@@ -18,9 +18,46 @@
       <span class="brand-mark">S</span>
       <span>SOP Library</span>
     </a>
+    <div class="searchbox">
+      <input type="search" class="search-input" placeholder="Search SOPs... (spelling off chale)" aria-label="Search SOPs" autocomplete="off">
+      <div class="search-results" hidden></div>
+    </div>
     <nav>
-      <a href="../../#library">All folders</a>
-      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Sections &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="#uiux-human">UI-UX human feel</a>
+          <a href="#mobile-friendly">Mobile friendly</a>
+          <a href="#competitor-design">Competitor design study</a>
+          <a href="#new-features">New features</a>
+          <a href="#theme-motion">Theme & motion</a>
+        </div>
+      </div>
+      <div class="menuwrap">
+        <button class="menu-btn" type="button" aria-haspopup="true">Menu &#9662;</button>
+        <div class="menu-panel" hidden>
+<a href="../../train/">&#128642; SOP Train</a>
+        <a href="../../ai-visibility/">AI Visibility SOP</a>
+        <hr>
+        <a href="../../folders/01-client-ask/">01 Client Ask (R&D)</a>
+        <a href="../../folders/02-domain-research/">02 Domain Research</a>
+        <a href="../../folders/03-strategy/">03 Strategy</a>
+        <a href="../../folders/04-design-webdev/">04 Design & Web Dev</a>
+        <a href="../../folders/05-onpage-seo/">05 On-Page SEO</a>
+        <a href="../../folders/06-offpage-seo/">06 Off-Page SEO</a>
+        <a href="../../folders/07-setup-tracking/">07 Setup & Tracking</a>
+        <a href="../../folders/08-technical-seo/">08 Technical SEO</a>
+        <a href="../../folders/09-ecommerce-seo/">09 Ecommerce SEO</a>
+        <a href="../../folders/10-reporting-maintenance/">10 Reporting & Maintenance</a>
+        <a href="../../folders/11-client-reporting/">11 Client Reporting</a>
+        <a href="../../folders/12-seo-executive-rr/">12 SEO Executive RR</a>
+        <a href="../../folders/13-notebooklm-mindmaps/">13 NotebookLM Mind Maps</a>
+        <a href="../../folders/14-website-design/">14 Website Design</a>
+        <a href="../../folders/15-site-architecture/">15 Site Architecture</a>
+        <a href="../../folders/16-architecture-flows/">16 Architecture Flow PDFs</a>
+        </div>
+      </div>
+      <button class="theme-btn" aria-label="Switch to dark mode">&#9789;</button>
     </nav>
   </div>
 </header>
@@ -80,13 +117,13 @@
       <div class="detail">
         <h2 class="sec" id="uiux-human">UI/UX - AI-made na lage aevu design</h2>
 <p>2026 ma AI websites same-look thai gay chhe - same gradients, same layout, robotic text. User 3 second ma identify kari jay ane trust ghate. Human feel = easy to read + natural flow.</p>
-<h3>Notebook na points</h3>
+<h3 id="uiux-human-s1">Notebook na points</h3>
 <ol>
 <li>Vanchvama easy: body text no font size 16px+, line height 1.5+, contrast strong rakho (white par light gray text = fail).</li>
 <li>Bad paragraphs avoid karo: lamba 10-line paragraphs nahi. 2-4 lines nu paragraph, vachche subheadings, bullet lists.</li>
 <li>AI text patterns avoid karo: "In today's fast-paced world", "delve into", "unlock the power" - aa words dekhata j user jaani jay. Simple, direct bhasha lakho.</li>
 </ol>
-<h3>Human feel mate</h3>
+<h3 id="uiux-human-s2">Human feel mate</h3>
 <ul>
 <li>Real photos (team, office, products) - stock images minimum rakho</li>
 <li>Real customer na words (reviews, testimonials names sathe)</li>
@@ -94,9 +131,9 @@
 <li>Whitespaces</li>
 <li>screen bharelu na dekhay</li>
 </ul>
-<h3>Test</h3>
+<h3 id="uiux-human-s3">Test</h3>
 <p>Page ne 5 second juvo ane pucho: "Aa page su kehve chhe?" Answer na male to redesign.</p>
-<h3>Checklist</h3>
+<h3 id="uiux-human-s4">Checklist</h3>
 <ul>
 <li>Font 16px+, contrast pass, 2-4 line na paragraphs</li>
 <li>AI-typical words hataavela</li>
@@ -135,7 +172,7 @@
       <div class="detail">
         <h2 class="sec" id="mobile-friendly">Mobile Friendly Design</h2>
 <p>India ma 75%+ traffic mobile par thi aave chhe. Google mobile-first indexing use kare - mobile version j Google ni nazar ma real site chhe. Desktop par saru ane mobile par kharab = rank kharab.</p>
-<h3>Checks</h3>
+<h3 id="mobile-friendly-s1">Checks</h3>
 <ol>
 <li>Responsive test: Chrome DevTools (F12 → mobile view) ma dar page check karo, ke Google Lighthouse run karo.</li>
 <li>Touch targets: buttons/links min 44px, besedha links touch na thay.</li>
@@ -143,14 +180,14 @@
 <li>Vanchva layak font: zoom vagar vanchay evu.</li>
 <li>Popups ma savdhan raho: mobile par full-screen popup = Google penalty risk.</li>
 </ol>
-<h3>Speed mobile par</h3>
+<h3 id="mobile-friendly-s2">Speed mobile par</h3>
 <ul>
 <li>Images WebP format ma compress karela</li>
 <li>4G connection par 3 second ma load thavu joiye (PageSpeed Insights mobile score check)</li>
 </ul>
-<h3>Real device test (jaruri)</h3>
+<h3 id="mobile-friendly-s3">Real device test (jaruri)</h3>
 <p>Emulator perfect batave pan real phone ma issues hoy. 1 Android + 1 iPhone ma kholi ne juvo: menu khule? Forms fill thay? Buttons dabay?</p>
-<h3>Checklist</h3>
+<h3 id="mobile-friendly-s4">Checklist</h3>
 <ul>
 <li>Mobile par Core Web Vitals pass (Lighthouse 90+ goal)</li>
 <li>Real device test thai gayo (Android + iPhone)</li>
@@ -184,7 +221,7 @@
       <div class="detail">
         <h2 class="sec" id="competitor-design">Competitor Pool - Design &amp; Features Study</h2>
 <p>Design reinvent karva ni jarur nathi - competitors ma su work kare chhe te study karo, pachhi te thi better banao.</p>
-<h3>Steps</h3>
+<h3 id="competitor-design-s1">Steps</h3>
 <ol>
 <li>Top 5 competitors ni sites kholo (mobile</li>
 </ol>
@@ -197,12 +234,12 @@
 <li>Trust signals note karo: reviews shu batave, guarantees, certificates, payment badges.</li>
 <li>Temni UX mistakes note karo: slow pages, confusing menu, lamba forms - aa tamara opportunity chhe.</li>
 </ol>
-<h3>Output</h3>
+<h3 id="competitor-design-s2">Output</h3>
 <ul>
 <li>Feature comparison table: Feature | Comp 1-5 | Tamara ma chhe? | Priority</li>
 <li>"Must have" (badha pase chhe) vs "Nice to have" (1-2 pase) vs "Differentiator" (koi pase nathi)</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="competitor-design-s3">Checklist</h3>
 <ul>
 <li>5 competitors na design notes + screenshots</li>
 <li>Feature comparison table taiyar chhe</li>
@@ -235,20 +272,20 @@
       <div class="detail">
         <h2 class="sec" id="new-features">New Features &amp; Tools to Add</h2>
 <p>Website static brochure na hovi joiye. Interactive tools (calculators, quizzes, configurators) engagement vadharave, time-on-site increase kare, ane backlinks pan aape - badha SEO signals.</p>
-<h3>Website type pramane tool ideas</h3>
+<h3 id="new-features-s1">Website type pramane tool ideas</h3>
 <ul>
 <li>Ecommerce: size calculator, EMI calculator, product comparison, bundle builder</li>
 <li>Service: cost estimator, booking calendar, WhatsApp click-to-chat, portfolio filter</li>
 <li>Blog/content: quizzes, checklists download, interactive infographics</li>
 <li>B2B: ROI calculator, case study library, demo booking</li>
 </ul>
-<h3>Pasandgi na criteria</h3>
+<h3 id="new-features-s2">Pasandgi na criteria</h3>
 <ol>
 <li>Customer nu real problem solve kare (Client Ask point 4 juvo)</li>
 <li>Build effort vs SEO/business value - simple tool je use thay &gt; complex tool je koine na khabar hoy</li>
 <li>Tool ne proper page aapo - indexable URL, content, schema (SoftwareApplication/WebApplication)</li>
 </ol>
-<h3>Checklist</h3>
+<h3 id="new-features-s3">Checklist</h3>
 <ul>
 <li>Customer na problems pramane 1-2 tools select karela chhe</li>
 <li>Tool nu dedicated indexable page planned</li>
@@ -281,14 +318,14 @@
       <div class="detail">
         <h2 class="sec" id="theme-motion">Theme, Motion &amp; Consistency (Extra - Design side)</h2>
 <p>Notebook ma point 7: "Motion &amp; movement theme properly follow, consistency on all pages". Animation saru lage, pan har page par different animation = unprofessional ane slow site.</p>
-<h3>Rules (niyamo)</h3>
+<h3 id="theme-motion-s1">Rules (niyamo)</h3>
 <ol>
 <li>Ek motion language: same animation style badha pages par (da. fade-up on scroll). 2-3 animation types max, badhu j mix nahi.</li>
 <li>Speed limit: animations 300-500ms - slow animation site slow lage.</li>
 <li>Performance check: animation library heavy hoy (large JS) to page speed score tapas o - Core Web Vitals (LCP/INP/CLS) bagde nahi.</li>
 <li>Reduced motion respect karo: koi users motion-sensitive hoy - CSS prefers-reduced-motion support.</li>
 </ol>
-<h3>Consistency checklist (har page par same)</h3>
+<h3 id="theme-motion-s2">Consistency checklist (har page par same)</h3>
 <ul>
 <li>Colors: 1 primary + 1 secondary + 1 accent - 5 colors mix nahi</li>
 <li>Fonts: vadhu ma vadhu 2 fonts (heading + body)</li>
@@ -296,7 +333,7 @@
 <li>Spacing system (8px na multiples)</li>
 <li>Header/footer identical badha pages par</li>
 </ul>
-<h3>Checklist</h3>
+<h3 id="theme-motion-s3">Checklist</h3>
 <ul>
 <li>Animation style guide defined ane consistent</li>
 <li>Animation pachhi pan Core Web Vitals pass</li>
@@ -318,6 +355,8 @@
   </div>
 </footer>
 
+<script>window.SOP_BASE = "../../";</script>
 <script src="../../assets/app.js"></script>
+<script src="../../assets/search.js" defer></script>
 </body>
 </html>
