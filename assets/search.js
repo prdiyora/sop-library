@@ -28,22 +28,24 @@
     return indexPromise;
   }
 
-  function editDist1(a, b) {
+  function editDist(a, b, maxD) {
+    // bounded Levenshtein; transposition counts as 2 (no Damerau)
     var la = a.length, lb = b.length;
-    if (Math.abs(la - lb) > 1) return false;
-    var i = 0, j = 0, edits = 0;
-    while (i < la && j < lb) {
-      if (a[i] === b[j]) { i++; j++; }
-      else {
-        edits++;
-        if (edits > 1) return false;
-        if (la > lb) i++;
-        else if (lb > la) j++;
-        else { i++; j++; }
+    if (Math.abs(la - lb) > maxD) return false;
+    var prev = [], cur = [], i, j;
+    for (j = 0; j <= lb; j++) prev[j] = j;
+    for (i = 1; i <= la; i++) {
+      cur[0] = i;
+      var rowMin = cur[0];
+      for (j = 1; j <= lb; j++) {
+        var cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost);
+        if (cur[j] < rowMin) rowMin = cur[j];
       }
+      if (rowMin > maxD) return false;
+      var t = prev; prev = cur; cur = t;
     }
-    if (i < la || j < lb) edits++;
-    return edits <= 1;
+    return prev[lb] <= maxD;
   }
 
   function scoreEntry(e, terms) {
@@ -58,9 +60,10 @@
         else if (w.indexOf(term) > 0) { if (best < 1) best = 1; }
       }
       if (best === 0 && term.length >= 4) {
+        var maxD = term.length >= 7 ? 2 : 1;
         var bucket = vocabByLetter[term[0]] || {};
         for (var vw in bucket) {
-          if (Math.abs(vw.length - term.length) <= 1 && editDist1(term, vw) && e.w[vw]) {
+          if (Math.abs(vw.length - term.length) <= maxD && editDist(term, vw, maxD) && e.w[vw]) {
             best = 2; break;
           }
         }
