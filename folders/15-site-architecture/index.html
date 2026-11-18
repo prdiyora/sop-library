@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>15 Site Architecture — SOP Library</title>
+<meta name="description" content="Site architecture: full page-by-page architecture for the new (NAVI) website and the old/existing (JUNI) website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../">
+      <span class="brand-mark">S</span>
+      <span>SOP Library</span>
+    </a>
+    <nav>
+      <a href="../../#library">All folders</a>
+      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+    <div class="hero">
+      <p class="kicker">Folder 15</p>
+      <h1>Site Architecture</h1>
+      <p class="lede">Navi website (new) ane juni website (old) banne ni full architecture — kayu page kya aave, su content hoy, akhu map.</p>
+      <div class="hero-meta">
+        <span class="pill">2 docs</span>
+        <span class="pill">Flow first, then numbered steps</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="toc">
+        <a href="#navi">NAVI Website (New Site)</a>
+        <a href="#juni">JUNI Website (Old Site)</a>
+      </div>
+
+      <div class="callout" style="margin-bottom:34px">Note: PDF versions same docs na exports chhe, etle website par docs j chhe.</div>
+
+      <div class="flow">
+        <p class="flow-title">New site architecture — 3 parts</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">☰</span>Full page map</p>
+            <p class="node-sub">Kayu page kya aave, akhu structure.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">▤</span>Per-page details</p>
+            <p class="node-sub">Darek page ma su hovu joie.</p>
+          </div>
+          <div class="node branch">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✓</span>Build order</p>
+            <p class="node-sub">Kaya kram ma banavvu te follow karo.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="navi">Site Architecture — NAVI Website (New Site) — 11 Nov 2026</h2>
+<hr />
+<p>Universal blueprint: koi pan niche, ecommerce, lead gen, blog ke service site. Sources: Google Search Central, Search Engine Land site architecture guide (2025-26), HubSpot silo guide. Freshness: 11 Nov 2026.</p>
+<p>Ek line ma: Homepage → Category/Hub pages → Sub-pages ane blogs — darek page homepage thi 3 clicks ni andar. Paisa kamavta pages (money pages) 1–2 clicks ma. Aa j architecture 1 site hoy ke 100 sites — same rehse.</p>
+<h3>1. Architecture model pasand karo (99% sites mate same)</h3>
+<table>
+<tr><th>Model</th><th>Shu chhe</th><th>Kyare vaparvu</th></tr>
+<tr><td>Hierarchical (tree)</td><td>Homepage → categories → sub-pages</td><td>99% sites — service, ecommerce nani-mid, blog, lead gen. Aa j default.</td></tr>
+<tr><td>Hub-and-spoke (topic cluster)</td><td>Pillar page + cluster blogs je pillar par link kare</td><td>Blog/information section mate — hierarchical ni andar j aave</td></tr>
+<tr><td>Database</td><td>Template + data thi pages bane (Amazon style)</td><td>Moti ecommerce ke programmatic SEO (03 → 12 Programmatic SEO)</td></tr>
+<tr><td>Matrix / Sequential</td><td>Multi-path ke step-by-step</td><td>SEO mate avoid — crawler confuse thay</td></tr>
+</table>
+<h3>2. Universal Page Map (koi pan niche)</h3>
+<p>AA structure badha projects ma same — niche pramane fakta names badlay:</p>
+<ul>
+<li>Homepage — brand + main category links + USP (money pages par direct link)</li>
+<li>Hub / Category pages (3–7) — ecommerce ma collection pages, service ma "Services", blog ma topic pillars. Head keywords ahi target thay.</li>
+<li>Sub-pages — products / individual services / city pages. Long-tail + buyer intent ahi.</li>
+<li>Blog clusters — dar hub niche 5–20 supporting blogs, badha hub par internal link kare (pillar ↔︎ cluster)</li>
+<li>Must-have pages — About, Contact, Privacy, Terms, Shipping/Refund (ecommerce) — EEAT mate (05 → 05 Must-Have Pages)</li>
+</ul>
+<h3>3. Niche pramane page map (3 ready templates)</h3>
+<h4>A. Ecommerce</h4>
+<ul>
+<li>Homepage → Category (collections) → Sub-category → Product</li>
+<li>Blog: category-specific guides je products par link kare (03 → 07 Ecommerce Blog Workflow)</li>
+<li>Filters/variants URL rule: canonical to main page (09 → 03)</li>
+</ul>
+<h4>B. Lead gen / Service business</h4>
+<ul>
+<li>Homepage → Services hub → Ek page per service (buyer intent: "cost", "quote", "near me")</li>
+<li>Ek page per city/service-area (jyare actual service aapu tya j — doorway pages nahi)</li>
+<li>Proof pages: case studies, reviews, before/after</li>
+<li>Detail: 03 → 11 Lead Gen SEO</li>
+</ul>
+<h4>C. Blog / Content site</h4>
+<ul>
+<li>Homepage → Topic pillars (3–7) → Cluster posts</li>
+<li>Dar pillar: 1 long pillar post (2000+ words) + 10–30 cluster posts</li>
+</ul>
+<h3>4. URL &amp; Slug rules</h3>
+<ul>
+<li>Parent-child URLs: /services/seo-audit, /category/product — hierarchy URL ma j dekhay</li>
+<li>Slug = primary keyword, short, hyphen (05 → 08 Slug = Keyword)</li>
+<li>Ek keyword-intent = ek URL (golden rule — cannibalization avoid)</li>
+<li>Breadcrumbs badha deep pages par + BreadcrumbList schema</li>
+</ul>
+<h3>5. Internal linking map (asli ranking fuel)</h3>
+<ul>
+<li>Dar page par 3–5 contextual internal links (05 → 03)</li>
+<li>Cluster → pillar par link (pillar ne authority aape); pillar → money page par link (link equity flow)</li>
+<li>Silo rule: same topic ni andar dense linking; bija topic taraf faqt jaruri hoy tyare — topical authority saaf rahe</li>
+<li>Orphan page = 0 internal links = kyarey nahi (05 → 06 No Orphan Pages)</li>
+<li>Navu page publish thay ek homepage ke top hub thi link — jaldi crawl thay (CONFIRMED: Google navi pages links thi shodhe)</li>
+</ul>
+<h3>6. Depth &amp; crawl rules</h3>
+<ul>
+<li>3-click rule: koi pan page homepage thi max 3 clicks (LIKELY — industry standard; Google crawl depth ne importance mane)</li>
+<li>4+ clicks deep page = Google ochho important mane ane crawl budget waste thay</li>
+<li>Moti site (1000+ pages) hoy to pan money pages flat rakho</li>
+</ul>
+<h3>7. Technical foundation (publish pehla)</h3>
+<ul>
+<li>XML sitemap (badha canonical URLs) + GSC ma submit (07 → 01)</li>
+<li>Robots.txt — admin/cart/thank-you block; sitemap line (05 → 02)</li>
+<li>Schema: Organization + WebSite sitewide; Product/Service/Article page pramane (08 → 04)</li>
+<li>GA4</li>
+<li>GSC + Clarity day 1 thi (07 Setup folder)</li>
+<li>IndexNow on (Bing/Yandex mate — ek toggle Cloudflare/Shopify/Wix/plugins ma; Google mate asar nahi — 11 Nov update 08 → 01 ma)</li>
+<li>Mobile-first</li>
+<li>Core Web Vitals pass (05 → 04)</li>
+</ul>
+<h3>8. Build order (navi site, week-by-week)</h3>
+<table>
+<tr><th>Week</th><th>Kaam</th></tr>
+<tr><td>Week 1</td><td>Domain (02 → 06), keyword research + Master Keyword Map (02 → 07), competitor pool (02 → 02), page map paper par finalize</td></tr>
+<tr><td>Week 2</td><td>Design setup (14 folder), Homepage + 3–7 hub pages + must-have pages live, GSC/GA4/Clarity setup, sitemap submit</td></tr>
+<tr><td>Week 3–4</td><td>Money pages (products/services) + pehla 5–10 cluster blogs, internal linking, indexing request (key pages only)</td></tr>
+<tr><td>Month 2–3</td><td>Cluster expand, off-page start (06 folder), first monthly report (11 folder)</td></tr>
+</table>
+<p>Common mistakes (aa bhool na karo): homepage par badha pages ni link dump; category vagar products direct; ek j keyword par 2 pages; deep burial (4+ clicks); navi site par day 1 thi 100 thin pages (scaled content abuse risk — CONFIRMED Google spam policy).</p>
+<h3>9. Checklist — NAVI site architecture finalize karta pehla</h3>
+<ul>
+<li>Page map paper/sheet ma chhe: homepage → hubs → sub-pages → clusters</li>
+<li>Darek page nu primary keyword Master Keyword Map ma chhe (1 intent = 1 URL)</li>
+<li>3-click rule verify karelu (money pages 1–2 clicks)</li>
+<li>URL parent-child format ma, slug = keyword</li>
+<li>Internal linking plan: dar cluster post → pillar; pillar → money page</li>
+<li>Sitemap</li>
+<li>robots + schema + tracking ready</li>
+<li>Breadcrumbs on</li>
+<li>Koi orphan page nahi</li>
+</ul>
+<p>Sources: developers.google.com/search/docs/specialty/ecommerce/help-google-understand-your-ecommerce-site-structure · searchengineland.com/guide/website-structure · blog.hubspot.com/website/silo-seo · hydrogenseo.com/how-to-rank/how-to-rank-faster</p>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Existing site architecture — 3 parts</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">▤</span>Current structure</p>
+            <p class="node-sub">Juni site atyare kevi chhe.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>What to fix</p>
+            <p class="node-sub">Su sudharvu te marked.</p>
+          </div>
+          <div class="node branch">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✓</span>Migration notes</p>
+            <p class="node-sub">Juna thi navi structure taraf.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="juni">Site Architecture — JUNI Website (Old / Existing Site) — 11 Nov 2026</h2>
+<hr />
+<p>Client ni chalu site ke apani juni site ne restructure karvani SOP. Rule #1: je chalu chhe e todvo nahi — audit pehla, fix priority pramane, URLs fakta jarur hoy to j badalvi. Freshness: 11 Nov 2026.</p>
+<p>Ek line ma: Juni site ma architecture fix = audit → map → blocker fixes → depth/structure fix → internal linking → measure. Rankings save karvani = URL changes minimum + 301 redirects jaruri.</p>
+<h3>1. Golden rules (juni site mate)</h3>
+<ul>
+<li>Ranking aavti URL kyarey bekar ma na badalvi. Slug kharab hoy pan traffic aave chhe to rakhvi — change kari to 301 jaruri.</li>
+<li>Ek vaar ma ek j change batch karo ane date note karo (Page Audit &amp; Fix log) — nahi to khbar nahi pade su kaam karyu.</li>
+<li>Change pachhi 4–6 week wait — Google ne recrawl + reassess karva time joiye (CONFIRMED: Google Starter Guide).</li>
+<li>Backup</li>
+<li>current rankings no snapshot PEHLA (01 → 00 Onboarding, Phase 1 baseline).</li>
+</ul>
+<h3>2. Step 1 — Full crawl &amp; current map (day 1–2)</h3>
+<ul>
+<li>Screaming Frog crawl karo (08 → 06) — badha URLs, titles, depth, status codes, canonicals export karo</li>
+<li>Depth report: kaya pages 3+ clicks deep chhe — list banavo</li>
+<li>Orphan pages: 0 internal links vala (GSC + crawl compare kari ne shodho)</li>
+<li>GSC export: kaya pages par impressions/clicks chhe (aa pages = protected, careful)</li>
+<li>Current structure no tree diagram banavo (paper ke Whimsical ma)</li>
+</ul>
+<h3>3. Step 2 — Fix order (aa j sequence ma)</h3>
+<ul>
+</ul>
+<table>
+<tr><th>#</th><th>Fix</th><th>SOP reference</th><th>Kem pehla</th></tr>
+<tr><td>1</td><td>Crawl blockers: noindex, robots block, khotu canonical</td><td>08 → 01, 08 → 02</td><td>Aa hoay to baki badhu bekar</td></tr>
+<tr><td>2</td><td>404s, broken links, redirect chains</td><td>08 → 03</td><td>Crawl budget + UX leak bandh karo</td></tr>
+<tr><td>3</td><td>Duplicate content / duplicate URLs (filters, variants)</td><td>08 → 02, 09 → 03</td><td>Rankings split thay chhe e jodvo</td></tr>
+<tr><td>4</td><td>Thin/duplicate pages: merge, refresh ke remove</td><td>10 → 03</td><td>Quality density vadharo</td></tr>
+<tr><td>5</td><td>Depth flattening: deep money pages ne homepage/hub thi link</td><td>05 → 03, 05 → 06</td><td>Importance signal + crawl</td></tr>
+<tr><td>6</td><td>Hub pages create karo je missing chhe (topics jodva)</td><td>03 Strategy</td><td>Topical authority build</td></tr>
+<tr><td>7</td><td>Internal linking systematic: cluster → pillar → money</td><td>05 → 03</td><td>Link equity flow set karo</td></tr>
+<tr><td>8</td><td>On-page quick wins: position 4–10 pages na titles/descriptions</td><td>03 → 01</td><td>Sauthi jadpi ranking gain</td></tr>
+</table>
+<h3>4. Restructure karvu hoy to (URL changes)</h3>
+<ul>
+<li>Badli URL mate 301 redirect old → new, ek hop ma (chain nahi)</li>
+<li>Internal links update karo navi URL taraf (redirect par rely na karo)</li>
+<li>Sitemap update + GSC ma resubmit</li>
+<li>2–4 week GSC ma monitor: impressions drop = turant check</li>
+<li>Moti restructure = full migration SOP follow karo (08 → 07 Website Redesign &amp; Migration)</li>
+</ul>
+<h3>5. Architecture fix patterns (je sauthi common chhe)</h3>
+<h4>Pattern 1: Flat dump</h4>
+<p>Badha pages homepage niche direct (50+ links). Fix: 3–7 hub pages banavo, pages hubs niche move karo, homepage par fakta hubs.</p>
+<h4>Pattern 2: Deep burial</h4>
+<p>Money pages 4–6 clicks deep. Fix: homepage/hub thi direct link, related-products/posts widgets, footer links (important pages only).</p>
+<h4>Pattern 3: Orphan blog posts</h4>
+<p>Blogs publish thay pan kyathi link j nathi. Fix: hub/pillar pages banavo je badha blogs ne list kare + posts ma contextual links.</p>
+<h4>Pattern 4: Cannibal clusters</h4>
+<p>Ek j keyword par 3 pages. Fix: Master Keyword Map (02 → 07, section 8) sathe compare → best page rakho, baki 301 ke merge (10 → 03 decision rules).</p>
+<h4>Pattern 5: Faceted nav bloat (ecommerce)</h4>
+<p>Filter combinations e 1000s URLs banavi. Fix: canonical/noindex rules (09 → 03), sitemap ma fakta canonical URLs.</p>
+<h3>6. 30/60/90 day plan (juni site)</h3>
+<table>
+<tr><th>Period</th><th>Target</th></tr>
+<tr><td>Day 1–30</td><td>Crawl + map + blockers/404/duplicates fix + GSC baseline + quick-win titles (03 → 01)</td></tr>
+<tr><td>Day 31–60</td><td>Depth flattening + hub pages + internal linking pass + content refresh top 10 pages (03 → 02)</td></tr>
+<tr><td>Day 61–90</td><td>Cluster expansion + off-page (06) + first full report compare (11) — measure vs baseline</td></tr>
+</table>
+<p>Common mistakes (aa bhool na karo): rankings snapshot vagar changes; badha URLs ek saathe badalvi; redirect chains (A→B→C); redirect kari ne internal links junu j rakhva; 2 week ma result judge kari ne undo kari devu; sitemap update bhuli javu.</p>
+<h3>7. Checklist — JUNI site architecture fix</h3>
+<ul>
+<li>Full crawl export + baseline snapshot lidhelu chhe</li>
+<li>Koi noindex/robots/canonical blocker nathi</li>
+<li>404</li>
+<li>broken links 0 (ke known ane redirected)</li>
+<li>Duplicate URL issues resolved (canonical/301)</li>
+<li>Money pages 2 clicks ni andar</li>
+<li>Koi orphan page nathi</li>
+<li>Dar badlai URL par 301 + internal links updated</li>
+<li>Sitemap resubmitted, GSC monitor schedule set</li>
+<li>Dar change nu date log ma</li>
+</ul>
+<p>Sources: developers.google.com/search/docs/crawling-indexing · searchengineland.com/guide/website-structure · hydrogenseo.com/how-to-rank/how-to-rank-faster</p>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../../#library">← Back to the SOP Library</a></p>
+    <p class="fmono">Folder 15 · SOP Library</p>
+  </div>
+</footer>
+
+<script src="../../assets/app.js"></script>
+</body>
+</html>
