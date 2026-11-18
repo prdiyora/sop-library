@@ -689,3 +689,68 @@ footer .fmono { font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
 
 /* deep-link anchors land below the sticky topbar */
 .sec, h3[id] { scroll-margin-top: 78px; }
+
+/* ---------- linear path (step-by-step reading) ---------- */
+.step-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+.step-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.step-nav a {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--accent-ink);
+  max-width: 46%;
+}
+.step-nav a:hover { color: var(--accent); }
+.step-next { text-align: right; margin-left: auto; }
+
+.path-folder { margin-bottom: 26px; }
+.path-folder h3 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  letter-spacing: .06em;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+.path-list { list-style: none; margin: 0; padding: 0; }
+.path-list li { border-bottom: 1px solid var(--line); }
+.path-list li:last-child { border-bottom: 0; }
+.path-list a {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.path-list a:hover { background: var(--bg-sunken); text-decoration: none; }
+.path-num {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  min-width: 30px;
+  text-align: right;
+  flex-shrink: 0;
+}
+@media (min-width: 720px) {
+  .path-cols { columns: 2; column-gap: 40px; }
+  .path-folder { break-inside: avoid; }
+}
