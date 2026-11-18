@@ -50,6 +50,8 @@
         <a href="#gtm-events">GTM event list</a>
       </div>
 
+      
+
       <div class="flow">
         <p class="flow-title">Google Search Console setup — 4 steps</p>
         <div class="flow-track">
@@ -182,7 +184,7 @@
 <li><p>Data Manager (beta, Nov 2026): product links, data streams ane first-party data ek jagya e manage; connection health/diagnostics pan. [CONFIRMED]</p></li>
 <li><p>GA4 UI ma native custom dashboards (Aug 2026 rollout) — quick reporting mate; client reporting mate Looker Studio j best rahe. [CONFIRMED]</p></li>
 <li><h3>Added 16 Nov 2026 - Exact GTM event list</h3></li>
-<li><p>Exact event names (view_item, add_to_cart, begin_checkout, purchase, generate_lead, click_buy_etsy ...) ane step-by-step: <a href="(team Drive ma doc)
+<li><p>Exact event names (view_item, add_to_cart, begin_checkout, purchase, generate_lead, click_buy_etsy ...) ane step-by-step: (team Drive ma doc)</p></li>
 <li><p>Rule: dar nava site par GSC + GA4 + GTM trino connect karo, GTM Preview ma events test karo, pachhi live report ma site umero.</p></li>
 </ul>
 
@@ -377,7 +379,8 @@
       </div>
 
       <div class="detail">
-        <h2 class="sec" id="gtm-events">GTM event list</h2><h3>Step by step (GTM)</h3>
+        <h2 class="sec" id="gtm-events">GTM event list</h2><p>02 GA4 &amp; GTM Setup ma "custom events" lakhyu chhe pan exact names nahi. Aa doc ma ready list chhe, ek var banavo ane darek site par copy karo (1 thi 100 sites).</p>
+<h3>Step by step (GTM)</h3>
 <ol>
 <li>GTM container ma GA4 Configuration tag (Measurement ID) - All Pages.</li>
 <li>Niche ni list pramane GA4 Event tag + trigger banavo.</li>
@@ -386,11 +389,76 @@
 <li>GA4 Admin → Events ma jo key event mark karvo hoy to "Mark as key event".</li>
 </ol>
 <h3>Ecommerce site (GA4 recommended event names)</h3>
-<p>| | | | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | Event name | Kyare fire thay | | view_item_list | Category / collection page par products list dekhay | | select_item | User list mathi product par click kare | | view_item | Product page khule | | add_to_cart | Add to cart click | | begin_checkout | Checkout sharu | | purchase | Order success (value + currency + transaction_id) | | search / view_search_results | Site search |</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>Event name</td>
+<td>Kyare fire thay</td>
+</tr>
+<tr class="even">
+<td>view_item_list</td>
+<td>Category / collection page par products list dekhay</td>
+</tr>
+<tr class="odd">
+<td>select_item</td>
+<td>User list mathi product par click kare</td>
+</tr>
+<tr class="even">
+<td>view_item</td>
+<td>Product page khule</td>
+</tr>
+<tr class="odd">
+<td>add_to_cart</td>
+<td>Add to cart click</td>
+</tr>
+<tr class="even">
+<td>begin_checkout</td>
+<td>Checkout sharu</td>
+</tr>
+<tr class="odd">
+<td>purchase</td>
+<td>Order success (value + currency + transaction_id)</td>
+</tr>
+<tr class="even">
+<td>search / view_search_results</td>
+<td>Site search</td>
+</tr>
+</tbody>
+</table>
 <h3>Lead / service site</h3>
-<p>| | | | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | generate_lead | Form submit success | | click_call (custom) | Phone link click | | click_whatsapp (custom) | WhatsApp link click | | click_email (custom) | mailto click |</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>generate_lead</td>
+<td>Form submit success</td>
+</tr>
+<tr class="even">
+<td>click_call (custom)</td>
+<td>Phone link click</td>
+</tr>
+<tr class="odd">
+<td>click_whatsapp (custom)</td>
+<td>WhatsApp link click</td>
+</tr>
+<tr class="even">
+<td>click_email (custom)</td>
+<td>mailto click</td>
+</tr>
+</tbody>
+</table>
 <h3>Etsy-style / outbound-sale site</h3>
-<p>| | | | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | click_buy_etsy (custom) | "Buy on Etsy" button click (item + page parameters) | | click_outbound_marketplace (custom) | Amazon/other marketplace link click |</p>
+<table>
+<tbody>
+<tr class="odd">
+<td>click_buy_etsy (custom)</td>
+<td>"Buy on Etsy" button click (item + page parameters)</td>
+</tr>
+<tr class="even">
+<td>click_outbound_marketplace (custom)</td>
+<td>Amazon/other marketplace link click</td>
+</tr>
+</tbody>
+</table>
 <h3>Badhi sites</h3>
 <ul>
 <li>scroll depth 25/50/75/90 (06 GA4 Scroll Depth Check), file_download, newsletter_signup (sign_up), video_play.</li>
