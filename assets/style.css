@@ -535,3 +535,9 @@ footer .fmono { font-family: "JetBrains Mono", monospace; font-size: 11.5px; }
   .topbar, .theme-btn, footer { display: none; }
   body { background: #fff; }
 }
+
+/* ---------- doc tables ---------- */
+.detail table { width: 100%; border-collapse: collapse; margin: 0 0 18px; font-size: 14.5px; line-height: 1.5; background: var(--bg-raised); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.detail td, .detail th { border: 1px solid var(--line); padding: 9px 13px; text-align: left; vertical-align: top; }
+.detail tbody tr:first-child td { font-weight: 600; background: var(--bg-sunken); }
+@media (max-width: 640px) { .detail table { font-size: 13px; display: block; overflow-x: auto; } }
