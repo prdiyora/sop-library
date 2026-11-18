@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 Technical SEO — SOP Library</title>
+<meta name="description" content="Technical SEO: indexing, canonical, redirects, schema, image SEO, Screaming Frog audit, migration, crawl budget ane hreflang, step by step.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="../../">
+      <span class="brand-mark">S</span>
+      <span>SOP Library</span>
+    </a>
+    <nav>
+      <a href="../../#library">All folders</a>
+      <button class="theme-btn" aria-label="Switch to dark mode">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap">
+    <div class="hero">
+      <p class="kicker">Folder 08</p>
+      <h1>Technical SEO</h1>
+      <p class="lede">Indexing, canonical, redirects, schema, audit, migration — website nu engine-room. Visitor ne na dekhay pan Google ne badhu dekhay.</p>
+      <div class="hero-meta">
+        <span class="pill">9 docs</span>
+        <span class="pill">Flow first, then numbered steps</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="toc">
+        <a href="#indexing">Indexing check</a>
+        <a href="#canonical">Canonical & duplicates</a>
+        <a href="#redirects">Redirects & 404s</a>
+        <a href="#schema">Schema markup</a>
+        <a href="#image-seo">Image SEO</a>
+        <a href="#tech-audit">Technical audit</a>
+        <a href="#migration">Redesign & migration</a>
+        <a href="#crawl-budget">Crawl budget & JS</a>
+        <a href="#international">International & hreflang</a>
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Indexing check — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⌕</span>Check what's indexed</p>
+            <p class="node-sub">GSC Page Indexing report — the doc shows exactly where to look.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Fix by the reason</p>
+            <p class="node-sub">Each common reason has its own fix, listed one by one.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✓</span>Think like a senior</p>
+            <p class="node-sub">The 'senior ni soch' section plus 2026 indexing-speed facts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="indexing">Indexing Check (GSC Page Indexing)</h2>
+<p>Page Google na index ma nathi to rank thavano j nathi - content game etlo saro hoy. Etle SEO ma pehlo sawal hamesha: "Aa page index chhe ke nahi, ane nathi to kem?" (Added point - juna notebook ma nahotu.)</p>
+<h3>Kevi rite check karvu</h3>
+<ol>
+<li>GSC → Indexing → Pages: Indexed vs Not indexed count juvo. Trend achanak niche jay to red flag.</li>
+<li>Not indexed reasons vanchho: dar reason no matlab alag chhe, badha "problem" nathi.</li>
+<li>URL Inspection: important page nu URL nakho → "URL is on Google" chhe ke nahi, user-declared vs Google-selected canonical juvo.</li>
+<li>Live test: page render thay chhe, robots/noindex block nathi te confirm karo.</li>
+</ol>
+<h3>Common reasons ane su karvu</h3>
+<ul>
+<li>Crawled - currently not indexed: Google e crawl karyu pan hamna index nathi karyu (mostly quality, duplicate ke ochi demand karan) - content improve karo, internal links vadharo, duplicate hoy to merge karo.</li>
+<li>Discovered - currently not indexed: Google e crawl j nathi karyu - internal links, sitemap ane site quality check karo.</li>
+<li>Duplicate without user-selected canonical: canonical tag set karo (Technical point 02 juvo).</li>
+<li>Alternate page with proper canonical tag: mostly normal chhe (filters, variants) - kai karvanu nathi.</li>
+<li>Excluded by noindex / Blocked by robots.txt: intentional chhe ke bhool thi? Money page hoy to tarat fix.</li>
+<li>Not found (404) / Soft 404: Technical point 03 juvo.</li>
+</ul>
+<h3>Senior ni soch</h3>
+<p>Badha pages index karvana nathi hota. Filter, tag, cart, thin pages index na thay te saru chhe. Focus: money pages (category, product, service, top blogs) index hova joiye — koi exclusion hoy to reason check karo.</p>
+<h3>Checklist</h3>
+<ul>
+<li>Top 20 money pages URL Inspection thi indexed confirmed</li>
+<li>Not indexed reasons ni sheet: karan | URL count | iradapurvak? | shu karvu</li>
+<li>Monthly indexed pages trend note thay chhe</li>
+</ul>
+<h3>Added 11 Nov 2026 — indexing speed na 2026 facts (research)</h3>
+<ul>
+<li><p>IndexNow: Bing, Yandex, Seznam, Naver, Amazon product search vanche — GOOGLE VAANTO J NATHI (Google e 2022 ma test kari ne adopt na karyu). Free; Cloudflare/Shopify/Wix/RankMath ma ek toggle. Enable karo, pan Google mate asar 0.</p></li>
+<li><p>Google Indexing API: faqt JobPosting ke livestream (BroadcastEvent) pages mate — general pages par scope violation (quota revoke risk). 200 requests/day. Ecommerce/blog pages mate use nahi.</p></li>
+<li><p>Google mate real channels: XML sitemap (primary), homepage/crawled pages thi internal links, URL Inspection → Request Indexing (key pages only, daily quota).</p></li>
+<li><p>Realistic indexing time: established site = kalak thi 2-3 divas; navi site = divas thi 2-6 week. Google kyarey crawl/index ni guarantee nahi aapto (CONFIRMED: crawling-indexing FAQ).</p></li>
+<li><p>Detail + fast ranking playbook: 03 → 10 Fast Ranking Strategy (11 Nov 2026).</p></li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Canonical, duplicates & noindex — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⌕</span>Find where duplicates come from</p>
+            <p class="node-sub">Same content, many URLs — the doc lists the usual sources.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Fix the right way</p>
+            <p class="node-sub">Canonical, noindex or consolidate — pick per case.</p>
+          </div>
+          <div class="node branch">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✗</span>Avoid the common mistakes</p>
+            <p class="node-sub">The wrong canonical can hide good pages.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="canonical">Canonical, Duplicate Content &amp; Noindex</h2>
+<p>Ek j content ghana URLs par khule (www/non-www, http/https, ?ref=, filters, variants) to Google ne pasand karvu pade ke kayu URL batavvu, ane links/signals vahenchai shake. Canonical tag Google ne kahe chhe: "aa content nu main URL aa chhe".</p>
+<h3>Duplicate kya thi aave</h3>
+<ul>
+<li>http vs https, www vs non-www, trailing slash / vs no slash</li>
+<li>Tracking parameters (?utm=, ?ref=), sort/filter parameters</li>
+<li>Shopify: /collections/x/products/y ane /products/y - same product be URL</li>
+<li>Print pages, tag pages, same description vala ghana product pages</li>
+</ul>
+<h3>Fix kevi rite</h3>
+<ol>
+<li>Self-canonical: dar indexable page par potana clean URL no canonical.</li>
+<li>Duplicate versions: main URL taraf canonical (ya 301 jo duplicate URL ni jarur j nathi).</li>
+<li>Site-wide 301: http → https ane www/non-www mathi ek j version.</li>
+<li>Noindex: je page users mate jaruri pan search mate nahi (thank-you, internal search, login) - meta robots noindex.</li>
+<li>Internal links: hamesha canonical URL ne j link karo - nahi to Google ne mixed signal male.</li>
+</ol>
+<h3>Common mistakes (aa bhool na karo)</h3>
+<ul>
+<li>Noindex + robots.txt block sathe: robots block hoy to Google noindex tag vanchi j na shake</li>
+<li>Canonical ek page par ane sitemap/internal links bija URL par - conflicting signals</li>
+<li>Badha pages no canonical homepage par - pages index mathi nikli jay</li>
+</ul>
+<p>Note: canonical ek hint chhe, order nahi (CONFIRMED - Google docs). Signals consistent hoy to j Google follow kare.</p>
+<h3>Checklist</h3>
+<ul>
+<li>Ek j preferred domain version (https + www ya non-www), baki 301</li>
+<li>Indexable pages par self-canonical</li>
+<li>Sitemap + internal links + canonical - teno match</li>
+<li>Noindex pages robots.txt ma blocked nathi</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Redirects, 404 & broken links — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">▶</span>Learn the status codes in plain words</p>
+            <p class="node-sub">301, 302, 404 — what each really means.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⌕</span>Check for broken links</p>
+            <p class="node-sub">The doc's checking method, step by step.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">⚖</span>Apply the decision rule</p>
+            <p class="node-sub">When to redirect, when to let a page die.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="redirects">Redirects, 404 &amp; Broken Links</h2>
+<p>URL badlay, page delete thay, product band thay - dar vakhte saacho status code jaruri chhe. Galat handling = backlinks waste, users frustrated, crawl budget waste.</p>
+<h3>Status codes simple bhasha ma</h3>
+<ul>
+<li>301: kayam mate move thayu - page ni value nava URL ne pass thay. Slug change, domain change, pages merge mate.</li>
+<li>302: temporary move (sale page, A/B test). Lambo time 302 rakhvu nahi.</li>
+<li>404: page nathi. Normal chhe - badha 404 problem nathi.</li>
+<li>410: page kayam mate gayu - Google 404 jevu j treat kare (farak bahu nano).</li>
+<li>Soft 404: page "nathi" kahe pan status 200 aape, ke badha deleted pages homepage par redirect - Google ene soft 404 gane.</li>
+</ul>
+<h3>Kevi rite check karvu</h3>
+<ol>
+<li>Screaming Frog crawl → Response Codes → 3xx, 4xx filter.</li>
+<li>GSC → Pages → Not found (404) ane Soft 404 lists.</li>
+<li>Redirect chains: A → B → C hoy to A → C direct karo (max 1 hop).</li>
+<li>Redirect loop: A → B → A - page khule j nahi, tarat fix.</li>
+</ol>
+<h3>Nirnay no niyam</h3>
+<ul>
+<li>404 page par backlinks ke traffic hoy → nearest relevant page par 301</li>
+<li>Koi value nathi ane replacement nathi → 404/410 rehva do</li>
+<li>Internal broken link → link j update karo (redirect par aadhar na rakho)</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>Monthly crawl: 0 internal broken links</li>
+<li>Koi redirect chain ke loop nathi</li>
+<li>Backlink vala 404 pages ne 301 aapela</li>
+<li>Search ane popular links sathe custom 404 page</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Schema markup — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">☰</span>Pick the schema your site type needs</p>
+            <p class="node-sub">The doc lists required schema per website type.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Add it step by step</p>
+            <p class="node-sub">Plus the important 2026 update and FAQ schema's final status.</p>
+          </div>
+          <div class="node branch">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✗</span>Avoid the common mistakes</p>
+            <p class="node-sub">Wrong schema is worse than none.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="schema">Schema Markup (Structured Data)</h2>
+<p>Schema = code (JSON-LD format) je Google ane AI systems ne page vishe clear facts aape: aa product chhe, price aatlo, brand aa, business kya chhe. Schema direct ranking boost nathi aapto (CONFIRMED), pan rich results (stars, price) ane machine understanding mate useful chhe.</p>
+<h3>Website type pramane jaruri schema</h3>
+<ul>
+<li>Badhi sites: Organization (logo, socials, contact), WebSite, BreadcrumbList</li>
+<li>Local business: LocalBusiness (NAP, hours, geo) - GBP sathe exact match</li>
+<li>Ecommerce: Product + Offer (price, availability, currency), review/rating fakt jo real reviews page par visible hoy</li>
+<li>Blog: Article/BlogPosting (author, datePublished, dateModified)</li>
+</ul>
+<h3>Important 2026 update</h3>
+<p>Google e 7 May 2026 thi FAQ rich results Search ma batavvana band karya chhe (CONFIRMED - Google Search Central). FAQ section page par users ane AEO mate hju useful chhe, pan FAQ schema thi have rich result nahi male. Pehla HowTo (2023) ane bija ghana types pan retire thaya chhe - navo schema add karta pehla Google docs ma type supported chhe ke nahi check karo.</p>
+<h3>Steps</h3>
+<ol>
+<li>Page type pramane schema type select karo.</li>
+<li>Implement: WordPress ma RankMath/Yoast, Shopify ma theme ma default Product schema hoy - check karo, jarur hoy to app/JSON-LD.</li>
+<li>Validate: Rich Results Test (Google) + validator.schema.org.</li>
+<li>Monitor: GSC → Enhancements/Shopping reports ma errors.</li>
+</ol>
+<h3>Common mistakes (aa bhool na karo)</h3>
+<ul>
+<li>Page par na dekhaye tevi info schema ma (fake rating) - manual action risk</li>
+<li>Schema price ane page price alag</li>
+<li>Duplicate schema - theme + plugin banne add kare</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>Organization + Breadcrumb site-wide</li>
+<li>Product/Article/LocalBusiness page type pramane</li>
+<li>Rich Results Test pass, GSC ma errors 0</li>
+</ul>
+<h3>Added 8 Nov 2026 — FAQ schema final status</h3>
+<ul>
+<li>June 2026 ma Google e FAQ rich result report (GSC) ane Rich Results Test mathi FAQ support pan kadhya — documentation pan remove thayu. [CONFIRMED — Google Search Central]</li>
+<li>Juno FAQ schema delete karvani jarur nathi — Google pramane unused structured data 'does not cause problems'. Pan navi pages ma FAQ schema banavva time na ghasvo; FAQ section users/AEO mate content tarike j rakho.</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Image SEO & alt text — 3 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">✎</span>Follow the rules</p>
+            <p class="node-sub">File names, alt text, size — the basics done right.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">✦</span>Ecommerce extras</p>
+            <p class="node-sub">Product photos need a little more.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✓</span>Check and checklist</p>
+            <p class="node-sub">How to verify it's all in place.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="image-seo">Image SEO &amp; Alt Text</h2>
+<p>Images speed na sauthi common karano ma ek ane Google Images traffic no source - banne. Ecommerce ma product images j sales kare chhe.</p>
+<h3>Rules (niyamo)</h3>
+<ol>
+<li>File name: upload pehla rename - IMG_4521.jpg nahi, eggless-chocolate-cake.webp.</li>
+<li>Alt text: image ma su chhe te 5-15 words ma describe karo. Keyword naturally aave to saru, stuffing nahi. Decorative images mate alt empty.</li>
+<li>Format: WebP (ya AVIF), compress karelu. Product image 100-200 KB target.</li>
+<li>Size: display size jetli j image - 4000px image 400px box ma nahi.</li>
+<li>Width/height attributes: layout shift (CLS) avoid karva.</li>
+<li>Lazy load: fold ni niche ni images lazy. Page ni main (LCP) image lazy nahi.</li>
+</ol>
+<h3>Ecommerce extra (vadhu)</h3>
+<ul>
+<li>Har product ni unique real photos - manufacturer ni same images badha sellers pase hoy</li>
+<li>Alag-alag angles + use-case photo + size reference</li>
+<li>Variant images alag (color pramane)</li>
+</ul>
+<h3>Kevi rite check karvu</h3>
+<ul>
+<li>Screaming Frog → Images → Missing alt text, over 100 KB</li>
+<li>PageSpeed Insights → "Properly size images", "Serve images in next-gen formats"</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>Content images ma Missing alt text 0</li>
+<li>Varnanatmak file names</li>
+<li>WebP + compressed, LCP image lazy nathi</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Technical audit (Screaming Frog) — 4 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚙</span>Crawl the site</p>
+            <p class="node-sub">Screaming Frog steps in the doc.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚖</span>Set priorities</p>
+            <p class="node-sub">What to fix first — the doc's priority method.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">▤</span>Write the output</p>
+            <p class="node-sub">In the format given, so fixes get assigned.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">4</span>
+            <p class="node-name"><span class="ico">✓</span>Extra 2026 checks</p>
+            <p class="node-sub">Added 16 Nov 2026 — don't skip the new items.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="tech-audit">Technical SEO Audit (Screaming Frog Crawl)</h2>
+<p>6 Month Plan na Month 1 ma "full audit" lakhel chhe - aa doc te audit kevi rite karvo te batave. Audit = list of issues nahi, priority sathe action plan.</p>
+<h3>Steps</h3>
+<ol>
+<li>Crawl: Screaming Frog (free 500 URLs) ma domain nakho. Mode: Spider.</li>
+<li>Response codes: 3xx, 4xx, 5xx ni list (Technical point 03).</li>
+<li>Indexability: noindex, canonicalised, blocked pages - intentional chhe? (Technical point 01, 02).</li>
+<li>Page titles + meta: missing, duplicate, limit karta vadhare lamba.</li>
+<li>H1: missing, ek karta vadhare, duplicate.</li>
+<li>Images: alt text missing, size moto.</li>
+<li>Crawl depth: money pages 3 clicks thi vadhare deep na hova joiye.</li>
+<li>GSC data sathe match: Pages report, Core Web Vitals, manual actions, security issues.</li>
+</ol>
+<h3>Priority kevi rite nakki karvi</h3>
+<ul>
+<li>Critical: site/money pages index nathi, noindex/robots bhool, site-wide redirect issue - tarat</li>
+<li>High: money pages par duplicate/canonical issue, broken internal links, slow mobile</li>
+<li>Medium: meta missing, alt text missing, redirect chains</li>
+<li>Low: cosmetic (title thodu lambu)</li>
+</ul>
+<p>Rule: "Ketla URLs affected" x "te pages ni business value" = priority. 500 blog tags par missing meta &lt; 5 product pages noindex.</p>
+<h3>Output</h3>
+<ul>
+<li>Sheet: Issue | Example URLs | Count | Impact | Effort | Priority | Owner | Status</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>Full crawl thai gayu + GSC data sathe cross-check karyu</li>
+<li>Issues priority sathe listed</li>
+<li>Critical issues 1 week ma fixed</li>
+</ul>
+<h3>Added 16 Nov 2026 - Audit ma extra checks</h3>
+<p>Big/programmatic site hoy to: <a href="(team Drive ma doc)
+<p>Multi-country (USA + UK) hoy to hreflang check: <a href="(team Drive ma doc)
+<p>Navi page publish karta pehla: <a href="(team Drive ma doc)
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Redesign & migration SEO — 3 phases</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">▤</span>Before launch</p>
+            <p class="node-sub">Map every old URL to its new home. Nothing gets lost.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⏏</span>Launch day</p>
+            <p class="node-sub">The day-of checklist, in order.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">↻</span>Watch for 6-8 weeks after</p>
+            <p class="node-sub">Rankings wobble after migration — monitor and fix.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="migration">Website Redesign &amp; Migration SEO</h2>
+<p>Navu design, navu platform (WordPress → Shopify) ke navu domain - aa SEO nu sauthi risky kaam chhe. Redirects bhuli gaya to mahinao ni ranking ek divas ma jay. Design &amp; Web Development section sathe aa follow karvu jaruri.</p>
+<h3>Launch pehla</h3>
+<ol>
+<li>Old site no full crawl + GSC top pages + backlink vala pages export.</li>
+<li>Redirect map: old URL | new URL - dar important URL 1:1 relevant page par 301. Badhu homepage par redirect nahi.</li>
+<li>Titles, meta, H1, content ane internal links navi site ma carry karo - kharab design change ok, content loss nahi.</li>
+<li>Staging site noindex/password protected - pan launch time te hatavvu yaad rakho.</li>
+</ol>
+<h3>Launch divas</h3>
+<ul>
+<li>robots.txt ma Disallow: / nathi te check</li>
+<li>Noindex tags remove karo</li>
+<li>Redirect map test karo (Screaming Frog list mode)</li>
+<li>Navu sitemap GSC + Bing ma submit; domain change hoy to GSC Change of Address</li>
+<li>GA4/GTM tracking live chhe te confirm</li>
+</ul>
+<h3>Launch pachhi (6-8 week)</h3>
+<ul>
+<li>Dar week GSC: 404, indexing drop, top queries ni position</li>
+<li>Thodo fluctuation 2–6 week normal; pan motu drop (20%+) ke 404 vadhe to tarat redirects/indexing check - raah na juo</li>
+<li>Redirects ochama ochu 1 varas rakho</li>
+</ul>
+<h3>Checklist</h3>
+<ul>
+<li>Redirect map 100% important URLs cover kare</li>
+<li>Launch divas na checks thai gaya</li>
+<li>Before/after traffic compare sheet taiyar chhe</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">Crawl budget & JavaScript SEO — 4 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">▶</span>Know when crawl budget matters</p>
+            <p class="node-sub">Small sites can skip this; big sites can't.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">✂</span>Cut the waste</p>
+            <p class="node-sub">Stop Google spending crawls on junk URLs.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">⚙</span>Log files (advanced, optional)</p>
+            <p class="node-sub">See what Googlebot actually does.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">4</span>
+            <p class="node-name"><span class="ico">✓</span>JavaScript SEO check</p>
+            <p class="node-sub">Make sure JS-built content is visible to Google.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="crawl-budget">Crawl budget & JS</h2><h3>1. Crawl budget kyare jovo</h3>
+<ul>
+<li>Site ma ghana hajar URLs (filters, tags, programmatic pages) hoy.</li>
+<li>GSC → Settings → Crawl stats: requests, response codes, avg response time.</li>
+<li>"Discovered</li>
+<li>currently not indexed" ghana hoy.</li>
+</ul>
+<h3>2. Waste ghatadvo</h3>
+<ol>
+<li>Parameter/filter URLs control (canonical, noindex, robots - 08/02, 08/03).</li>
+<li>Redirect chains ane 404 ghatadvo (08/03).</li>
+<li>Sitemap ma fakat indexable, 200-status, canonical URLs.</li>
+<li>Server speed (TTFB) saru - slow server = Google ochhu crawl kare.</li>
+<li>Strong internal links important pages ne (05/03).</li>
+</ol>
+<h3>3. Log files (advanced, optional)</h3>
+<ul>
+<li>Server log mathi Googlebot hits joi shakay: kaya URLs crawl thay, kaya nahi.</li>
+<li>Tool: Screaming Frog Log File Analyser (ke hosting logs). Googlebot verify karo (fake bots hoy).</li>
+<li>Important page Googlebot ne dekhatu nathi to internal link / sitemap sudharo.</li>
+</ul>
+<h3>4. JavaScript SEO</h3>
+<ol>
+<li>Rule: important content + links normal HTML ma hova joiye (anchor tag with href).</li>
+<li>Test: GSC URL Inspection → View tested page → Screenshot/HTML. Content dekhay chhe?</li>
+<li>View-source vs rendered HTML compare. Content fakat JS thi aave to risk.</li>
+<li>Best: server-side rendering ya static HTML for money pages.</li>
+<li>Lazy-load images ma above-the-fold image lazy na karo.</li>
+<li>Click par j khulta tabs/accordion content ne Google read kare, pan fakat button click thi load thay (API call) to nahi.</li>
+</ol>
+<h3>Checklist</h3>
+<ul>
+<li>Crawl stats joyu, 5xx nathi.</li>
+<li>Important page rendered HTML ma content + links chhe.</li>
+<li>Sitemap clean.</li>
+</ul>
+
+      </div>
+
+      <div class="flow">
+        <p class="flow-title">International SEO & hreflang — 4 steps</p>
+        <div class="flow-track">
+          <div class="node">
+            <span class="node-num">1</span>
+            <p class="node-name"><span class="ico">⚲</span>Pick the structure</p>
+            <p class="node-sub">How country/language versions are organized.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">2</span>
+            <p class="node-name"><span class="ico">⚙</span>Set hreflang</p>
+            <p class="node-sub">Only when two or more versions exist — it tells Google which is which.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">3</span>
+            <p class="node-name"><span class="ico">✎</span>Localize the content</p>
+            <p class="node-sub">Real localization, not machine translation dumps.</p>
+          </div>
+          <div class="node">
+            <span class="node-num">4</span>
+            <p class="node-name"><span class="ico">↻</span>Measure per market</p>
+            <p class="node-sub">Plus the mistakes list to avoid.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="detail">
+        <h2 class="sec" id="international">International & hreflang</h2><h3>1. Structure pasand karo</h3>
+<p>| | | | | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | | Option | Example | Kyare | | Same page, ek English | / | Content same, fakat price/shipping notes alag | | Subfolder | /us/ , /uk/ | Best for most (ek domain ni authority) | | ccTLD | .co.uk | Strong local brand, alag budget |</p>
+<h3>2. hreflang (jo be ke vadhu versions hoy)</h3>
+<ol>
+<li>Darek version page par badha j versions ni hreflang tag (potani sahit - self reference).</li>
+<li>Codes: en-US, en-GB, x-default (fallback).</li>
+<li>Return links jaruri: US page UK ne point kare to UK page US ne point kare.</li>
+<li>Absolute URLs, canonical same page par self.</li>
+<li>Implement: HTML head, ke sitemap ma. Ek j method rakho.</li>
+</ol>
+<h3>3. Content localisation</h3>
+<ul>
+<li>UK spelling (colour, jewellery) vs US (color, jewelry), UK vs US keywords alag check karo (Semrush ma database US ane UK).</li>
+<li>Currency, shipping time, returns, VAT/tax notes, size units.</li>
+<li>Pure copy-paste duplicate nahi - thodu localise.</li>
+</ul>
+<h3>4. Measure</h3>
+<ul>
+<li>GSC → Performance → Country filter (United States / United Kingdom).</li>
+<li>GA4 ma country wise sessions + key events.</li>
+</ul>
+<h3>Mistakes</h3>
+<ul>
+<li>Automatic IP redirect (Googlebot ne block thai jay) - bhale suggestion banner aapo.</li>
+<li>hreflang return link na hovi.</li>
+</ul>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="../../#library">← Back to the SOP Library</a></p>
+    <p class="fmono">Folder 08 · SOP Library</p>
+  </div>
+</footer>
+
+<script src="../../assets/app.js"></script>
+</body>
+</html>
