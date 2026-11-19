@@ -32,6 +32,31 @@
 <li>Sitemap GSC + Bing ma submit karel chhe, koi errors nathi</li>
 <li>New pages sitemap ma auto-add thay</li>
 </ul></div>
+<div class="sec" id="section-e"><h3><span class="letter">5.2.E</span> Ecommerce mate full rulebook (ChatGPT Plus thi verify karela, 19 Nov 2026)</h3>
+<p>4 vastu yaad rakho: <b>robots.txt = crawl control</b>, <b>noindex = indexing control</b>, <b>canonical = duplicate ma thi preferred URL</b>, <b>sitemap = je pages index karavva chhe teni discovery list</b>. Badha alag kaam kare chhe.</p>
+<h4>1. Robots.txt — su allow ane su block</h4>
+<table><tbody>
+<tr><th>URL type</th><th>Rule</th></tr>
+<tr><td>Homepage, product pages, collection/category pages, blog, important content pages</td><td>Allow + index</td></tr>
+<tr><td>Cart (/cart), checkout (/checkout), account/login</td><td>Disallow</td></tr>
+<tr><td>Internal search (/search?q=...)</td><td>Disallow; already index thayel hoy to noindex</td></tr>
+<tr><td>Thank-you / order confirmation</td><td>Noindex + crawl restrict (order data protect karo)</td></tr>
+<tr><td>Sort URLs (?sort_by=) ane filter URLs (?filter=)</td><td>Generally disallow — PAN jo koi filter URL intentional SEO landing page hoy (dakhla "black running shoes" category) to allow + canonical + sitemap ma nakho</td></tr>
+<tr><td>Tracking URLs (?utm_=)</td><td>Canonical clean URL par; crawl block optional</td></tr>
+<tr><td>CSS, JS, product images</td><td>Allow — page render karva jaruri</td></tr>
+<tr><td>Category pagination</td><td>Generally allow (crawl thavu joie)</td></tr>
+</tbody></table>
+<h4>2. Robots.txt example (custom site mate — Shopify ma blindly paste na karo)</h4>
+<p>User-agent: * | Disallow: /cart | Disallow: /checkout | Disallow: /account/ | Disallow: /search | Disallow: /thank-you | Disallow: /*?*sort_by= | Disallow: /*?*filter= | chelle: Sitemap: https://(site).com/sitemap.xml</p>
+<h4>3. Kaay pan block NA karo</h4>
+<ul><li>Product, collection, category ke rank karvo hoy eva content pages</li><li>CSS/JS/images je page render mate jaruri</li><li>Je page par noindex chhe e page — block karsho to Google noindex joi j na shake</li><li>Akhi site par Disallow: / (production ma kyay nahi)</li></ul>
+<h4>4. Sitemap rules</h4>
+<ul><li><b>Include:</b> canonical product, collection/category, homepage, important pages, indexable blogs, SEO-worthy filter landing pages</li><li><b>Exclude:</b> cart, checkout, login/account, search URLs, thank-you, non-indexable filter/sort URLs, tracking parameter URLs, redirected URLs, 404/410, noindex pages, canonicalized duplicates</li><li>Darek sitemap URL: HTTP 200, indexable, HTTPS canonical host, internal link thi milay evu</li><li><b>Limit:</b> 1 sitemap ma max 50,000 URLs ke 50MB — motu ho to split karo (sitemap-products-1.xml, sitemap-collections.xml, sitemap-pages.xml, sitemap-blogs.xml) ane sitemap index ma link karo</li><li>lastmod accurate rakho — fakt rebuild thayo etle update na karo; changefreq/priority Google ignore kare chhe</li><li>Product add/remove/change thay tyare sitemap update; weekly error check, monthly full audit</li></ul>
+<h4>5. Shopify vs custom platform</h4>
+<ul><li>Shopify robots.txt ane sitemap.xml auto-generate kare chhe — pehla review karo, pachhi j change karo</li><li>Shopify ma custom rules mate robots.txt.liquid edit karo — default rule groups replace na karo, add karo</li><li>/collections/category/products/product URL no canonical /products/product par j hoy — multiple collections ma product hoy to canonical audit karo</li><li>Sitemap Shopify auto-maintain kare (products, collections, pages, blogs)</li><li>Product hide karvo hoy to seo.hidden = 1 ke Unlisted status — pan storefront visibility pehla check karo</li><li>Custom platform ma: robots.txt approved template thi, sitemap database thi auto-generate, delete/redirect/draft/private URLs exclude, removed URL par real 404/410 ke 301, JS store ma crawlable product links confirm karo</li></ul>
+<h4>6. Trainee checklist (darek client mate)</h4>
+<ol><li>/robots.txt kholo — production globally blocked nathi ne?</li><li>Products, categories, blogs crawlable chhe?</li><li>Cart, checkout, search, account, thank-you handling barabar chhe?</li><li>Real filter/sort/pagination URLs test karya?</li><li>CSS/JS/images block to nathi ne?</li><li>/sitemap.xml ane child sitemaps load thay chhe?</li><li>Sitemap URLs: 200, indexable, canonical, HTTPS?</li><li>Size limit ane lastmod barabar?</li><li>GSC ma sitemap submit karyu ane errors check karya?</li><li>Changes pachhi GSC ma sample product/collection URLs inspect karya?</li></ol>
+<p><b>Final rule:</b> sitewide robots.txt ke sitemap change karta PEHLA representative URLs test karo, ane deploy pachhi GSC review karo — especially mota ecommerce sites ma.</p></div>
 <div class="pagenav"><a href="../../..//coaches/05-onpage-seo/5-1-eeat-follow-on-all-pages/">← 5.1 EEAT Follow on All Pages</a><a href="../../..//coaches/05-onpage-seo/5-3-internal-linking-3-5-per-page/">5.3 Internal Linking (3-5 Per Page) →</a></div>
 </div></main><footer class="site"><div class="wrap">🚂 SEO SOP Express — Priyank nu SEO SOP Library. 15 dabba + engine, ek train. Badhu content ahi j chhe, koi doc kholvu nahi. 🙏</div></footer>
 <script>window.BASE='../../../';</script><script src="../../..//assets/data.js"></script><script src="../../..//assets/app.js"></script></body></html>
