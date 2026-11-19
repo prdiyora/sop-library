@@ -13,238 +13,377 @@
 <p style="color:var(--muted);font-size:14px;margin-bottom:6px">Dabbo 11 · Client Reporting System · <span class="badge done" data-done-id="11.4" style="display:none">✅ Done</span></p>
 <div class="tools"><button class="markdone" onclick="markDone('11.4')">☑️ Mark done</button><button class="setcur" onclick="setCurrent('11.4')">📍 Set current stop</button></div>
 <div class="sec"><p>Gujarati-English | Updated 06 Nov 2026</p>
-<p>Boundary: Current Netlify production is untouched. Vercel is Preview/migration only. Do not change production branch, domain, alias, or promote without owner approval.</p></div><div class="sec" id="section-a"><h3><span class="letter">11.4.A</span> 0. One-line architecture</h3><p>GSC → daily scheduler (05:30 IST) → GitHub main/data.json → Vercel API → dashboard.</p>
-<p>Vercel is hosting/deployment + serverless API. It is not the current GSC data scheduler. Existing scheduled automation fetches 13 GSC properties, merges historical rows and commits data.json.</p></div><div class="sec" id="section-b"><h3><span class="letter">11.4.B</span> 1. Current known setup</h3><table>
+<p>Boundary: Current Netlify production is untouched. Vercel is Preview/migration only. Do not change production branch, domain, alias, or promote without owner approval.</p></div><div class="sec" id="section-a"><h3><span class="letter">11.4.A</span> 0. Ek line ma architecture</h3>
+<p>GSC → daily scheduler (05:30 IST) → GitHub main/data.json → Vercel API → dashboard.</p>
+<p>Vercel = hosting/deployment + serverless API. Vercel GSC data scheduler NAHI. 05:30 nu data collection existing scheduled automation kare che — e 13 GSC properties fetch kare, historical rows merge kare ane data.json commit kare.</p></div><div class="sec" id="section-b"><h3><span class="letter">11.4.B</span> 1. Hal nu known setup</h3>
+<table>
 <tr><th>Item</th><th>Value</th></tr>
 <tr><td>GitHub repo</td><td>client-a-store/gsc (private)</td></tr>
 <tr><td>Data branch</td><td>main</td></tr>
 <tr><td>Vercel Preview branch</td><td>migration/vercel</td></tr>
-<tr><td>Vercel project</td><td>(vercel project)</td></tr>
+<tr><td>Vercel project</td><td>(vercel project — admin pase confirm karo)</td></tr>
 <tr><td>Team slug / ID</td><td>(team slug) / (team ID)</td></tr>
 <tr><td>Project ID</td><td>(project ID)</td></tr>
 <tr><td>Plan / region</td><td>Hobby / bom1</td></tr>
-<tr><td>Preview URL</td><td>(team internal link)
-<tr><td>Stable Preview alias</td><td>(team internal link)
-<tr><td>Health URL</td><td>(team internal link)
-<tr><td>Current dashboard</td><td>(team internal link)
+<tr><td>Preview URL</td><td>(team internal link — admin pase mangvo)</td></tr>
+<tr><td>Stable Preview alias</td><td>(team internal link — admin pase mangvo)</td></tr>
+<tr><td>Health URL</td><td>(team internal link — admin pase mangvo)</td></tr>
+<tr><td>Current dashboard</td><td>(team internal link — admin pase mangvo)</td></tr>
 <tr><td>Scheduler ID</td><td>(scheduler ID)</td></tr>
 <tr><td>Scheduler</td><td>Daily 05:30 Asia/Kolkata</td></tr>
 </table>
-<p>Last documented manual GSC sync: 04 Nov 2026; commit (commit ref). Vercel Preview health passed after that sync (13/13 projects valid). Netlify live endpoint was not independently verified in that environment; this does not mean Netlify is down.</p></div><div class="sec" id="section-c"><h3><span class="letter">11.4.C</span> 2. What Vercel does</h3><ul>
-<li>Hosts static HTML/CSS/JS.</li>
-<li>Connects to GitHub and deploys on push.</li>
-<li>Non-production branches get Preview deployments.</li>
-<li>Configured production branch deploys to production.</li>
-<li>api/*.js files become server-side Node.js Functions.</li>
-<li>Environment Variables store secrets server-side.</li>
+<p>Last documented manual GSC sync: 04 Nov 2026; commit (commit ref). Ae sync pachhi Vercel Preview health pass thayo (13/13 projects valid). Netlify live endpoint ae environment ma independently verify thayu nahi — aanu matlab e nathi ke Netlify down che.</p>
+<p><b>Boundary:</b> Current Netlify production untouched. Vercel = fakt Preview/migration. Production branch, domain, alias ke promotion owner na written approval vagar NA badalvu.</p></div><div class="sec" id="section-c"><h3><span class="letter">11.4.C</span> 2. Vercel shu kare che</h3>
+<ul>
+<li>Static HTML/CSS/JS host kare.</li>
+<li>GitHub sathe connect thay, push par deploy kare.</li>
+<li>Non-production branches ne Preview deployments male.</li>
+<li>Configured production branch production ma deploy thay.</li>
+<li>api/*.js files server-side Node.js Functions bane.</li>
+<li>Environment Variables ma secrets server-side store thay.</li>
 </ul>
-<p>Important: Current 05:30 GSC collection is done by existing scheduled automation, not Vercel Cron. A Vercel Cron hitting /api/gsc-health only checks data; it does not fetch GSC or update GitHub.</p></div><div class="sec" id="section-d"><h3><span class="letter">11.4.D</span> 3. Connect the repo to Vercel</h3><ol>
-<li>Sign in at <a href="https://vercel.com/dashboard" target="_blank" rel="noopener">https://vercel.com/dashboard</a>.</li>
-<li>Select team (team slug), not personal account.</li>
+<p><b>Important:</b> 05:30 nu GSC collection existing scheduled automation kare, Vercel Cron nahi. /api/gsc-health par Vercel Cron fakt data CHECK kare — e GSC fetch nathi kartu ke GitHub update nathi kartu.</p></div><div class="sec" id="section-d"><h3><span class="letter">11.4.D</span> 3. Repo Vercel sathe connect karo</h3>
+<ol>
+<li>vercel.com/dashboard par sign in karo.</li>
+<li>Team select karo (team slug), personal account nahi.</li>
 <li>Add New → Project.</li>
-<li>Import GitHub repo client-a-store/gsc.</li>
-<li>Reuse existing project (vercel project); do not create duplicate.</li>
+<li>GitHub repo client-a-store/gsc import karo.</li>
+<li>Existing project (vercel project) reuse karo — duplicate project NA banavvo.</li>
 <li>Framework preset: Other.</li>
-<li>Root directory: ..</li>
-<li>Current plain HTML + Node API source has no root package.json and no vercel.json in inspected migration branch. No build command/dependency install is expected for this source; keep Vercel defaults unless repo later adds a build system.</li>
-<li>Confirm Git connection and Preview branch deployment.</li>
-<li>Do not change Production Branch or attach production domain as part of Preview setup.</li>
+<li>Root directory: repo root.</li>
+<li>Aa plain HTML + Node API source ma root package.json ke vercel.json nathi, etle build command/install ni jarur nathi — Vercel defaults j rakho (pachhi repo ma build system aave to change).</li>
+<li>Git connection ane Preview branch deployment confirm karo.</li>
+<li>Production Branch NA badalvo ane production domain NA attach karo — aa fakt Preview setup che.</li>
 </ol>
 <h4>Branch discipline</h4>
 <ul>
-<li>main: canonical saved GSC snapshot and existing production workflow.</li>
+<li>main: canonical saved GSC snapshot ane existing production workflow.</li>
 <li>migration/vercel: Vercel Preview migration.</li>
-<li>Push Preview code only to migration/vercel; verify commit + Preview URL.</li>
-<li>Production promotion/domain/alias changes require written approval.</li>
+<li>Preview code fakt migration/vercel par push karo; commit + Preview URL verify karo.</li>
+<li>Production promotion/domain/alias changes mate written approval joie.</li>
 </ul>
 <p>Example push:</p>
-<p>git checkout migration/vercel git pull origin migration/vercel git status git diff git add api/gsc.js api/gsc-health.js index.html git commit -m "fix: update GSC dashboard API" git push origin migration/vercel</p></div><div class="sec" id="section-e"><h3><span class="letter">11.4.E</span> 4. GitHub token → Vercel Environment Variable</h3><p>The API reads private GitHub main/data.json, so Vercel needs a server-side GITHUB_TOKEN.</p>
+<pre><code>git checkout migration/vercel
+git pull origin migration/vercel
+git status
+git diff
+git add api/gsc.js api/gsc-health.js index.html
+git commit -m "fix: update GSC dashboard API"
+git push origin migration/vercel</code></pre></div><div class="sec" id="section-e"><h3><span class="letter">11.4.E</span> 4. GitHub token → Vercel Environment Variable</h3>
+<p>API private GitHub main/data.json vanche che, etle Vercel ne server-side GITHUB_TOKEN joie.</p>
 <ol>
 <li>GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.</li>
 <li>Resource owner: client-a-store.</li>
-<li>Repository access: only gsc.</li>
+<li>Repository access: fakt gsc repo.</li>
 <li>Permissions: Contents Read-only; Metadata Read-only/default.</li>
-<li>Generate token; copy it only into Vercel. Never paste into chat, docs, source, HTML, screenshots, or logs.</li>
+<li>Token generate karo; copy fakt Vercel ma j karo. Chat, docs, source code, HTML, screenshot ke logs ma KYAREY paste na karo.</li>
 <li>Vercel → project (vercel project) → Settings → Environment Variables.</li>
-<li>Name GITHUB_TOKEN; value = token; target = Preview (and branch restriction migration/vercel if using branch-specific preview env).</li>
-<li>Save and redeploy latest Preview deployment. Environment changes do not alter already-built deployments automatically.</li>
-<li>Test /api/gsc-health; expected ok:true, 13 expected/checked projects, allProjectsValid true.</li>
+<li>Name: GITHUB_TOKEN; value: token; target: Preview (branch-specific preview env use karta hoy to branch restriction migration/vercel).</li>
+<li>Save karo ane latest Preview deployment redeploy karo. Environment changes already-built deployments par automatic apply nathi thata.</li>
+<li>/api/gsc-health test karo; expected: ok:true, 13 expected/checked projects, allProjectsValid true.</li>
 </ol>
-<p>Token must never be returned to browser. Rotate it if exposed or expired.</p></div><div class="sec" id="section-f"><h3><span class="letter">11.4.F</span> 5. API route map</h3><table>
-<tr><th>File</th><th>Route</th><th>Purpose</th></tr>
-<tr><td>api/gsc.js</td><td>/api/gsc?site=Client A&start=2026-10-01&end=2026-10-31</td><td>Reads private GitHub snapshot and filters daily rows</td></tr>
-<tr><td>api/gsc-health.js</td><td>/api/gsc-health</td><td>Validates 13 projects and numeric daily rows</td></tr>
-<tr><td>index.html</td><td>/</td><td>Dashboard UI; calls /api/gsc</td></tr>
-</table></div><div class="sec" id="section-g"><h3><span class="letter">11.4.G</span> 6. Copy/paste: api/gsc.js</h3><p>Create file path exactly api/gsc.js:</p>
-<p>const SITES = { /* mapping removed */ };</p>
-<p>export default async function handler(req, res) { res.setHeader("Cache-Control", "no-store, max-age=0"); res.setHeader("Content-Type", "application/json; charset=utf-8"); if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." });</p>
-<p>const site = String(req.query.site || "Client A"); const hasStart = Boolean(req.query.start); const hasEnd = Boolean(req.query.end); // A site-only request is a safe health check that returns the full saved history. // The dashboard continues to pass explicit start/end dates for its selected range. const start = hasStart &amp;&amp; hasEnd ? String(req.query.start) : (!hasStart &amp;&amp; !hasEnd ? "1900-01-01" : ""); const end = hasStart &amp;&amp; hasEnd ? String(req.query.end) : (!hasStart &amp;&amp; !hasEnd ? "9999-12-31" : ""); const datePattern = /^\d{4}-\d{2}-\d{2}$/; if (!SITES[site]) return res.status(400).json({ ok: false, error: "Unknown project selected." }); if (!datePattern.test(start) || !datePattern.test(end) || start &gt; end) { return res.status(400).json({ ok: false, error: "Provide both valid start and end dates, or omit both for a full-history health check." }); }</p>
-<p>const token = process.env.GITHUB_TOKEN; if (!token) return res.status(500).json({ ok: false, error: "GitHub read token is not configured on this Vercel environment." });</p>
-<p>try { const url = "<a href="https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=" target="_blank" rel="noopener">https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=</a>"</p>
-<ul>
-<li>Date.now(); const response = await fetch(url, { cache: "no-store", headers: { Accept: "application/vnd.github+json", Authorization: "Bearer " + token, "X-GitHub-Api-Version": "2022-11-28", "Cache-Control": "no-cache, no-store", Pragma: "no-cache" } }); if (!response.ok) throw new Error("GitHub snapshot request failed ("</li>
-<li>response.status + ")."); const file = await response.json(); if (file.encoding !== "base64" || !file.content) throw new Error("GitHub snapshot content is missing or not base64 encoded."); const snapshot = JSON.parse(Buffer.from(file.content.replace(/\s/g, ""), "base64").toString("utf8")); const project = snapshot.projects &amp;&amp; snapshot.projects[site]; if (!project) throw new Error("No saved GSC snapshot exists for this project yet.");</li>
-</ul>
-<p>const daily = (project.daily || []) .filter(row =&gt; row.date &gt;= start &amp;&amp; row.date &lt;= end) .map(row =&gt; ({ date: row.date, clicks: Number(row.clicks || 0), impressions: Number(row.impressions || 0), ctr: Number(row.ctr || 0), position: Number(row.position || 0) }));</p>
-<p>return res.status(200).json({ ok: true, project: project.name, siteUrl: project.siteUrl, start, end, fetchedAt: snapshot.updatedAt, daily, pages: [], source: "github-api-private-snapshot" }); } catch (error) { console.error("GSC snapshot load failed:", error); return res.status(502).json({ ok: false, error: "Could not load the scheduled GSC snapshot. Check the GitHub token permissions and Vercel Function logs." }); } }</p></div><div class="sec" id="section-h"><h3><span class="letter">11.4.H</span> 7. Copy/paste: api/gsc-health.js</h3><p>Create file path exactly api/gsc-health.js:</p>
-<p>const EXPECTED = ["Client A","client_d","client_d","client_e","client_f","client_g","Client Bbox","client_h","client_i","client_j","client_k","client_l","client_m"];</p>
-<p>export default async function handler(req, res) { res.setHeader("Cache-Control", "no-store, max-age=0"); res.setHeader("Content-Type", "application/json; charset=utf-8"); if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." }); const token = process.env.GITHUB_TOKEN; if (!token) return res.status(500).json({ ok: false, error: "GitHub read token is not configured." }); try { const url = "<a href="https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=" target="_blank" rel="noopener">https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main\&amp;nocache=</a>"</p>
-<ul>
-<li>Date.now(); const response = await fetch(url, { cache: "no-store", headers: { Accept: "application/vnd.github+json", Authorization: "Bearer " + token, "X-GitHub-Api-Version": "2022-11-28", "Cache-Control": "no-cache, no-store", Pragma: "no-cache" } }); if (!response.ok) throw new Error("GitHub snapshot request failed ("</li>
-<li>response.status + ")."); const file = await response.json(); if (file.encoding !== "base64" || !file.content) throw new Error("GitHub snapshot content is missing or not base64 encoded."); const snapshot = JSON.parse(Buffer.from(file.content.replace(/\s/g, ""), "base64").toString("utf8")); const projects = snapshot.projects || {}; const checks = EXPECTED.map(key =&gt; { const project = projects[key]; const daily = project &amp;&amp; Array.isArray(project.daily) ? project.daily : []; const latestDate = daily.reduce((latest, row) =&gt; row.date &gt; latest ? row.date : latest, ""); const validRows = daily.every(row =&gt; /^\d{4}-\d{2}-\d{2}$/.test(row.date) &amp;&amp; Number.isFinite(Number(row.clicks)) &amp;&amp; Number.isFinite(Number(row.impressions)) &amp;&amp; Number.isFinite(Number(row.ctr)) &amp;&amp; Number.isFinite(Number(row.position)) ); return { key, present: Boolean(project), rows: daily.length, latestDate, validRows }; }); const ok = checks.every(item =&gt; item.present &amp;&amp; item.validRows); return res.status(ok ? 200 : 503).json({ ok, source: "github-api-private-snapshot", branch: "main", fetchedAt: snapshot.updatedAt || null, expectedProjects: EXPECTED.length, checkedProjects: checks.length, allProjectsValid: ok, projects: checks }); } catch (error) { console.error("GSC health check failed:", error); return res.status(502).json({ ok: false, error: "Could not verify the GitHub GSC snapshot. Check GitHub token permissions and Vercel Function logs." }); } }</li>
-</ul></div><div class="sec" id="section-i"><h3><span class="letter">11.4.I</span> 8. data.json schema</h3><p>Root keys: updatedAt, projects. Each project has name, siteUrl, daily. Daily fields: date, clicks, impressions, ctr, position. CTR stored as decimal ratio (0.01 = 1%).</p>
-<p>{ "updatedAt": "2026-11-04T05:55:52.339Z", "projects": { "Client A": { "name": "Client A Products", "siteUrl": "<a href="https://client-a-store.com/" target="_blank" rel="noopener">https://client-a-store.com/</a>", "daily": [ {"date":"2026-11-01","clicks":29,"impressions":2500,"ctr":0.0116,"position":8.4} ] } } }</p>
-<p>This is a one-project abbreviated schema sample, not full production data.</p></div><div class="sec" id="section-j"><h3><span class="letter">11.4.J</span> 9. Front-end API fetch example</h3><p>Browser calls the same-origin Vercel API; never call GitHub private API from browser:</p>
-<p>async function loadGsc(site, start, end) { const params = new URLSearchParams({ site, start, end }); const response = await fetch(`/api/gsc?${params.toString()}`, { method: "GET", cache: "no-store", headers: { "Accept": "application/json" } }); const data = await response.json(); if (!response.ok || !data.ok) { throw new Error(data.error || `GSC API failed (${response.status})`); } return data; }</p>
-<p>This is a reference helper; preserve existing dashboard rendering logic in index.html.</p></div><div class="sec" id="section-k"><h3><span class="letter">11.4.K</span> 10. Daily 05:30 scheduler workflow</h3><ol>
+<p>Token browser ma kyarey return thavu NA joie. Exposed ke expired thay to rotate karo.</p></div><div class="sec" id="section-f"><h3><span class="letter">11.4.F</span> 5. API route map</h3>
+<table>
+<tr><th>File</th><th>Route</th><th>Kam</th></tr>
+<tr><td>api/gsc.js</td><td>/api/gsc?site=Client A&amp;start=2026-10-01&amp;end=2026-10-31</td><td>Private GitHub snapshot vanchi ne daily rows filter kare</td></tr>
+<tr><td>api/gsc-health.js</td><td>/api/gsc-health</td><td>13 projects ane numeric daily rows validate kare</td></tr>
+<tr><td>index.html</td><td>/</td><td>Dashboard UI; /api/gsc call kare</td></tr>
+</table></div><div class="sec" id="section-g"><h3><span class="letter">11.4.G</span> 6. Copy/paste: api/gsc.js</h3>
+<p>File path exactly api/gsc.js banao:</p>
+<pre><code>const SITES = { /* mapping removed */ };
+
+export default async function handler(req, res) {
+  res.setHeader("Cache-Control", "no-store, max-age=0");
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+  if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." });
+
+  const site = String(req.query.site || "Client A");
+  const hasStart = Boolean(req.query.start);
+  const hasEnd = Boolean(req.query.end);
+  // Site-only request = safe health check, full saved history aape.
+  // Dashboard hamesha explicit start/end dates pass kare.
+  const start = hasStart &amp;&amp; hasEnd ? String(req.query.start) : (!hasStart &amp;&amp; !hasEnd ? "1900-01-01" : "");
+  const end = hasStart &amp;&amp; hasEnd ? String(req.query.end) : (!hasStart &amp;&amp; !hasEnd ? "9999-12-31" : "");
+  const datePattern = /^\d{4}-\d{2}-\d{2}$/;
+  if (!SITES[site]) return res.status(400).json({ ok: false, error: "Unknown project selected." });
+  if (!datePattern.test(start) || !datePattern.test(end) || start &gt; end) {
+    return res.status(400).json({ ok: false, error: "Provide both valid start and end dates, or omit both for a full-history health check." });
+  }
+
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return res.status(500).json({ ok: false, error: "GitHub read token is not configured on this Vercel environment." });
+
+  try {
+    const url = "https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main&amp;nocache=" + Date.now();
+    const response = await fetch(url, {
+      cache: "no-store",
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: "Bearer " + token,
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Cache-Control": "no-cache, no-store",
+        Pragma: "no-cache"
+      }
+    });
+    if (!response.ok) throw new Error("GitHub snapshot request failed (" + response.status + ").");
+    const file = await response.json();
+    if (file.encoding !== "base64" || !file.content) throw new Error("GitHub snapshot content is missing or not base64 encoded.");
+    const snapshot = JSON.parse(Buffer.from(file.content.replace(/\s/g, ""), "base64").toString("utf8"));
+    const project = snapshot.projects &amp;&amp; snapshot.projects[site];
+    if (!project) throw new Error("No saved GSC snapshot exists for this project yet.");
+
+    const daily = (project.daily || [])
+      .filter(row =&gt; row.date &gt;= start &amp;&amp; row.date &lt;= end)
+      .map(row =&gt; ({
+        date: row.date,
+        clicks: Number(row.clicks || 0),
+        impressions: Number(row.impressions || 0),
+        ctr: Number(row.ctr || 0),
+        position: Number(row.position || 0)
+      }));
+
+    return res.status(200).json({
+      ok: true,
+      project: project.name,
+      siteUrl: project.siteUrl,
+      start,
+      end,
+      fetchedAt: snapshot.updatedAt,
+      daily,
+      pages: [],
+      source: "github-api-private-snapshot"
+    });
+  } catch (error) {
+    console.error("GSC snapshot load failed:", error);
+    return res.status(502).json({ ok: false, error: "Could not load the scheduled GSC snapshot. Check the GitHub token permissions and Vercel Function logs." });
+  }
+}</code></pre></div><div class="sec" id="section-h"><h3><span class="letter">11.4.H</span> 7. Copy/paste: api/gsc-health.js</h3>
+<p>File path exactly api/gsc-health.js banao:</p>
+<pre><code>const EXPECTED = ["Client A","client_d","client_d","client_e","client_f","client_g","Client Bbox","client_h","client_i","client_j","client_k","client_l","client_m"];
+
+export default async function handler(req, res) {
+  res.setHeader("Cache-Control", "no-store, max-age=0");
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+  if (req.method !== "GET") return res.status(405).json({ ok: false, error: "Method not allowed." });
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return res.status(500).json({ ok: false, error: "GitHub read token is not configured." });
+  try {
+    const url = "https://api.github.com/repos/client-a-store/gsc/contents/data.json?ref=main&amp;nocache=" + Date.now();
+    const response = await fetch(url, {
+      cache: "no-store",
+      headers: {
+        Accept: "application/vnd.github+json",
+        Authorization: "Bearer " + token,
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Cache-Control": "no-cache, no-store",
+        Pragma: "no-cache"
+      }
+    });
+    if (!response.ok) throw new Error("GitHub snapshot request failed (" + response.status + ").");
+    const file = await response.json();
+    if (file.encoding !== "base64" || !file.content) throw new Error("GitHub snapshot content is missing or not base64 encoded.");
+    const snapshot = JSON.parse(Buffer.from(file.content.replace(/\s/g, ""), "base64").toString("utf8"));
+    const projects = snapshot.projects || {};
+    const checks = EXPECTED.map(key =&gt; {
+      const project = projects[key];
+      const daily = project &amp;&amp; Array.isArray(project.daily) ? project.daily : [];
+      const latestDate = daily.reduce((latest, row) =&gt; row.date &gt; latest ? row.date : latest, "");
+      const validRows = daily.every(row =&gt;
+        /^\d{4}-\d{2}-\d{2}$/.test(row.date) &amp;&amp;
+        Number.isFinite(Number(row.clicks)) &amp;&amp;
+        Number.isFinite(Number(row.impressions)) &amp;&amp;
+        Number.isFinite(Number(row.ctr)) &amp;&amp;
+        Number.isFinite(Number(row.position))
+      );
+      return { key, present: Boolean(project), rows: daily.length, latestDate, validRows };
+    });
+    const ok = checks.every(item =&gt; item.present &amp;&amp; item.validRows);
+    return res.status(ok ? 200 : 503).json({
+      ok,
+      source: "github-api-private-snapshot",
+      branch: "main",
+      fetchedAt: snapshot.updatedAt || null,
+      expectedProjects: EXPECTED.length,
+      checkedProjects: checks.length,
+      allProjectsValid: ok,
+      projects: checks
+    });
+  } catch (error) {
+    console.error("GSC health check failed:", error);
+    return res.status(502).json({ ok: false, error: "Could not verify the GitHub GSC snapshot. Check GitHub token permissions and Vercel Function logs." });
+  }
+}</code></pre></div><div class="sec" id="section-i"><h3><span class="letter">11.4.I</span> 8. data.json schema</h3>
+<p>Root keys: updatedAt, projects. Darek project ma: name, siteUrl, daily. Daily fields: date, clicks, impressions, ctr, position. CTR decimal ratio ma store thay (0.01 = 1%).</p>
+<pre><code>{
+  "updatedAt": "2026-11-04T05:55:52.339Z",
+  "projects": {
+    "Client A": {
+      "name": "Client A Products",
+      "siteUrl": "https://client-a-store.com/",
+      "daily": [
+        {"date":"2026-11-01","clicks":29,"impressions":2500,"ctr":0.0116,"position":8.4}
+      ]
+    }
+  }
+}</code></pre>
+<p>Aa fakt ek project nu abbreviated schema sample che, full production data nahi.</p></div><div class="sec" id="section-j"><h3><span class="letter">11.4.J</span> 9. Front-end API fetch example</h3>
+<p>Browser same-origin Vercel API ne j call kare; browser mathi GitHub private API KYAREY call na karo:</p>
+<pre><code>async function loadGsc(site, start, end) {
+  const params = new URLSearchParams({ site, start, end });
+  const response = await fetch(`/api/gsc?${params.toString()}`, {
+    method: "GET",
+    cache: "no-store",
+    headers: { "Accept": "application/json" }
+  });
+  const data = await response.json();
+  if (!response.ok || !data.ok) {
+    throw new Error(data.error || `GSC API failed (${response.status})`);
+  }
+  return data;
+}</code></pre>
+<p>Aa reference helper che; index.html ni existing dashboard rendering logic preserve rakho.</p></div><div class="sec" id="section-k"><h3><span class="letter">11.4.K</span> 10. Daily 05:30 scheduler workflow</h3>
+<ol>
 <li>05:30 Asia/Kolkata trigger.</li>
-<li>Query 13 GSC properties.</li>
-<li>Normalize daily date rows and metrics.</li>
-<li>Merge with old history by date key; no duplicate rows; preserve old rows.</li>
-<li>Commit data.json to GitHub main.</li>
-<li>Read back main/data.json; validate JSON and project count.</li>
-<li>Call Vercel Preview health endpoint.</li>
-<li>Smoke-test /api/gsc and dashboard.</li>
+<li>13 GSC properties query karo.</li>
+<li>Daily date rows ane metrics normalize karo.</li>
+<li>Date key thi junia history sathe merge karo; duplicate rows nahi; juna rows preserve.</li>
+<li>data.json GitHub main ma commit karo.</li>
+<li>main/data.json pacho vanchi ne JSON ane project count validate karo.</li>
+<li>Vercel Preview health endpoint call karo.</li>
+<li>/api/gsc ane dashboard smoke-test karo.</li>
 </ol>
-<p>GSC reporting can be delayed. Do not fill missing dates with zero. Next scheduled run should backfill/merge when data becomes available. Existing scheduler ID: (scheduler ID). Do not create duplicate schedules unless replacing the current workflow with an approved tested migration.</p></div><div class="sec" id="section-l"><h3><span class="letter">11.4.L</span> 11. Vercel Cron – optional, not current data-fetch system</h3><p>Vercel Cron sends an HTTP request to a deployed route. It does not magically connect GSC or write GitHub. If a cron calls /api/gsc-health, it only checks the snapshot. Full GSC ETL requires OAuth/service-account auth, API query code, merge/write logic, retries, idempotency/locking, and monitoring. Keep current working scheduler until replacement is tested end-to-end.</p></div><div class="sec" id="section-m"><h3><span class="letter">11.4.M</span> 12. Verification URLs</h3><table>
+<p>GSC reporting ma delay hoy shake. Missing dates ne zero thi NA bharo — next scheduled run data available thay tyare backfill/merge kare. Existing scheduler ID: (scheduler ID). Approved tested migration vagar duplicate schedules NA banavvo.</p></div><div class="sec" id="section-l"><h3><span class="letter">11.4.L</span> 11. Vercel Cron — optional, current data-fetch system NAHI</h3>
+<p>Vercel Cron deployed route par HTTP request moke che. E GSC connect nathi kartu ke GitHub write nathi kartu. Cron /api/gsc-health call kare to fakt snapshot check thay. Full GSC ETL mate OAuth/service-account auth, API query code, merge/write logic, retries, idempotency/locking ane monitoring joie. Replacement end-to-end test thaya sudhi current working scheduler j rakho.</p></div><div class="sec" id="section-m"><h3><span class="letter">11.4.M</span> 12. Verification URLs</h3>
+<table>
 <tr><th>Check</th><th>Request</th><th>Expected</th></tr>
 <tr><td>Homepage</td><td>Preview URL /</td><td>HTTP 200, HTML</td></tr>
 <tr><td>Health</td><td>/api/gsc-health</td><td>HTTP 200, ok:true, 13/13 valid</td></tr>
 <tr><td>Full history</td><td>/api/gsc?site=Client A</td><td>HTTP 200, daily array</td></tr>
-<tr><td>Date filter</td><td>/api/gsc?site=Client A&start=2026-10-01&end=2026-10-31</td><td>only requested dates</td></tr>
+<tr><td>Date filter</td><td>/api/gsc?site=Client A&amp;start=2026-10-01&amp;end=2026-10-31</td><td>fakt requested dates</td></tr>
 <tr><td>Unknown site</td><td>site=unknown with valid dates</td><td>HTTP 400</td></tr>
-<tr><td>One date missing</td><td>only start supplied</td><td>HTTP 400</td></tr>
-</table></div><div class="sec" id="section-n"><h3><span class="letter">11.4.N</span> 13. Daily checklist</h3><ul>
-<li><input type="checkbox" disabled="" />
-Today's 05:30 run completed?</li>
-<li><input type="checkbox" disabled="" />
-13 properties fetched? Failures logged?</li>
-<li><input type="checkbox" disabled="" />
-Latest GSC date checked; no zero-filling?</li>
-<li><input type="checkbox" disabled="" />
-GitHub main commit and updatedAt checked?</li>
-<li><input type="checkbox" disabled="" />
-JSON valid, 13 projects present, no duplicate dates?</li>
-<li><input type="checkbox" disabled="" />
-Health endpoint HTTP 200 / ok true / allProjectsValid true?</li>
-<li><input type="checkbox" disabled="" />
-/api/gsc response and dashboard display checked?</li>
-<li><input type="checkbox" disabled="" />
-GA4/Shopify business conversions sourced separately?</li>
-</ul></div><div class="sec" id="section-o"><h3><span class="letter">11.4.O</span> 14. Troubleshooting</h3><table>
+<tr><td>Ek date missing</td><td>fakt start supplied</td><td>HTTP 400</td></tr>
+</table></div><div class="sec" id="section-n"><h3><span class="letter">11.4.N</span> 13. Daily checklist</h3>
+<ul>
+<li><input type="checkbox" disabled="" /> Aaj nu 05:30 run complete thayu?</li>
+<li><input type="checkbox" disabled="" /> 13 properties fetch thai? Failures log thaya?</li>
+<li><input type="checkbox" disabled="" /> Latest GSC date check kari; zero-filling nathi?</li>
+<li><input type="checkbox" disabled="" /> GitHub main commit ane updatedAt check karya?</li>
+<li><input type="checkbox" disabled="" /> JSON valid, 13 projects hazar, duplicate dates nathi?</li>
+<li><input type="checkbox" disabled="" /> Health endpoint HTTP 200 / ok true / allProjectsValid true?</li>
+<li><input type="checkbox" disabled="" /> /api/gsc response ane dashboard display check karya?</li>
+<li><input type="checkbox" disabled="" /> GA4/Shopify business conversions alag source thi lidha?</li>
+</ul></div><div class="sec" id="section-o"><h3><span class="letter">11.4.O</span> 14. Troubleshooting</h3>
+<table>
 <tr><th>Error</th><th>Likely cause</th><th>Fix</th></tr>
-<tr><td>API 500 token missing</td><td>Preview env var missing</td><td>Add GITHUB_TOKEN to Preview; redeploy</td></tr>
-<tr><td>API 502</td><td>GitHub API, token scope, rate limit, invalid JSON</td><td>Inspect Vercel Function logs; verify token read scope + JSON</td></tr>
-<tr><td>GitHub 404</td><td>Wrong repo/path/ref or private repo access</td><td>Verify repo, data.json, ref=main</td></tr>
-<tr><td>GitHub 403</td><td>Token/org approval/rate limit</td><td>Check GitHub token repo access and approval</td></tr>
-<tr><td>API 400</td><td>Invalid site/date args</td><td>Use exact site key and both YYYY-MM-DD dates</td></tr>
-<tr><td>Health 503</td><td>Missing project or invalid row</td><td>Inspect JSON structure and merge</td></tr>
-<tr><td>Homepage OK, API fails</td><td>Function/env problem</td><td>Test health endpoint; inspect function logs</td></tr>
-<tr><td>Preview current, Netlify stale</td><td>Separate hosting pipelines</td><td>Do not assume Preview updates Netlify</td></tr>
-<tr><td>Latest date absent</td><td>GSC delay</td><td>Leave absent; backfill on next run</td></tr>
-</table></div><div class="sec" id="section-p"><h3><span class="letter">11.4.P</span> 15. Security</h3><ul>
-<li>No secrets in code/docs/chat/screenshots.</li>
-<li>GitHub fine-grained token limited to selected repo + Contents Read-only.</li>
-<li>Secrets stored in Vercel Environment Variables.</li>
-<li>No token returned to browser or error response.</li>
-<li>Rotate leaked/expired token.</li>
-<li>Restrict private repo and Vercel team access.</li>
-<li>Do not deploy unreviewed code with production secrets.</li>
-<li>Never promote Preview or change domain/alias without approval.</li>
-</ul></div><div class="sec" id="section-q"><h3><span class="letter">11.4.Q</span> 16. GSC metrics vs business goals</h3><ul>
+<tr><td>API 500 token missing</td><td>Preview env var missing</td><td>GITHUB_TOKEN Preview ma umero; redeploy karo</td></tr>
+<tr><td>API 502</td><td>GitHub API, token scope, rate limit, invalid JSON</td><td>Vercel Function logs juo; token read scope + JSON verify karo</td></tr>
+<tr><td>GitHub 404</td><td>Khotu repo/path/ref ke private repo access</td><td>Repo, data.json, ref=main verify karo</td></tr>
+<tr><td>GitHub 403</td><td>Token/org approval/rate limit</td><td>GitHub token repo access ane approval check karo</td></tr>
+<tr><td>API 400</td><td>Invalid site/date args</td><td>Exact site key ane banne YYYY-MM-DD dates vapro</td></tr>
+<tr><td>Health 503</td><td>Missing project ke invalid row</td><td>JSON structure ane merge inspect karo</td></tr>
+<tr><td>Homepage OK, API fails</td><td>Function/env problem</td><td>Health endpoint test karo; function logs juo</td></tr>
+<tr><td>Preview current, Netlify stale</td><td>Alag hosting pipelines</td><td>Assume na karo ke Preview Netlify update kare</td></tr>
+<tr><td>Latest date absent</td><td>GSC delay</td><td>Absent j raheva do; next run ma backfill</td></tr>
+</table></div><div class="sec" id="section-p"><h3><span class="letter">11.4.P</span> 15. Security</h3>
+<ul>
+<li>Code/docs/chat/screenshots ma secrets nahi.</li>
+<li>GitHub fine-grained token fakt selected repo + Contents Read-only sudhi limited.</li>
+<li>Secrets Vercel Environment Variables ma store.</li>
+<li>Token browser ke error response ma return nathi.</li>
+<li>Leaked/expired token rotate karo.</li>
+<li>Private repo ane Vercel team access restrict karo.</li>
+<li>Production secrets valo unreviewed code deploy na karo.</li>
+<li>Approval vagar Preview promote ke domain/alias change na karo.</li>
+</ul></div><div class="sec" id="section-q"><h3><span class="letter">11.4.Q</span> 16. GSC metrics vs business goals</h3>
+<ul>
 <li>Clicks, impressions, CTR, position → GSC.</li>
-<li>Organic Search sessions/users and engagement → GA4.</li>
+<li>Organic Search sessions/users ane engagement → GA4.</li>
 <li>Purchases/revenue → Shopify + GA4 purchase event.</li>
 <li>Leads/forms/calls → GA4 event + CRM/call/form tracking.</li>
 <li>CTR = clicks ÷ impressions × 100.</li>
-<li>Use GSC period-level average position; don't average daily average positions manually.</li>
-<li>Example goal: 700 clicks baseline, 770 target (+10%); actual/target × 100 = achievement. Targets are team-defined.</li>
-</ul></div><div class="sec" id="section-r"><h3><span class="letter">11.4.R</span> 17. Production cutover / rollback</h3><p>Current state is Preview only. Before cutover: test all 13 properties, historical data, API, mobile/desktop, analytics, env vars, domain, SSL, and rollback. Get written approval for production branch/domain/alias changes. Keep existing Netlify deployment available until Vercel production proven stable. Do not change production in this SOP.</p></div><div class="sec" id="section-s"><h3><span class="letter">11.4.S</span> 18. Minimum-deployment strategy – reusable across all projects</h3><p>Goal: reliable dashboard with minimum unnecessary Vercel deployments, GitHub API reads/writes, GSC queries, automation runs and AI/token usage.</p>
-<h4>18.1 Recommended architecture: deploy code rarely, update data separately</h4>
+<li>GSC period-level average position vapro; daily average positions nu manually average NA karvu.</li>
+<li>Example goal: 700 clicks baseline, 770 target (+10%); actual/target × 100 = achievement. Targets team-defined che.</li>
+</ul></div><div class="sec" id="section-r"><h3><span class="letter">11.4.R</span> 17. Production cutover / rollback</h3>
+<p>Current state = fakt Preview. Cutover pehla test karo: badhi 13 properties, historical data, API, mobile/desktop, analytics, env vars, domain, SSL ane rollback. Production branch/domain/alias changes mate written approval lo. Vercel production stable prove thaya sudhi existing Netlify deployment available rakho. Aa SOP ma production change NAHI.</p></div><div class="sec" id="section-s"><h3><span class="letter">11.4.S</span> 18. Minimum-deployment strategy — badha projects ma reusable</h3>
+<p>Goal: minimum unnecessary Vercel deployments, GitHub API reads/writes, GSC queries, automation runs ane AI/token usage sathe reliable dashboard.</p>
+<h4>18.1 Recommended architecture: code rarely deploy karo, data alag update karo</h4>
 <table>
-<tr><th>Layer</th><th>Minimum strategy</th><th>Why it saves usage</th></tr>
-<tr><td>Hosting</td><td>One Vercel project per genuinely separate app/repo. If multiple sites use the same dashboard, use one shared multi-site app with a config-driven site list.</td><td>Avoid duplicate projects and repeated build/deploy work.</td></tr>
-<tr><td>Deployments</td><td>Deploy only for code/config changes. Keep feature work on Preview; Production only after approval.</td><td>A data refresh does not require a new deployment.</td></tr>
-<tr><td>Data</td><td>Keep one canonical GitHub JSON snapshot; partition only if file size becomes a measured problem.</td><td>One merge/write per scheduled batch.</td></tr>
-<tr><td>API</td><td>A small number of serverless endpoints serves all site keys using query parameters.</td><td>Avoid 13 copies of the same API.</td></tr>
-<tr><td>Scheduler</td><td>One scheduled job loops through configured properties.</td><td>Avoid one automation per property and duplicate polling.</td></tr>
-<tr><td>Health</td><td>One health check after a successful data commit.</td><td>Avoid high-frequency checks.</td></tr>
-<tr><td>Secrets</td><td>Least-privilege read-only GitHub token per deployment/repo security boundary.</td><td>Reduce secret sprawl and permission surface.</td></tr>
+<tr><th>Layer</th><th>Minimum strategy</th><th>Usage kem bade</th></tr>
+<tr><td>Hosting</td><td>Darek genuinely alag app/repo mate ek Vercel project. Same dashboard ghana sites use kare to config-driven site list valo ek shared multi-site app.</td><td>Duplicate projects ane repeated build/deploy work oche.</td></tr>
+<tr><td>Deployments</td><td>Fakt code/config changes mate deploy. Feature work Preview par; Production fakt approval pachhi.</td><td>Data refresh mate navi deployment jaruri nathi.</td></tr>
+<tr><td>Data</td><td>Ek canonical GitHub JSON snapshot; file size measured problem bane to j partition.</td><td>Scheduled batch dida ek j merge/write.</td></tr>
+<tr><td>API</td><td>Ocha serverless endpoints query parameters thi badha site keys serve kare.</td><td>Same API na 13 copies bachave.</td></tr>
+<tr><td>Scheduler</td><td>Ek scheduled job configured properties par loop kare.</td><td>Property dida automation ane duplicate polling bachave.</td></tr>
+<tr><td>Health</td><td>Successful data commit pachhi ek health check.</td><td>High-frequency checks bachave.</td></tr>
+<tr><td>Secrets</td><td>Deployment/repo boundary dida least-privilege read-only GitHub token.</td><td>Secret sprawl ane permission surface ghatare.</td></tr>
 </table>
 <h4>18.2 Deployment decision rule</h4>
 <ul>
-<li>Data-only change (new rows in data.json): do not redeploy Vercel. The API reads the latest GitHub main snapshot when requested.</li>
-<li>Dashboard/API code change: push one reviewed commit to migration/vercel; Git integration creates one Preview deployment.</li>
-<li>Preview passes and release approved: follow the production release process. Do not deploy for each daily data refresh.</li>
-<li>More properties in same dashboard: add a site config entry; do not clone the entire dashboard/API for every site.</li>
-<li>Different client/team with separate secrets, access rules, billing or branding: use a separate project/repo when isolation is needed.</li>
-<li>Batch related code/config edits and deploy once; environment-variable changes also require a new deployment to take effect.</li>
+<li>Data-only change (data.json ma navi rows): Vercel redeploy NA karo. API request vakhte latest GitHub main snapshot vanche.</li>
+<li>Dashboard/API code change: migration/vercel par ek reviewed commit push karo; Git integration ek Preview deployment banave.</li>
+<li>Preview pass + release approved: production release process follow karo. Daily data refresh mate deploy NA karo.</li>
+<li>Same dashboard ma vadhare properties: site config entry umero; darek site mate whole dashboard/API clone NA karo.</li>
+<li>Alag client/team jena secrets, access rules, billing ke branding alag hoy: isolation joie to alag project/repo vapro.</li>
+<li>Related code/config edits batch kari ne ek var deploy karo; environment-variable changes ne pan effect mate navi deployment joie.</li>
 </ul>
-<h4>18.3 Keep GitHub, GSC and API usage low</h4>
+<h4>18.3 GitHub, GSC ane API usage ocho rakho</h4>
 <ol>
-<li>GSC: one Search Analytics query per property per daily run for the required date window; use only required dimensions (date) and metrics. Do not repeat identical queries in the same run.</li>
-<li>Backfill: query only missing/recent dates or a deliberate bounded lookback; merge by date key idempotently.</li>
-<li>GitHub: prepare the merged JSON in memory and commit once after all properties are processed; avoid one commit per site/date.</li>
-<li>Scheduler GitHub reads: read source once before merge and read back once after commit for validation.</li>
-<li>Dashboard: fetch only the selected site and selected date range; do not fetch all 13 sites on every page view unless portfolio totals require it.</li>
-<li>Health: run once after commit; no polling every few seconds.</li>
-<li>No-op: if content is unchanged, skip the commit and record “no new finalized GSC rows”; never trigger a deployment for a no-op.</li>
-<li>Retries: retry transient 429/5xx with exponential backoff and a small maximum attempt count; honor Retry-After; never loop indefinitely.</li>
-<li>Do not add a second Vercel Cron to duplicate the existing 05:30 automation.</li>
+<li>GSC: daily run ma property dida required date window mate ek Search Analytics query; fakt required dimensions (date) ane metrics. Same run ma identical queries repeat na karo.</li>
+<li>Backfill: fakt missing/recent dates ke bounded lookback query karo; date key thi idempotently merge karo.</li>
+<li>GitHub: merged JSON memory ma taiyar kari ne badha properties process thaya pachhi ek var commit karo; site/date dida commit nahi.</li>
+<li>Scheduler GitHub reads: merge pehla ek var vancho ane commit pachhi validation mate ek var pacho vancho.</li>
+<li>Dashboard: fakt selected site ane selected date range fetch karo; portfolio totals na joie to darek page view par badhi 13 sites fetch na karo.</li>
+<li>Health: commit pachhi ek var; dar thoda seconds polling nahi.</li>
+<li>No-op: content unchanged hoy to commit skip kari ne "no new finalized GSC rows" record karo; no-op mate KYAREY deployment trigger na karo.</li>
+<li>Retries: transient 429/5xx ne exponential backoff ane ocha max attempts sathe retry karo; Retry-After honor karo; KYAREY infinite loop nahi.</li>
+<li>Existing 05:30 automation duplicate karva second Vercel Cron NA umero.</li>
 </ol>
 <h4>18.4 Reusable multi-project config</h4>
-<p>Add a new authorized GSC property by adding a key/name to the site configuration, rather than copying API files:</p>
-<p>const SITES = { /* mapping removed */ };</p>
-<p>The matching project key must also exist in data.json and in the health endpoint's expected project list. Keep these lists in sync; ideally move the project registry to one shared config module to prevent drift.</p>
+<p>Navi authorized GSC property umeravi hoy to API files copy karva na badle site configuration ma key/name umero:</p>
+<pre><code>const SITES = { /* mapping removed */ };</code></pre>
+<p>Matching project key data.json ma ane health endpoint ni expected project list ma pan hovo joie. Aa lists sync ma rakho; ideally project registry ek shared config module ma move karo jethi drift na thay.</p>
 <h4>18.5 Minimum-usage operating profile</h4>
 <table>
 <tr><th>Activity</th><th>Recommended cadence</th><th>Avoid</th></tr>
-<tr><td>GSC fetch</td><td>Once daily at 05:30 IST per property</td><td>Repeated same-window queries/hourly polling</td></tr>
-<tr><td>GitHub commit</td><td>At most one data snapshot commit per batch</td><td>One commit per property/date</td></tr>
-<tr><td>Vercel deploy</td><td>Only for reviewed code/config changes</td><td>Deploy after every data refresh</td></tr>
-<tr><td>Health endpoint</td><td>Once after commit + manual diagnosis</td><td>Continuous high-frequency polling</td></tr>
-<tr><td>Dashboard API</td><td>Page load / selected filter change</td><td>Re-fetch all projects repeatedly</td></tr>
-<tr><td>Preview builds</td><td>One per meaningful code push</td><td>Tiny commits that trigger many builds</td></tr>
+<tr><td>GSC fetch</td><td>Property dida daily 05:30 IST ek var</td><td>Repeated same-window queries/hourly polling</td></tr>
+<tr><td>GitHub commit</td><td>Batch dida max ek data snapshot commit</td><td>Property/date dida commit</td></tr>
+<tr><td>Vercel deploy</td><td>Fakt reviewed code/config changes</td><td>Darek data refresh pachhi deploy</td></tr>
+<tr><td>Health endpoint</td><td>Commit pachhi ek var + manual diagnosis</td><td>Continuous high-frequency polling</td></tr>
+<tr><td>Dashboard API</td><td>Page load / selected filter change</td><td>Badha projects repeatedly re-fetch</td></tr>
+<tr><td>Preview builds</td><td>Meaningful code push dida ek</td><td>Tiny commits je ghana builds trigger kare</td></tr>
 </table>
-<p>Quota note: Vercel plan limits, GitHub API limits, GSC quotas and AI/automation usage can vary by account and change over time. This guide does not hard-code free-tier quotas. Check Vercel Usage/Billing, GitHub rate-limit headers and current GSC quota documentation before setting hard numeric caps.</p>
-<h4>18.6 Trade-offs and safeguards</h4>
+<p><b>Quota note:</b> Vercel plan limits, GitHub API limits, GSC quotas ane AI/automation usage account pramane alag hoy ane time sathe badlay. Aa guide free-tier quotas hard-code nathi karti. Hard numeric caps nakhta pehla Vercel Usage/Billing, GitHub rate-limit headers ane current GSC quota docs check karo.</p>
+<h4>18.6 Trade-offs ane safeguards</h4>
 <ul>
-<li>A shared multi-site dashboard reduces duplicate deployments, but all sites share a release cycle; test representative properties.</li>
-<li>One large JSON is simple and minimizes GitHub operations. Partition by project/month only after measuring response size and performance.</li>
-<li>Serverless instances may not share in-memory cache reliably. Never rely on memory cache for correctness.</li>
-<li>Short caching can reduce repeat GitHub reads but may show briefly stale data. Keep current no-store behavior when freshness matters; add a measured short TTL only if acceptable.</li>
-<li>Current API reads private GitHub main/data.json per request. The safest savings are reducing duplicate browser fetches, not removing authorization or hiding failures.</li>
+<li>Shared multi-site dashboard duplicate deployments ghatare, pan badha sites same release cycle share kare; representative properties test karo.</li>
+<li>Ek moto JSON simple che ane GitHub operations minimize kare. Response size ane performance measure karya pachhi j project/month pramane partition karo.</li>
+<li>Serverless instances in-memory cache reliably share na pan kare. Correctness mate memory cache par KYAREY rely na karo.</li>
+<li>Short caching repeat GitHub reads ghatare pan briefly stale data batavi shake. Freshness matter kare to current no-store behavior j rakho; acceptable hoy to j measured short TTL umero.</li>
+<li>Current API darek request par private GitHub main/data.json vanche. Safest savings = duplicate browser fetches ocha karva, authorization remove karvo ke failures hide karva nahi.</li>
 </ul>
-<p>Reusable principle: one scheduler → one batch fetch → one merge → one commit → one health check; deploy only when code changes.</p></div><div class="sec" id="section-t"><h3><span class="letter">11.4.T</span> 19. Onboarding checklist</h3><ul>
-<li><input type="checkbox" disabled="" />
-GitHub repo and correct branch access</li>
-<li><input type="checkbox" disabled="" />
-Vercel correct team/project access</li>
-<li><input type="checkbox" disabled="" />
-Preview deployment READY</li>
-<li><input type="checkbox" disabled="" />
-Preview GITHUB_TOKEN configured (secret never shared)</li>
-<li><input type="checkbox" disabled="" />
-Health endpoint passes</li>
-<li><input type="checkbox" disabled="" />
-GSC API date filter passes</li>
-<li><input type="checkbox" disabled="" />
-Daily 05:30 automation enabled and run history inspected</li>
-<li><input type="checkbox" disabled="" />
-Historical data preserved / no duplicate dates</li>
-<li><input type="checkbox" disabled="" />
-GA4/Shopify conversion sources documented</li>
-<li><input type="checkbox" disabled="" />
-Production remains untouched without approval</li>
-</ul></div><div class="sec" id="section-u"><h3><span class="letter">11.4.U</span> Official references</h3><ul>
-<li>Vercel Deployments: <a href="https://vercel.com/docs/deployments" target="_blank" rel="noopener">https://vercel.com/docs/deployments</a></li>
-<li>Vercel Git: <a href="https://vercel.com/docs/git" target="_blank" rel="noopener">https://vercel.com/docs/git</a></li>
-<li>Vercel Environment Variables: <a href="https://vercel.com/docs/projects/environment-variables" target="_blank" rel="noopener">https://vercel.com/docs/projects/environment-variables</a></li>
-<li>Vercel Functions: <a href="https://vercel.com/docs/functions" target="_blank" rel="noopener">https://vercel.com/docs/functions</a></li>
-<li>GitHub fine-grained tokens: <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token" target="_blank" rel="noopener">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token</a></li>
-<li>Search Console API: <a href="https://developers.google.com/webmaster-tools/v1/searchanalytics/query" target="_blank" rel="noopener">https://developers.google.com/webmaster-tools/v1/searchanalytics/query</a></li>
+<p><b>Reusable principle:</b> one scheduler → one batch fetch → one merge → one commit → one health check; deploy fakt tyare jyare code change thay.</p></div><div class="sec" id="section-t"><h3><span class="letter">11.4.T</span> 19. Onboarding checklist</h3>
+<ul>
+<li><input type="checkbox" disabled="" /> GitHub repo ane correct branch access</li>
+<li><input type="checkbox" disabled="" /> Vercel correct team/project access</li>
+<li><input type="checkbox" disabled="" /> Preview deployment READY</li>
+<li><input type="checkbox" disabled="" /> Preview GITHUB_TOKEN configured (secret kyarey share nathi)</li>
+<li><input type="checkbox" disabled="" /> Health endpoint pass</li>
+<li><input type="checkbox" disabled="" /> GSC API date filter pass</li>
+<li><input type="checkbox" disabled="" /> Daily 05:30 automation enabled ane run history inspect karyu</li>
+<li><input type="checkbox" disabled="" /> Historical data preserved / duplicate dates nathi</li>
+<li><input type="checkbox" disabled="" /> GA4/Shopify conversion sources documented</li>
+<li><input type="checkbox" disabled="" /> Approval vagar production untouched</li>
+</ul></div><div class="sec" id="section-u"><h3><span class="letter">11.4.U</span> Official docs — shu vanchvu</h3>
+<p>Vadhare detail joie to aa official docs search kari ne vancho (trainee mate search terms):</p>
+<ul>
+<li>"Vercel deployments docs" — deployments kevi rite kam kare</li>
+<li>"Vercel git docs" — Git integration ane Preview/Production branches</li>
+<li>"Vercel environment variables docs" — env vars set karva</li>
+<li>"Vercel functions docs" — serverless Node.js functions</li>
+<li>"GitHub fine-grained personal access token docs" — token banana ane permissions</li>
+<li>"Search Console API searchanalytics.query docs" — GSC data query format</li>
 </ul>
-<p>Important: These API code blocks are copied from the inspected migration/vercel branch as of 06 Nov 2026. Scheduler OAuth/connector credentials are intentionally not included; each operator must connect their own authorized account securely.</p></div>
+<p><b>Important:</b> Aa API code blocks 06 Nov 2026 na inspected migration/vercel branch mathi copied che. Scheduler OAuth/connector credentials janbuji ne include nathi — darek operator potanu authorized account securely connect kare.</p></div>
 <div class="pagenav"><a href="../../..//coaches/11-client-reporting/11-3-01a-tracking-sheet-template/">← 11.3 01A Tracking Sheet TEMPLATE</a><a href="../../..//coaches/11-client-reporting/11-5-seo-live-report-universal-sop-koi-pan-client-pro/">11.5 SEO Live Report — Universal SOP (koi pan →</a></div>
 </div></main><footer class="site"><div class="wrap">🚂 SEO SOP Express — Priyank nu SEO SOP Library. 15 dabba + engine, ek train. Badhu content ahi j chhe, koi doc kholvu nahi. 🙏</div></footer>
 <script>window.BASE='../../../';</script><script src="../../..//assets/data.js"></script><script src="../../..//assets/app.js"></script></body></html>
