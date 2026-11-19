@@ -83,3 +83,23 @@ footer.site{margin-top:50px;padding:26px 0;color:var(--muted);font-size:13px;bor
  .pagenav a{max-width:100%;width:100%}
  .coachhead .big{font-size:38px}
 }
+
+.gate{border:2px dashed;border-radius:14px;padding:14px 16px;margin:12px 0}
+.gate.phatak{background:repeating-linear-gradient(45deg,#fff8e6,#fff8e6 16px,#fdf0c8 16px,#fdf0c8 32px);border-color:var(--amber)}
+.gate.quality{background:#e9f7f3;border-color:var(--teal)}
+.gate.approval{background:#fdeceb;border-color:#c0392b}
+.gate .ghead{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.gate h3{margin:0 0 2px;font-size:17px}
+.gate .gcount{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
+.gate .gmeta{font-size:12.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.gate .gitems label{display:flex;gap:9px;align-items:flex-start;padding:5px 0;font-size:15px;cursor:pointer}
+.gate .gitems input[type=checkbox]{width:19px;height:19px;margin-top:1px;accent-color:var(--teal);flex-shrink:0}
+.gate .gitems input[type=checkbox]:checked+span{text-decoration:line-through;color:var(--muted)}
+.gate .gnote{font-size:13px;color:var(--muted);margin-top:8px}
+.route{display:flex;flex-direction:column;gap:0}
+.route-stop{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin:10px 0 0;text-decoration:none;color:var(--ink)}
+.route-stop:hover{border-color:var(--teal)}
+.route-stop .rs-num{font-weight:800;font-size:17px;white-space:nowrap}
+.route-stop .rs-title{font-weight:600;flex:1}
+.route-stop .rs-meta{font-size:13px;color:var(--muted);white-space:nowrap}
+.route .gate{margin:6px 0 6px 26px}
