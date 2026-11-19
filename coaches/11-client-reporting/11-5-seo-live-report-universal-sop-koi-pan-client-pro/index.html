@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>11.5 SEO Live Report — Universal SOP (koi pan client / project mate) — SEO SOP Express</title>
+<meta name="description" content="11.5 SEO Live Report — Universal SOP (koi pan client / project mate) — Dabbo 11 SEO SOP">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../..//assets/style.css">
+</head><body><header class="site"><div class="wrap bar"><a class="logo" href="../../..//">🚂 SEO SOP Express</a>
+<button class="burger" aria-label="Menu">☰</button><nav class="main"><a href="../../..//journey/" class="">🗺️ Journey</a><a href="../../..//search/" class="">🔍 Search</a><a href="../../..//progress/" class="">📍 My Journey</a><a href="../../..//client-intake/" class="">🎯 Client Intake</a><a href="../../..//drive-saver/" class="">🔗 Drive Saver</a></nav></div></header><main class="wrap">
+<div class="crumbs"><a href="../../..//">Home Station</a> → <a href="../../..//journey/">Journey</a> → <a href="../../..//coaches/11-client-reporting/">Dabbo 11 📈</a> → 11.5</div>
+<div class="topicpage" data-topic="11.5">
+<h1 class="ttile">📈 <span style="color:var(--teal)">11.5</span> — SEO Live Report — Universal SOP (koi pan client / project mate)</h1>
+<p style="color:var(--muted);font-size:14px;margin-bottom:6px">Dabbo 11 · Client Reporting System · <span class="badge done" data-done-id="11.5" style="display:none">✅ Done</span></p>
+<div class="tools"><button class="markdone" onclick="markDone('11.5')">☑️ Mark done</button><button class="setcur" onclick="setCurrent('11.5')">📍 Set current stop</button></div>
+<div class="sec"><p>Aa SOP ma Client A Products no report jem banavyo, e j flow step-by-step lakhyo chhe. Navo client hoy to aa j order ma follow karo: Setup → Data → Analysis → Content → Build → QA → Deploy.</p>
+<hr /></div><div class="sec" id="section-a"><h3><span class="letter">11.5.A</span> 0. Akho flow ek nazar ma</h3><p>[Client profile]  →  [GSC data: 7 / 28 / 90 days]  →  [GA4 Organic data] ↓                       ↓                              ↓ [Site live audit: top 10 pages]  →  [Analysis rules: what changed, striking, low CTR] ↓ [Rewrites + New ideas + Fixes (data na reason sathe)] ↓ [Website build: Next.js (live) ane/athva HTML artifact (snapshot)] ↓ [QA checklist]  →  [GitHub → Vercel]  →  [Client ne link]</p>
+<p>Be output banave chhe:</p>
+<table>
+<tr><th>Output</th><th>Shu chhe</th><th>Kyare vaparvu</th></tr>
+<tr><td>Live website (Next.js + Composio + ChatGPT)</td><td>Data darek var khulta j live aave chhe, 7/28/90 days buttons</td><td>Long-term, darek mahine report banavvo na pade</td></tr>
+<tr><td>Snapshot artifact / HTML</td><td>Aaj na saacha numbers HTML ma fix</td><td>Turant client ne batavvu hoy, ke Composio connect na hoy</td></tr>
+</table>
+<hr /></div><div class="sec" id="section-b"><h3><span class="letter">11.5.B</span> 1. Golden rules (kyarey todvana nahi)</h3><ol>
+<li>Ek pan number banavvano nahi. Darek number GSC ke GA4 mathi j aavvo joie. Dummy/demo data hoy to page par upar mota akshar ma "DEMO DATA" lakho.</li>
+<li>Saachu account check karo. Composio / Chrome je Google account thi connected chhe ema client ni property chhe ke nahi, e pehla check karo (Client A vakhte connected account ma Client A j na hatu).</li>
+<li>$0 revenue hoy to saachu batavo. Revenue 0 hoy to "tracking set nathi" e Fix tarike lakho, khota orders na mukvana.</li>
+<li>Period hamesha lakho. Darek table/section ma date range ane comparison range lakho.</li>
+<li>Brand keywords alag. Branded ane Non-branded keyword ne mix na karvana.</li>
+<li>Content (rewrites/ideas/fixes) ma darek suggestion sathe "Why (data)" reason — impressions, position, CTR na number sathe.</li>
+</ol>
+<hr /></div><div class="sec" id="section-c"><h3><span class="letter">11.5.C</span> 2. Step 1 — Client profile (5 minute)</h3><p>Navo client hoy to aa table bharo:</p>
+<table>
+<tr><th>Field</th><th>Example (Client A)</th><th>Tamaro client</th></tr>
+<tr><td>Client name</td><td>Client A Products</td><td></td></tr>
+<tr><td>Domain</td><td>client-a-store.com</td><td></td></tr>
+<tr><td>GSC property</td><td>https://client-a-store.com/ (URL-prefix) athva sc-domain:xyz.com</td><td></td></tr>
+<tr><td>GA4 property ID</td><td>558018808 (account 411256034)</td><td></td></tr>
+<tr><td>Platform</td><td>Shopify</td><td></td></tr>
+<tr><td>Client type</td><td>Ecommerce</td><td>Ecommerce / Lead-gen / Blog / Local</td></tr>
+<tr><td>Main market</td><td>USA (usa, gl=us)</td><td></td></tr>
+<tr><td>Brand terms</td><td>Client A, sky line</td><td></td></tr>
+<tr><td>Blog path</td><td>/blogs/</td><td>WordPress: /blog/</td></tr>
+<tr><td>Collection/category path</td><td>/collections/</td><td>/product-category/</td></tr>
+<tr><td>Product path</td><td>/products/</td><td>/product/</td></tr>
+</table>
+<p>GA4 property ID kevi rite shodhvu: GA4 kholo → property picker ma client nu naam search karo → URL ma #/a&lt;ACCOUNT&gt;p&lt;PROPERTY&gt;/ dekhashe. p pachhi no number e property ID chhe.</p>
+<hr /></div><div class="sec" id="section-d"><h3><span class="letter">11.5.D</span> 3. Step 2 — Date ranges nakki karo</h3><p>GSC data ma 2 divas no lag hoy chhe, etle end date = aaj − 2 divas.</p>
+<table>
+<tr><th>Period</th><th>Current</th><th>Comparison (same length, just pehla)</th></tr>
+<tr><td>7 days</td><td>end−6 → end</td><td>te pehla na 7 divas</td></tr>
+<tr><td>28 days</td><td>end−27 → end</td><td>te pehla na 28 divas</td></tr>
+<tr><td>3 months (90 days)</td><td>end−89 → end</td><td>te pehla na 90 divas</td></tr>
+</table>
+<p>Example (end = 2 Nov 2026): 7d = Oct 27–Nov 2 vs Oct 20–26 · 28d = Oct 6–Nov 2 vs Sep 8–Oct 5 · 90d = Aug 5–Nov 2 vs May 7–Aug 4.</p>
+<hr /></div><div class="sec" id="section-e"><h3><span class="letter">11.5.E</span> 4. Step 3 — GSC data levo</h3><h4>Option A: Composio thi (automatic, live website mate)</h4>
+<ol>
+<li>Composio ma google_search_console connect karo — je Google account ma client ni property chhe e j account thi.</li>
+<li>GOOGLE_SEARCH_CONSOLE_LIST_SITES chalavo → client ni property list ma chhe ke nahi e check karo. Na hoy to navu account connect karo.</li>
+<li>GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY darek period mate 2 var (current + comparison):</li>
+</ol>
+<p>{ "site_url": "<a href="https://client.com/" target="_blank" rel="noopener">https://client.com/</a>", "start_date": "2026-10-06", "end_date": "2026-11-02", "dimensions": ["page"], "row_limit": 1000 }</p>
+<p>dimensions ma ["page"], ["query"], ane trend mate ["date"] — ek ek alag call. Note: ctr 0–1 fraction ma aave chhe, display vakhte ×100 karo.</p>
+<h4>Option B: Chrome browser thi (Composio na hoy tyare — Client A ma aa j vapryu)</h4>
+<ol>
+<li>Aa URL kholo (resource_id, dates, breakdown badlo):</li>
+</ol>
+<p><a href="https://search.google.com/search-console/performance/search-analytics?resource\_id=https%3A%2F%2Fclient.com%2F\&amp;start\_date=20261006\&amp;end\_date=20261102\&amp;compare\_start\_date=20260908\&amp;compare\_end\_date=20261005\&amp;metrics=CLICKS%2CIMPRESSIONS%2CCTR%2CPOSITION\&amp;breakdown=page" target="_blank" rel="noopener">https://search.google.com/search-console/performance/search-analytics?resource\_id=https%3A%2F%2Fclient.com%2F\&amp;start\_date=20261006\&amp;end\_date=20261102\&amp;compare\_start\_date=20260908\&amp;compare\_end\_date=20261005\&amp;metrics=CLICKS%2CIMPRESSIONS%2CCTR%2CPOSITION\&amp;breakdown=page</a></p>
+<p>breakdown=page → pages, breakdown=query → keywords.</p>
+<ol>
+<li>Page khulya pachhi console/JS ma aa extractor chalavo. Ek var FX localStorage ma save karo, pachhi darek page par await eval(localStorage.getItem('FX'))('p28') chalavo:</li>
+</ol>
+<p>// Columns: [url/query, clicks, prevClicks, impr, prevImpr, pos, prevPos] (async k=&gt;{ await new Promise(r=&gt;setTimeout(r,3500)); const n=s=&gt;+String(s).replace(/,/g,'').replace('%','')||0; const T=[...document.querySelector('table').rows].slice(1).map(r=&gt;[...r.cells].map(c=&gt;c.innerText.trim())); const b=document.body.innerText; const tot=[...b.matchAll(/(Total clicks|Total impressions|Average CTR|Average position)\n([\d,.K%]+)\n[^\n]*\n([\d,.K%]+)/g)].map(m=&gt;[m[2],m[3]]); localStorage.setItem('R_'+k, JSON.stringify({tot, rows:T.map(c=&gt;[ c[0].replace('<a href="https://client.com&#39;,&#39;&#39;).split(&#39;?&#39;)\[0\].split(&#39;\#&#39;)\[0\]" target="_blank" rel="noopener">https://client.com','').split('?')\[0\].split('\#')\[0\]</a> .replace(' Copy URL to clipboard Open in new tab Inspect URL',''), n(c[1]),n(c[2]),n(c[4]),n(c[5]),n(c[10]),n(c[11]) ]).sort((a,b)=&gt;b[3]-a[3]).slice(0,80)})); return 'ok '+T.length+' '+JSON.stringify(tot); })</p>
+<p>Keys: p7 q7 p28 q28 p90 q90 (p = pages, q = queries).</p>
+<ol>
+<li>Badho data ek sathe kadhva (JS output 1000 characters par cut thay chhe, etle page par lakhi ne vancho):</li>
+</ol>
+<p>const o={};['p7','q7','p28','q28','p90','q90'].forEach(k=&gt;o[k]=JSON.parse(localStorage.getItem('R_'+k))); const p=document.createElement('pre');p.textContent=JSON.stringify(o);document.body.replaceChildren(p);</p>
+<p>Pachhi get_page_text thi akho JSON vanchi ne data.json ma save karo.</p>
+<p>Dhyan:</p>
+<ul>
+<li>Compare mode ma column order: 0 page | 1 clicks | 2 prevClicks | 3 diff | 4 impr | 5 prevImpr | 6 diff | 7 ctr | 8 prevCtr | 9 diff | 10 pos | 11 prevPos | 12 diff.</li>
+<li>#anchor vala duplicate URLs aave chhe → dedupe karo (pehli row rakho).</li>
+<li>Totals "65K" jem rounded aave chhe — e j rite batavo, "approx" lakho.</li>
+</ul>
+<hr /></div><div class="sec" id="section-f"><h3><span class="letter">11.5.F</span> 5. Step 4 — GA4 data levo</h3><h4>Option A: Composio</h4>
+<p>GOOGLE_ANALYTICS_LIST_ACCOUNT_SUMMARIES → property check. Pachhi GOOGLE_ANALYTICS_RUN_REPORT:</p>
+<p>{ "property": "properties/558018808", "dateRanges": [{"startDate":"2026-10-06","endDate":"2026-11-02"}], "dimensions": [{"name":"landingPage"}], "metrics": [{"name":"sessions"},{"name":"activeUsers"},{"name":"transactions"},{"name":"purchaseRevenue"}], "dimensionFilter": {"filter":{"fieldName":"sessionDefaultChannelGroup","stringFilter":{"value":"Organic Search"}}}, "limit": 500 }</p>
+<p>metricValues[].value string aave chhe → number ma convert karo.</p>
+<h4>Option B: Chrome</h4>
+<ol>
+<li>GA4 → property picker → client select.</li>
+<li>Reports → Engagement → Landing page.</li>
+<li>Add filter → Dimension: Session default channel group → exactly matches → Organic Search → Apply.</li>
+<li>Date range set karo, rows per page 25/50.</li>
+<li>get_page_text thi table vancho: Landing page, Sessions, Active users, Engagement time, Key events, Total revenue.</li>
+</ol>
+<p>Check karo: Total revenue ane Key events 0 hoy to → ecommerce tracking set nathi. Report ma "Orders/Revenue: 0 — tracking not set up" lakho ane Fixes ma High priority.</p>
+<hr /></div><div class="sec" id="section-g"><h3><span class="letter">11.5.G</span> 6. Step 5 — Site live audit (top 10 pages)</h3><p>GSC mathi top impressions vali ~10 pages lo (homepage, top collections, top blogs, low-CTR pages). Client ni site browser ma kholi ne same-origin JS chalavo (server mathi fetch block thay to aa j rasto):</p>
+<p>const U=["/","/collections/x","/blogs/news/y"];const out=[]; for(const u of U){const h=await (await fetch(u)).text();const d=new DOMParser().parseFromString(h,'text/html'); const m=d.querySelector('main')||d.body;const imgs=[...m.querySelectorAll('img')]; out.push({u,t:d.title.trim(),tl:d.title.trim().length, md:(d.querySelector('meta[name=description]')?.content||'').trim(), h1:[...d.querySelectorAll('h1')].map(x=&gt;x.textContent.trim()), words:(m.textContent||'').trim().split(/\s+/).length, img:imgs.length,noalt:imgs.filter(i=&gt;!(i.getAttribute('alt')||'').trim()).length, schema:[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=&gt;{try{const j=JSON.parse(s.textContent);return [].concat(j['']||j['']?.map(x=&gt;x[''])).join('/')}catch{return '?'}}), canonical:d.querySelector('link[rel=canonical]')?.href})} const p=document.createElement('pre');p.textContent=JSON.stringify(out);document.body.replaceChildren(p);</p>
+<h4>Audit checklist (darek page par)</h4>
+<table>
+<tr><th>Check</th><th>Problem kyare</th><th>Priority</th></tr>
+<tr><td>Title length</td><td>> 60 ya < 30 chars, ya keyword nathi</td><td>Low–Medium</td></tr>
+<tr><td>Meta description</td><td>Nathi, > 160 chars, ya search intent sathe match nathi</td><td>Medium</td></tr>
+<tr><td>H1</td><td>0 ke 1 thi vadhu, ya keyword vagar nu</td><td>Medium</td></tr>
+<tr><td>Image alt</td><td>Alt vagar ni images</td><td>High jo ghani hoy</td></tr>
+<tr><td>Schema</td><td>Blog ma Article/Breadcrumb nathi · Collection ma CollectionPage/ItemList nathi · Product ma Product nathi</td><td>Medium</td></tr>
+<tr><td>Canonical</td><td>Nathi ke biji URL par jay chhe</td><td>High</td></tr>
+<tr><td>Content</td><td>< 300 words (collection/blog)</td><td>Medium</td></tr>
+<tr><td>GA4 tracking</td><td>Revenue/Key events 0</td><td>High</td></tr>
+<tr><td>(not set) landing page</td><td>Ghana sessions</td><td>Low</td></tr>
+</table>
+<hr /></div><div class="sec" id="section-h"><h3><span class="letter">11.5.H</span> 7. Step 6 — Analysis rules (data mathi decision)</h3><p>Aa rules code ma pan chhe (lib/analyze.js) ane manually pan aa j rite karo:</p>
+<table>
+<tr><th>Section</th><th>Rule</th></tr>
+<tr><td>Blog traffic</td><td>URL ma /blogs/ ke /blog/ hoy e pages</td></tr>
+<tr><td>Other pages</td><td>Baki badhi pages (home, collections, products, pages)</td></tr>
+<tr><td>Pages gaining clicks</td><td>clicks − prevClicks sauthi vadhu (top 8, fakt positive)</td></tr>
+<tr><td>Pages gaining impressions</td><td>impr − prevImpr sauthi vadhu</td></tr>
+<tr><td>Pages that dropped</td><td>clicks − prevClicks < 0 (client report ma optional)</td></tr>
+<tr><td>New keywords</td><td>prevImpr = 0 ane impr ≥ 5</td></tr>
+<tr><td>Position movers</td><td>prevPos − pos sauthi vadhu (positive = improve)</td></tr>
+<tr><td>Striking distance</td><td>position 8–20 ane impr ≥ 20, non-branded</td></tr>
+<tr><td>Low CTR</td><td>impr ≥ 100–300 ane CTR < 1%</td></tr>
+<tr><td>Branded</td><td>query ma brand term regex match (/Client A|sky line/i)</td></tr>
+<tr><td>Non-branded</td><td>baki badha, impressions thi sort</td></tr>
+<tr><td>Keyword band</td><td>≤3 Top 3 · ≤10 Page 1 · ≤20 Page 2 · >20 Beyond</td></tr>
+</table>
+<hr /></div><div class="sec" id="section-i"><h3><span class="letter">11.5.I</span> 8. Step 7 — Content sections (rewrites, ideas, fixes)</h3><h4>8.1 Page rewrites for this week (3 pages)</h4>
+<p>Kai page pasand karvi:</p>
+<ol>
+<li>High impressions + CTR &lt; 1% + position 4–20 → FULL PAGE REWRITE</li>
+<li>Impressions vadhya pan position ghati (Google navi queries test kare chhe) → SEO-FOCUSED REWRITE</li>
+<li>Topic ni queries position 30+ par (topic own nathi kartu) → SEO-FOCUSED REWRITE + collection ↔︎ blog link</li>
+</ol>
+<p>Darek rewrite ma:</p>
+<ul>
+<li>Why (data): impressions, clicks, CTR, position, top queries numbers sathe</li>
+<li>Full rewrite: Title (≤60), Meta (≤155), H1, akhi body (H2/H3 outline + text), FAQ (4 q), internal links, schema</li>
+<li>SEO-focused rewrite: fakt badlav — title/meta, intro ma exact query, nava H2 (missing queries mathi), tables, FAQ, internal links</li>
+</ul>
+<p>Example (Client A): /collections/porcelain-sinks — 3,471 impr, 17 clicks (0.5% CTR), pos 10.1; meta ma fakt bathroom, pan "porcelain kitchen sink" queries aave chhe → full rewrite.</p>
+<h4>8.2 New blog topics &amp; collection ideas (90-day data)</h4>
+<p>Blog topic mate signal:</p>
+<ul>
+<li>Question type query, position 1–10, pan dedicated page nathi (e.g. "why diamond segments wear too fast…" pos 3.7)</li>
+<li>Navi query je jaldi vadhti hoy (15 → 157 impr)</li>
+<li>Product/collection position 20+ — support blog thi help mle</li>
+</ul>
+<p>Collection idea mate signal:</p>
+<ul>
+<li>Ek j intent ni ghani queries (kitchen porcelain sink, white porcelain kitchen sink…) ane emne match karti collection nathi</li>
+<li>Brand/product family queries (tenax proseal 767 impr) — dedicated collection nathi</li>
+</ul>
+<p>Darek idea sathe: title, target keyword, supporting keywords, reason with numbers, slug, outline / products.</p>
+<h4>8.3 Fixes spotted on the site</h4>
+<p>Table format: Priority | Page | Problem | Reason | Fix / rewrite (exact navo title/meta/alt/H1 lakho, fakt "fix karo" nahi).</p>
+<hr /></div><div class="sec" id="section-j"><h3><span class="letter">11.5.J</span> 9. Step 8 — Report structure (website sections, upar thi niche)</h3><ol>
+<li>Hero — client, date range vs comparison, 7/28/90 buttons, Download PDF</li>
+<li>Overview — Clicks, Impressions, CTR, Avg position (prev + % change) + trend chart</li>
+<li>GSC: Blog posts — KPI + table (clicks, prev, Δ, impr, prev, Δ, CTR, pos)</li>
+<li>GSC: Other pages — same table</li>
+<li>What changed — 6 cards (gainers, impr gainers, new keywords, movers, striking, low CTR)</li>
+<li>Keyword positions — 2 tabs: Non-branded / Branded, "Search ↗" Google link (&amp;gl=us&amp;hl=en)</li>
+<li>GA4 — Organic sessions, users, engagement, orders, revenue; blog ane other landing pages alag</li>
+<li>Page rewrites (full</li>
+</ol>
+<ul>
+<li>SEO-focused)</li>
+</ul>
+<ol start="9">
+<li>New blog topics &amp; collection ideas</li>
+<li>Fixes spotted on the site</li>
+<li>Footer — source + exact date ranges</li>
+</ol>
+<p>Client type pramane badlo: Lead-gen → revenue ni jagyae form submits/calls · Local → city keywords · Blog site → GA4 revenue kadhi nakho.</p>
+<hr /></div><div class="sec" id="section-k"><h3><span class="letter">11.5.K</span> 10. Step 9 — Build</h3><h4>10.1 Live website (Next.js + Composio + ChatGPT)</h4>
+<p>Folder structure:</p>
+<p>seo-report/ ├─ app/ │  ├─ page.js            ← UI (tabs, tables, buttons) │  ├─ layout.js          ← noindex meta │  ├─ globals.css        ← brand colour, dark mode, print CSS │  └─ api/ │     ├─ report/route.js ← GSC + GA4 fetch via Composio (?days=7|28|90) │     └─ ai/route.js     ← rewrites / ideas / fixes via ChatGPT + live page audit ├─ lib/ │  ├─ composio.js        ← Composio execute + date ranges │  └─ analyze.js         ← blog/other split, branded, what-changed rules ├─ .env.example ├─ package.json └─ README.md</p>
+<p>Composio API call:</p>
+<p>POST <a href="https://backend.composio.dev/api/v3/tools/execute/\" target="_blank" rel="noopener">https://backend.composio.dev/api/v3/tools/execute/\</a>&lt;TOOL_SLUG&gt; Header: x-api-key: &lt;COMPOSIO_API_KEY&gt; Body: { "connected_account_id": "&lt;id&gt;", "arguments": { ... } }</p>
+<p>Environment variables (Vercel ma):</p>
+<table>
+<tr><th>Variable</th><th>Shu nakhvu</th></tr>
+<tr><td>COMPOSIO_API_KEY</td><td>Composio → Settings → API key</td></tr>
+<tr><td>COMPOSIO_USER_ID</td><td>Composio user id (default default)</td></tr>
+<tr><td>COMPOSIO_GSC_ACCOUNT_ID</td><td>Client vala GSC connection ni ID</td></tr>
+<tr><td>COMPOSIO_GA4_ACCOUNT_ID</td><td>Client vala GA4 connection ni ID</td></tr>
+<tr><td>COMPOSIO_GSC_TOOL</td><td>GOOGLE_SEARCH_CONSOLE_SEARCH_ANALYTICS_QUERY</td></tr>
+<tr><td>COMPOSIO_GA4_TOOL</td><td>GOOGLE_ANALYTICS_RUN_REPORT</td></tr>
+<tr><td>SITE_NAME / SITE_URL</td><td>Client naam / URL</td></tr>
+<tr><td>GSC_PROPERTY</td><td>https://client.com/ athva sc-domain:client.com</td></tr>
+<tr><td>GA4_PROPERTY_ID</td><td>Fakt number (e.g. 558018808)</td></tr>
+<tr><td>BRAND_TERMS</td><td>comma separated</td></tr>
+<tr><td>OPENAI_API_KEY / OPENAI_MODEL</td><td>ChatGPT key / gpt-4o-mini</td></tr>
+</table>
+<p>ChatGPT system prompt (ai route):</p>
+<p>You are a senior ecommerce SEO strategist and copywriter. Use ONLY the given data; never invent numbers. Output clean markdown in English.</p>
+<p>Navo client = code change nahi. Fakt env vars badlo → Redeploy.</p>
+<h4>10.2 Snapshot artifact / HTML (aaj na data thi)</h4>
+<ol>
+<li>Step 3–5 no data data.json ma save karo.</li>
+<li>HTML template ma const DATA=__DATA__; rakho, python thi replace karo:</li>
+</ol>
+<p>python3 -c "t=open('tpl.html').read();d=open('data.json').read();open('report.html','w').write(t.replace('__DATA__',d))"</p>
+<ol>
+<li>JS syntax check: node -e "new Function(&lt;script part&gt;)".</li>
+<li>Artifact tarike publish karo ke ZIP ma index.html tarike mukho.</li>
+</ol>
+<hr /></div><div class="sec" id="section-l"><h3><span class="letter">11.5.L</span> 11. Step 10 — QA checklist (publish pehla)</h3><ul>
+<li><input type="checkbox" disabled="" />
+Darek number source sathe match (GSC/GA4 ma 3–4 random numbers cross-check)</li>
+<li><input type="checkbox" disabled="" />
+Koi demo/dummy data nathi (ke chhe to clearly label)</li>
+<li><input type="checkbox" disabled="" />
+Period labels badha sections ma saacha</li>
+<li><input type="checkbox" disabled="" />
+Duplicate (#anchor) URLs dedupe thai gaya</li>
+<li><input type="checkbox" disabled="" />
+Branded keywords non-branded tab ma nathi</li>
+<li><input type="checkbox" disabled="" />
+GA4 revenue 0 hoy to clearly lakhyu chhe</li>
+<li><input type="checkbox" disabled="" />
+Darek rewrite/idea/fix ma "why" + number chhe</li>
+<li><input type="checkbox" disabled="" />
+Mobile width (≈375px) par horizontal scroll nathi</li>
+<li><input type="checkbox" disabled="" />
+noindex, nofollow meta chhe</li>
+<li><input type="checkbox" disabled="" />
+Links client ni site par saacha khule chhe</li>
+<li><input type="checkbox" disabled="" />
+Dark mode ma text vanchay chhe</li>
+</ul>
+<hr /></div><div class="sec" id="section-m"><h3><span class="letter">11.5.M</span> 12. Step 11 — Deploy (GitHub → Vercel)</h3><ol>
+<li>GitHub → New private repo (e.g. client-seo-report).</li>
+<li>ZIP extract karo → files upload karo (ZIP nahi). node_modules ane .next na mukvana.</li>
+<li>Vercel → Continue with GitHub → Add New Project → repo Import.</li>
+<li>Framework: Next.js (auto) → Environment Variables ma section 10.1 ni badhi values.</li>
+<li>Deploy → *.vercel.app link client ne mokalo.</li>
+<li>Pachhi koi badlav: GitHub ma file update → Vercel automatic redeploy.</li>
+</ol>
+<p>Note: repo private chhe pan live link jene male e joi shake. noindex thi Google ma nahi aave. Client data chhe etle REPORT_PASSWORD (ke Vercel password protection) jaruri add karo.</p>
+<hr /></div><div class="sec" id="section-n"><h3><span class="letter">11.5.N</span> 13. Common problems &amp; solutions (Client A mathi shikhyu)</h3><table>
+<tr><th>Problem</th><th>Karan</th><th>Solution</th></tr>
+<tr><td>Composio ma client ni site nathi</td><td>Biju Google account connected</td><td>Client access vala account thi navu connection (COMPOSIO_MANAGE_CONNECTIONS → add)</td></tr>
+<tr><td>GA4 revenue $0</td><td>Shopify purchase events GA4 ma nathi aavta</td><td>Fix list ma High; Shopify "Google & YouTube" app thi GA4 link</td></tr>
+<tr><td>Server mathi site fetch 403</td><td>Proxy/allowlist block</td><td>Browser ma site kholi same-origin fetch()</td></tr>
+<tr><td>JS output cut thay</td><td>Tool output limit ~1000 chars</td><td>Data <pre> ma lakhi get_page_text thi vancho</td></tr>
+<tr><td>window function navigation pachhi jato rahe</td><td>Page reload</td><td>Function string localStorage ma rakho, eval thi chalavo</td></tr>
+<tr><td>Ek j URL ghani var</td><td>#elementor-toc… ke #anchor URLs</td><td>split('#')[0] + dedupe</td></tr>
+<tr><td>"Copy URL to clipboard…" text URL ma</td><td>GSC row button text</td><td>.replace(...) thi kadhi nakho</td></tr>
+<tr><td>Totals "65K"</td><td>GSC UI rounding</td><td>Rounded batavo ke API thi exact lo</td></tr>
+<tr><td>Demo data thi client confuse</td><td>Preview ma fake numbers</td><td>Hamesha saacha data thi j final banavo</td></tr>
+</table>
+<hr /></div><div class="sec" id="section-o"><h3><span class="letter">11.5.O</span> 14. Navo report — ready prompt (copy-paste)</h3><p>Act as Senior SEO Analyst + Dashboard Developer. Client: &lt;NAME&gt; | Site: &lt;URL&gt; | GSC property: &lt;PROPERTY&gt; | GA4 property: &lt;ID&gt; Platform: &lt;Shopify/WordPress&gt; | Market: &lt;USA/UK/IN&gt; | Brand terms: &lt;a,b,c&gt;</p>
+<p>Follow my "SEO Live Report SOP": 1. GSC data 7/28/90 days (pages + queries, with comparison) — Composio ke Chrome. 2. GA4 Organic Search landing pages: sessions, users, orders, revenue. 3. Live audit of top 10 pages (title, meta, H1, alt, schema). 4. Sections: Overview, Blog traffic, Other pages, What changed, Keywords (Branded/Non-branded), GA4 blog + other landing revenue, Page rewrites (full + SEO-focused), New blog &amp; collection ideas (90d, with reasons), Fixes spotted (priority + reason + exact fix). 5. Never invent numbers. Label every period. 6. Output: artifact (snapshot) + Next.js ZIP for GitHub/Vercel. Chat with me in Gujlish; report content in English.</p>
+<hr /></div><div class="sec" id="section-p"><h3><span class="letter">11.5.P</span> 15. Monthly routine (live website hoy to)</h3><table>
+<tr><th>Kyare</th><th>Shu karvu</th><th>Time</th></tr>
+<tr><td>Darek Monday</td><td>7-day view kholo → What changed + Striking distance note karo</td><td>10 min</td></tr>
+<tr><td>Darek week</td><td>"Generate page rewrites" → 1–3 pages update karo</td><td>1–2 kalak</td></tr>
+<tr><td>Mahina ni shuruat</td><td>28-day + 90-day view → Ideas generate → 2–4 nava blogs/collections plan</td><td>30 min</td></tr>
+<tr><td>Mahina ma ek var</td><td>"Scan pages & generate fixes" → High priority pehla fix</td><td>1 kalak</td></tr>
+<tr><td>Client meeting</td><td>Link share + Overview, What changed, Rewrites done batavo</td><td>—</td></tr>
+</table>
+
+        <div><a>&larr; Step 83: 02 Dashboard Handbook</a><a>Step 85: Looker Studio Dashboard &rarr;</a></div>
+      </div>
+
+      <div>
+        <p>Looker dashboard — 4 steps</p>
+        <div>
+          <div>
+            <span>1</span>
+            <p><span>➜</span>Connect 3 data sources</p>
+            <p>Sources connect karva na steps.</p>
+          </div>
+          <div>
+            <span>2</span>
+            <p><span>⚙</span>Calculated fields once</p>
+            <p>Ek vaar banao, pachhi reuse.</p>
+          </div>
+          <div>
+            <span>3</span>
+            <p><span>▤</span>Build pages in order</p>
+            <p>Pages aapel kram ma banao.</p>
+          </div>
+          <div>
+            <span>4</span>
+            <p><span>✓</span>Master template, copy per client</p>
+            <p>Ek template, darek client mate copy.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p>Step 85 / 111</p></div>
+<div class="pagenav"><a href="../../..//coaches/11-client-reporting/11-4-client-a-gsc-vercel-full-implementation-handbook/">← 11.4 Client A – GSC + Vercel Full Implementat</a><a href="../../..//coaches/11-client-reporting/11-6-looker-studio-traffic-dashboard-build-guide-repo/">11.6 Looker Studio Traffic Dashboard — Build  →</a></div>
+</div></main><footer class="site"><div class="wrap">🚂 SEO SOP Express — Priyank nu SEO SOP Library. 16 dabba, ek train. Badhu content ahi j chhe, koi doc kholvu nahi. 🙏</div></footer>
+<script>window.BASE='../../../';</script><script src="../../..//assets/data.js"></script><script src="../../..//assets/app.js"></script></body></html>

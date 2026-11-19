@@ -1,13 +1,10 @@
-# SOP Library
+# SEO SOP Express 🚂
 
-Step-by-step SEO and AI-visibility playbooks, written so anyone on the team can follow them: simple flow diagrams up top, numbered detailed steps underneath.
+Full SEO SOP library — 16 coaches (dabba), 165 numbered stops, station-wayfinding design.
 
-Live site: https://prdiyora.github.io/sop-library/
+- `/` Home Station
+- `/journey/` full train map
+- `/coaches/NN-.../` each dabba + topic pages
+- `/search/` fuzzy search · `/progress/` progress tracker · `/client-intake/` required client info · `/drive-saver/` source docs
 
-## Structure
-
-- `index.html` — library home: the new-client master flow, golden rules, folder index
-- `ai-visibility/` — the AI Visibility SOP (Part A: Semrush research, Part B: ChatGPT Business Hub)
-- `assets/` — shared stylesheet and theme toggle
-
-Plain HTML/CSS/JS. No build step. Served by GitHub Pages from the `main` branch root.
+Built with NotebookLM architecture + ChatGPT design. Deployed on Vercel; mirrored on GitHub Pages.
