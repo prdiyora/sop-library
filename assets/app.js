@@ -15,6 +15,7 @@ function paint(){
  });
  document.querySelectorAll('[data-done-id]').forEach(el=>{
    const id=el.getAttribute('data-done-id');if(s.done&&s.done[id])el.style.display='inline-block';});
+ paintGates(s);
  if(document.getElementById('progress-root'))renderProgress(s);
  if(document.getElementById('continue-root'))renderContinue(s);
 }
@@ -36,7 +37,16 @@ function renderProgress(s){
  });
  let cur='';
  if(s.current&&window.TOPICS[s.current]){const t=window.TOPICS[s.current];cur=`<div class="notice">📍 <b>Current stop:</b> <a href="${B+t.url}">${t.id} — ${t.title}</a> (Coach ${t.coach})</div>`}
- el.innerHTML=`<h2 style="margin:10px 0">📍 My Journey — ${td} / ${Object.keys(window.TOPICS).length} stops done</h2>${cur}<div class="track">${html}</div><p style="margin-top:14px;color:var(--muted);font-size:14px">Progress saves in this browser automatically. Koi pan topic page par "Mark done" ke "Set current stop" dabavo.</p>`;
+ const gd=Object.values(s.gates||{}).filter(Boolean).length;
+ el.innerHTML=`<h2 style="margin:10px 0">📍 My Journey — ${td} / ${Object.keys(window.TOPICS).length} stops done</h2>${cur}<p style="font-size:14.5px;margin:4px 0 10px">🚦 Gate items ticked: <b>${gd}</b> (gates full route par chhe — Journey page juo)</p><div class="track">${html}</div><p style="margin-top:14px;color:var(--muted);font-size:14px">Progress saves in this browser automatically. Koi pan topic page par "Mark done" ke "Set current stop" dabavo.</p>`;
+}
+function gateTick(id,el){const s=st();s.gates=s.gates||{};s.gates[id]=el.checked;sv(s);paintGates(s)}
+function paintGates(s){
+ document.querySelectorAll('input.check-g').forEach(el=>{el.checked=!!(s.gates&&s.gates[el.dataset.g])});
+ document.querySelectorAll('[data-gate]').forEach(box=>{
+  const ins=box.querySelectorAll('input.check-g');const dn=Array.from(ins).filter(i=>i.checked).length;
+  const lab=box.querySelector('.gcount');if(lab&&ins.length)lab.textContent=dn+'/'+ins.length+' ✅';
+ });
 }
 document.addEventListener('DOMContentLoaded',()=>{
  const b=document.querySelector('.burger');if(b)b.onclick=()=>document.querySelector('nav.main').classList.toggle('open');
