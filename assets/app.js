@@ -33,7 +33,7 @@ function renderProgress(s){
  window.COACHES.forEach(c=>{
   const dn=c.topics.filter(id=>done[id]).length;td+=dn;
   const pct=Math.round(100*dn/c.topics.length);
-  html+=`<a class="stop" style="min-width:210px" href="${B+c.url}"><div class="num">${c.emoji} ${String(c.num).padStart(2,'0')}</div><div class="nm">${c.title}</div><div class="bar-bg"><div class="bar-fg" style="width:${pct}%"></div></div><div class="meta" style="font-size:12px;color:var(--muted);margin-top:6px">${dn}/${c.topics.length} stops ✅</div></a>`;
+  html+=`<a class="stop" style="min-width:210px" href="${B+c.url}"><div class="num">${c.emoji}${c.engine?'':' '+String(c.num).padStart(2,'0')}</div><div class="nm">${c.title}</div><div class="bar-bg"><div class="bar-fg" style="width:${pct}%"></div></div><div class="meta" style="font-size:12px;color:var(--muted);margin-top:6px">${dn}/${c.topics.length} stops ✅</div></a>`;
  });
  let cur='';
  if(s.current&&window.TOPICS[s.current]){const t=window.TOPICS[s.current];cur=`<div class="notice">📍 <b>Current stop:</b> <a href="${B+t.url}">${t.id} — ${t.title}</a> (Coach ${t.coach})</div>`}
