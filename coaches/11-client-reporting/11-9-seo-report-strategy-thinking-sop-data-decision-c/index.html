@@ -13,7 +13,7 @@
 <p style="color:var(--muted);font-size:14px;margin-bottom:6px">Dabbo 11 · Client Reporting System · <span class="badge done" data-done-id="11.9" style="display:none">✅ Done</span></p>
 <div class="tools"><button class="markdone" onclick="markDone('11.9')">☑️ Mark done</button><button class="setcur" onclick="setCurrent('11.9')">📍 Set current stop</button></div>
 <div class="sec"><blockquote>
-<p><strong>Aa file shu chhe:</strong> Client A no report ([artifact]((team internal link))) banavati vakhte me je <em>mind</em> ane <em>strategy</em> vapri, e akhi aa file ma lakhi chhe. Kayo data joyo, emathi shu samjayu, ane pachhi rewrite, nava blog, nava collection ke fix nu suggestion kem aapyu, e badhu ahi chhe. &gt; Aa file vanchi ne tame koi pan client (Shopify, WordPress, lead-gen, blog) no report <strong>same logic thi</strong> banavi shako. &gt; &gt; Technical setup (Composio, JS extractor code, env vars) mate juo: <code>SEO-Live-Report-SOP.md</code>. Aa file <strong>thinking + content + deploy</strong> mate chhe.</p>
+<p><strong>Aa file shu chhe:</strong> Client A no report banavati vakhte me je <em>mind</em> ane <em>strategy</em> vapri, e akhi aa file ma lakhi chhe. Kayo data joyo, emathi shu samjayu, ane pachhi rewrite, nava blog, nava collection ke fix nu suggestion kem aapyu, e badhu ahi chhe. &gt; Aa file vanchi ne tame koi pan client (Shopify, WordPress, lead-gen, blog) no report <strong>same logic thi</strong> banavi shako. &gt; &gt; Technical setup (Composio, JS extractor code, env vars) mate juo: <code>SEO-Live-Report-SOP.md</code>. Aa file <strong>thinking + content + deploy</strong> mate chhe.</p>
 </blockquote>
 <hr /></div><div class="sec" id="section-a"><h3><span class="letter">11.9.A</span> PART A — Akho process 1 page ma</h3><pre><code>1. Client ne samjo        → shu vechay chhe, paisa kya thi aave chhe, brand naam shu chhe
 2. Data lo (3 period)     → GSC pages + queries (7 / 28 / 90 days, comparison sathe), GA4 Organic
@@ -24,7 +24,7 @@
 7. Report banavo          → sections ane design (PART F)
 8. QA → Deploy            → GitHub → Vercel → client ne link (PART H) ```
 
-**Ek line ma strategy:** &gt; *Google already je page ne batave chhe (impressions) pan click nathi madta (low CTR / position 8–20), e pages ne pehla sudharo. Google je queries mate tamari site batave chhe pan matching page nathi, e mate navu page banavo.*
+<strong>Ek line ma strategy:</strong> &gt; *Google already je page ne batave chhe (impressions) pan click nathi madta (low CTR / position 8–20), e pages ne pehla sudharo. Google je queries mate tamari site batave chhe pan matching page nathi, e mate navu page banavo.*
 
 Aa line tame yaad rakhsho to badha decisions emathi j nikle chhe.
 
@@ -34,16 +34,16 @@ Aa line tame yaad rakhsho to badha decisions emathi j nikle chhe.
 
 | Data | Kya thi | Kem joie |
 |---|---|---|
-| **GSC Pages** (clicks, impr, CTR, position, current vs prev) | Search Console → Performance → Pages, compare mode | Kayu page vadhe chhe, ghate chhe, kayu page &quot;chance&quot; chhe |
-| **GSC Queries** | Same → Queries tab | Loko shu search kare chhe; navi queries; position |
-| **3 period: 7 / 28 / 90 divas** | Date range badli ne | 7d = taja signal, 28d = main report, 90d = trend + nava content ideas |
-| **GA4 Organic landing pages** | GA4 → Engagement → Landing page + filter `Session default channel group = Organic Search` | SEO thi aavela visitors, engagement, orders, revenue |
-| **Live page audit** | Site ni page kholi ne HTML vanchvu | Title/meta/H1/alt/schema ma shu khoti chhe |
+| <strong>GSC Pages</strong> (clicks, impr, CTR, position, current vs prev) | Search Console → Performance → Pages, compare mode | Kayu page vadhe chhe, ghate chhe, kayu page &quot;chance&quot; chhe |
+| <strong>GSC Queries</strong> | Same → Queries tab | Loko shu search kare chhe; navi queries; position |
+| <strong>3 period: 7 / 28 / 90 divas</strong> | Date range badli ne | 7d = taja signal, 28d = main report, 90d = trend + nava content ideas |
+| <strong>GA4 Organic landing pages</strong> | GA4 → Engagement → Landing page + filter `Session default channel group = Organic Search` | SEO thi aavela visitors, engagement, orders, revenue |
+| <strong>Live page audit</strong> | Site ni page kholi ne HTML vanchvu | Title/meta/H1/alt/schema ma shu khoti chhe |
 
-**Kem 3 period?**
-- **7 divas:** aa week shu thayu. Navi queries jaldi dekhay chhe.
-- **28 divas:** main report period. Ek mahina ni stable picture aape chhe.
-- **90 divas:** trend saacho chhe ke nahi e khabar pade (Client A: 904 → 2,420 clicks). Nava blog ke collection na ideas 90 divas na data parthi j aapva, karan ke tyare j data puratu hoy chhe.
+<strong>Kem 3 period?</strong>
+- <strong>7 divas:</strong> aa week shu thayu. Navi queries jaldi dekhay chhe.
+- <strong>28 divas:</strong> main report period. Ek mahina ni stable picture aape chhe.
+- <strong>90 divas:</strong> trend saacho chhe ke nahi e khabar pade (Client A: 904 → 2,420 clicks). Nava blog ke collection na ideas 90 divas na data parthi j aapva, karan ke tyare j data puratu hoy chhe.
 
 ---
 
@@ -53,36 +53,36 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 
 ### Sawal 1: &quot;Overall site upar jay chhe ke niche?&quot;
 - Clicks, impressions, CTR ane position na totals current vs previous sarkhavo.
-- **Client A 28d:** Clicks 743 → 843 (upar), Impr 68.5K → 65K (thoda niche), CTR 1.1% → 1.3% (upar).
-- **Matlab:** impressions thodi ghati pan clicks vadhya. Etle je traffic aave chhe e vadhu relevant chhe. Aa **positive story** chhe.
-- **Rule:** Clicks upar ane impr niche hoy to CTR sudharyo chhe. Clicks niche ane impr upar hoy to position ke snippet ni problem chhe.
+- <strong>Client A 28d:</strong> Clicks 743 → 843 (upar), Impr 68.5K → 65K (thoda niche), CTR 1.1% → 1.3% (upar).
+- <strong>Matlab:</strong> impressions thodi ghati pan clicks vadhya. Etle je traffic aave chhe e vadhu relevant chhe. Aa <strong>positive story</strong> chhe.
+- <strong>Rule:</strong> Clicks upar ane impr niche hoy to CTR sudharyo chhe. Clicks niche ane impr upar hoy to position ke snippet ni problem chhe.
 
 ### Sawal 2: &quot;Kayu content kaam kare chhe?&quot; (Blog vs other pages)
 - URL ma `/blogs/` hoy e blog. Baki badhu collection, product, home.
-- **Client A:** top impressions vala pages ma ghana blogs chhe (cutting-metal-with-a-skil-saw 5,711 impr, choose-the-right-blade 3,990). **Matlab:** blogs traffic laave chhe, pan revenue collections/products thi aave chhe. Etle **blog → collection internal link** sauthi mahatva nu kaam chhe.
+- <strong>Client A:</strong> top impressions vala pages ma ghana blogs chhe (cutting-metal-with-a-skil-saw 5,711 impr, choose-the-right-blade 3,990). <strong>Matlab:</strong> blogs traffic laave chhe, pan revenue collections/products thi aave chhe. Etle <strong>blog → collection internal link</strong> sauthi mahatva nu kaam chhe.
 
 ### Sawal 3: &quot;Shu badlayu?&quot; (What changed section)
 
 | Signal | Kevi rite shodhvu | Matlab shu |
 |---|---|---|
 | Clicks gainers | `clicks − prevClicks` sauthi vadhu | Kaam thayu chhe, client ne batavo |
-| Impression gainers | `impr − prevImpr` sauthi vadhu | Google aa page ne navi queries mate test kare chhe. **Opportunity** |
-| New keywords | prev impr = 0, current impr ≥ 5 | Google navo topic tamari site sathe jode chhe. **Nava content no idea** |
+| Impression gainers | `impr − prevImpr` sauthi vadhu | Google aa page ne navi queries mate test kare chhe. <strong>Opportunity</strong> |
+| New keywords | prev impr = 0, current impr ≥ 5 | Google navo topic tamari site sathe jode chhe. <strong>Nava content no idea</strong> |
 | Position movers | `prevPos − pos` vadhu | Ranking sudhri. Report ma batavo |
-| Striking distance | position 8–20, impr ≥ 20 | Page 1 ni najik chhe. **Thodu kaam karo to vadhu clicks malse** |
-| Low CTR | impr ≥ 100–300, CTR &lt; 1% | Google batave chhe pan loko click nathi karta. **Title/meta/intent ni problem** |
+| Striking distance | position 8–20, impr ≥ 20 | Page 1 ni najik chhe. <strong>Thodu kaam karo to vadhu clicks malse</strong> |
+| Low CTR | impr ≥ 100–300, CTR &lt; 1% | Google batave chhe pan loko click nathi karta. <strong>Title/meta/intent ni problem</strong> |
 
 ### Sawal 4: &quot;Loko shu search kare chhe?&quot; (Keywords)
-- **Branded** (Client A, Client A stone products): aa loko tamne already jane chhe. Aa SEO nu kaam nathi, brand nu chhe. **Alag tab ma rakho.**
-- **Non-branded** (akemi, porcelain sink, tenax proseal): aa SEO nu saachu result chhe. **Main tab.**
-- **Dhyan:** &quot;akemi&quot; ke &quot;tenax&quot; product brand chhe, store brand nathi. Etle e **non-branded** gane.
+- <strong>Branded</strong> (Client A, Client A stone products): aa loko tamne already jane chhe. Aa SEO nu kaam nathi, brand nu chhe. <strong>Alag tab ma rakho.</strong>
+- <strong>Non-branded</strong> (akemi, porcelain sink, tenax proseal): aa SEO nu saachu result chhe. <strong>Main tab.</strong>
+- <strong>Dhyan:</strong> &quot;akemi&quot; ke &quot;tenax&quot; product brand chhe, store brand nathi. Etle e <strong>non-branded</strong> gane.
 
 ### Sawal 5: &quot;SEO thi business ne shu malyu?&quot; (GA4)
 - Organic sessions, users, engagement, orders, revenue.
-- **Client A:** 821 organic sessions pan **revenue $0, key events 0.** Sales nathi thata evu nathi, **tracking j nathi.**
-- **Rule:** Revenue 0 hoy to pehla tracking check karo. Report ma &quot;tracking not set up&quot; lakho ane Fixes ma **High** priority aapo. Khota orders kyarey na mukvana.
+- <strong>Client A:</strong> 821 organic sessions pan <strong>revenue $0, key events 0.</strong> Sales nathi thata evu nathi, <strong>tracking j nathi.</strong>
+- <strong>Rule:</strong> Revenue 0 hoy to pehla tracking check karo. Report ma &quot;tracking not set up&quot; lakho ane Fixes ma <strong>High</strong> priority aapo. Khota orders kyarey na mukvana.
 
-### Sawal 6: &quot;Shu karvu?&quot; (Action, PART D) Upar na 5 sawal mathi je pages ane queries nikle, emathi **Rewrite / New content / Fix** nakki karo.
+### Sawal 6: &quot;Shu karvu?&quot; (Action, PART D) Upar na 5 sawal mathi je pages ane queries nikle, emathi <strong>Rewrite / New content / Fix</strong> nakki karo.
 
 ---
 
@@ -99,7 +99,7 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 | store naam | Navigational (branded) | Homepage |
 
 ### Priority kevi rite nakki karvi ``` Priority score ≈ Impressions × (position 4–20 hoy to vadhu) × Business value (product/collection &gt; blog) ```
-- Pehla e pages lo je **already page 1 ni najik** chhe ane **paisa vala** chhe (collections/products).
+- Pehla e pages lo je <strong>already page 1 ni najik</strong> chhe ane <strong>paisa vala</strong> chhe (collections/products).
 - Position 50+ vala pages par pehla kaam na karo. Ema vadhu mehnat lage ane result late aave.
 
 ---
@@ -108,19 +108,19 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 
 ### E1. Rewrite #1: `/collections/porcelain-sinks` → FULL PAGE REWRITE
 
-**Me shu joyu (data):**
-- 28d: **3,471 impressions, fakt 17 clicks → CTR 0.5%**, position 10.1
+<strong>Me shu joyu (data):</strong>
+- 28d: <strong>3,471 impressions, fakt 17 clicks → CTR 0.5%</strong>, position 10.1
 - Top queries: &quot;porcelain sink&quot; 902 impr (pos 9.4), &quot;porcelain kitchen sink&quot; 313 impr (pos 9.8)
-- Live audit: meta description ma **fakt &quot;bathroom sinks&quot;** lakhyu chhe
+- Live audit: meta description ma <strong>fakt &quot;bathroom sinks&quot;</strong> lakhyu chhe
 
-**Thinking:**
+<strong>Thinking:</strong>
 1. Impressions ghani chhe, etle Google page ne relevant mane chhe.
 2. CTR 0.5% chhe, etle loko snippet joi ne click nathi karta.
-3. Kem? Searcher &quot;kitchen&quot; sink shodhe chhe pan snippet ma &quot;bathroom&quot; lakhyu chhe. **Intent mismatch.**
+3. Kem? Searcher &quot;kitchen&quot; sink shodhe chhe pan snippet ma &quot;bathroom&quot; lakhyu chhe. <strong>Intent mismatch.</strong>
 4. Position 10 chhe, etle page 1 nu chhellu sthan. Thodu content sudhre to top 5 ma aavi shake.
-5. Aa collection page chhe, etle direct **paisa vala** page chhe. **Sauthi upar priority.**
+5. Aa collection page chhe, etle direct <strong>paisa vala</strong> page chhe. <strong>Sauthi upar priority.</strong>
 
-**Rewrite ma shu badlyu:**
+<strong>Rewrite ma shu badlyu:</strong>
 | Element | Juno | Navo | Kem |
 |---|---|---|---|
 | Title | Porcelain Sink for Kitchen &amp; Bathroom \| Client A | Porcelain Sinks for Kitchen &amp; Bathroom \| Client A | Plural &quot;sinks&quot; = transactional; kitchen pehla |
@@ -132,76 +132,76 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 
 ### E2. Rewrite #2: `/blogs/news/kitchen-sink-cabinet-combo-buying-guide` → SEO-FOCUSED REWRITE
 
-**Data:** impressions 365 → **1,203 (3 gana)**, pan position 7.4 → **11.2 (niche gayu)**. Navi queries: &quot;kitchen cabinets for sink&quot; (pos 37.2), &quot;kitchen sink with cabinet&quot; (13.5), &quot;kitchen sink and cabinet combo&quot; (10.1). Aa queries pehla na period ma nahotī.
+<strong>Data:</strong> impressions 365 → <strong>1,203 (3 gana)</strong>, pan position 7.4 → <strong>11.2 (niche gayu)</strong>. Navi queries: &quot;kitchen cabinets for sink&quot; (pos 37.2), &quot;kitchen sink with cabinet&quot; (13.5), &quot;kitchen sink and cabinet combo&quot; (10.1). Aa queries pehla na period ma nahotī.
 
-**Thinking:**
-- Impressions vadhya ane position ghati, etle Google aa page ne **ghani navi queries mate test kare chhe**. Average position niche aave chhe karan ke nava, door na keywords umerata jay chhe.
-- Page aakhu kharab nathi, etle full rewrite **nathi** karvo. Fakt **e navi queries ne page ma jagya aapvi** chhe.
+<strong>Thinking:</strong>
+- Impressions vadhya ane position ghati, etle Google aa page ne <strong>ghani navi queries mate test kare chhe</strong>. Average position niche aave chhe karan ke nava, door na keywords umerata jay chhe.
+- Page aakhu kharab nathi, etle full rewrite <strong>nathi</strong> karvo. Fakt <strong>e navi queries ne page ma jagya aapvi</strong> chhe.
 
-**Shu badlvu (fakt aatlu):**
+<strong>Shu badlvu (fakt aatlu):</strong>
 - Title ane meta ma exact phrase &quot;kitchen sink and cabinet combo&quot;.
 - Intro na pehla 100 words ma &quot;kitchen sink with cabinet&quot;.
 - Nava H2, darek ek navi query mathi: &quot;Kitchen cabinets for sink: base sizes&quot;, &quot;Cheap combo: what to check&quot;, &quot;Ready-made vs custom&quot;.
 - Size table, FAQ, ane collection par link.
 
-**Rule:** *Navi query = navo H2 section.* Google ne je query mate tame dekhao chho, e query no jawab page ma spasht hovo joie.
+<strong>Rule:</strong> *Navi query = navo H2 section.* Google ne je query mate tame dekhao chho, e query no jawab page ma spasht hovo joie.
 
 ### E3. Rewrite #3: Core drill bits (blog + collection) → SEO REWRITE + linking
 
-**Data:** blog ma 1,684 impr pan fakt 6 clicks, pos 10.6. Collection pos 23.7. &quot;what is a core drill bit&quot; pos 50.3, &quot;core drill bit&quot; pos 37.3. Collection ma **2 H1**.
+<strong>Data:</strong> blog ma 1,684 impr pan fakt 6 clicks, pos 10.6. Collection pos 23.7. &quot;what is a core drill bit&quot; pos 50.3, &quot;core drill bit&quot; pos 37.3. Collection ma <strong>2 H1</strong>.
 
-**Thinking:** topic site par chhe pan Google ene topic no &quot;owner&quot; nathi manto. Blog ane collection ek bija ne support nathi karta, ane collection ma 2 H1 thi signal mix thay chhe.
+<strong>Thinking:</strong> topic site par chhe pan Google ene topic no &quot;owner&quot; nathi manto. Blog ane collection ek bija ne support nathi karta, ane collection ma 2 H1 thi signal mix thay chhe.
 
-**Shu karyu:**
+<strong>Shu karyu:</strong>
 - Blog ma pehlo H2 &quot;What is a core drill bit?&quot; ane 40–50 words ni definition (featured snippet mate).
 - Collection ma ek j H1, 150 words nu intro, ane blog par link.
-- Blog thi collection par link, anchor &quot;shop diamond core drill bits&quot;. Aam blog ane collection ek **cluster** bane chhe.
+- Blog thi collection par link, anchor &quot;shop diamond core drill bits&quot;. Aam blog ane collection ek <strong>cluster</strong> bane chhe.
 
 ### E4. Nava BLOG topics kem aapya
 
 | Topic | Data | Logic |
 |---|---|---|
-| Why Diamond Segments Wear Too Fast When Cutting Granite | 91 impr, **pos 3.7**, dedicated page nathi | Google already upar batave chhe, pan saachu jawab aapti page nathi. Dedicated page lakho to click malse |
+| Why Diamond Segments Wear Too Fast When Cutting Granite | 91 impr, <strong>pos 3.7</strong>, dedicated page nathi | Google already upar batave chhe, pan saachu jawab aapti page nathi. Dedicated page lakho to click malse |
 | How to Choose a Diamond Segment for Marble | 85 impr, pos 3.4 | Upar jevu j, question query chhe |
-| Can a Circular Saw Cut Metal Studs? | 36 impr, pos 3, **navi query** | Top blog (skil saw, 5,711 impr) nu support topic. Cluster majboot thay |
+| Can a Circular Saw Cut Metal Studs? | 36 impr, pos 3, <strong>navi query</strong> | Top blog (skil saw, 5,711 impr) nu support topic. Cluster majboot thay |
 | Best Countertop Protection Film | 292 + 165 impr, pos 21–37 | Product page pos 31 par chhe. Blog bane to e product ne support kare |
-| Granite Polishing Pads Grit Sequence | 469 impr, **0 clicks**, pos 12.6 | Demand chhe pan saachu content nathi |
+| Granite Polishing Pads Grit Sequence | 469 impr, <strong>0 clicks</strong>, pos 12.6 | Demand chhe pan saachu content nathi |
 | Porcelain vs Stainless Kitchen Sink | 937 + 393 + 125 impr | Comparison intent. Collection ne support kare |
-| Akemi Products Guide | &quot;akemi&quot; **10,396 impr** | Sauthi moti query chhe, guide thi long-tail pan cover thay |
+| Akemi Products Guide | &quot;akemi&quot; <strong>10,396 impr</strong> | Sauthi moti query chhe, guide thi long-tail pan cover thay |
 | Best Sanding Disc for Grinder | 15 → 157 impr (10 gana) | Demand jaldi vadhe chhe |
 
-**Blog topic rules (yaad rakho):**
-1. **Question query + position 1–10 + dedicated page nathi** → sauthi saro idea (jaldi result).
-2. **Navi query jeni demand jaldi vadhti hoy** (2× thi vadhu) → trend pakdo.
-3. **Product/collection position 20+** → support blog lakho ane emathi link aapo.
-4. **Moti head query** (akemi 10K) → guide/pillar post.
-5. Hamesha **90 divas no data** vapro. 7 divas ma noise vadhu hoy chhe.
+<strong>Blog topic rules (yaad rakho):</strong>
+1. <strong>Question query + position 1–10 + dedicated page nathi</strong> → sauthi saro idea (jaldi result).
+2. <strong>Navi query jeni demand jaldi vadhti hoy</strong> (2× thi vadhu) → trend pakdo.
+3. <strong>Product/collection position 20+</strong> → support blog lakho ane emathi link aapo.
+4. <strong>Moti head query</strong> (akemi 10K) → guide/pillar post.
+5. Hamesha <strong>90 divas no data</strong> vapro. 7 divas ma noise vadhu hoy chhe.
 
 ### E5. Nava COLLECTION ideas kem aapya
 
 | Collection | Data | Logic |
 |---|---|---|
-| Porcelain Kitchen Sinks | Kitchen-intent porcelain queries 1,600+ impr, pos 10–18 | Hal nu collection bathroom-focused chhe. **Intent split** karvo |
+| Porcelain Kitchen Sinks | Kitchen-intent porcelain queries 1,600+ impr, pos 10–18 | Hal nu collection bathroom-focused chhe. <strong>Intent split</strong> karvo |
 | Granite Fabrication Tools | granite tools 285 + granite fabrication tools 58 + stone fabrication tools 42 | Ek j intent ni 3 queries ane matching collection nathi |
 | Diamond Blades for Granite | 41 + 40 + 39 impr, pos 22.9 | Product intent. Blog (3,990 impr) thi link aapi shakay |
 | Tenax Proseal Sealers | tenax proseal 767 + nano 183 | Brand + product family. Dedicated collection nathi |
 | Countertop Protection Film | 292 + 165 + 123 impr | Transactional queries pan fakt 1 product page |
 
-**Collection idea rules:**
-1. **Ek j buying intent ni 3 ke vadhu queries** (plural, product type, brand + product) hoy ane matching collection na hoy → navu collection.
-2. **Hal nu collection 2 intent mix kare** (kitchen + bathroom) ane banne ma impressions hoy → **split** karo.
-3. **Brand + product family** ni queries 100+ impr hoy → brand sub-collection.
-4. Store ma e products **hovi joie**. Product vagar collection na banavo (thin page thay).
+<strong>Collection idea rules:</strong>
+1. <strong>Ek j buying intent ni 3 ke vadhu queries</strong> (plural, product type, brand + product) hoy ane matching collection na hoy → navu collection.
+2. <strong>Hal nu collection 2 intent mix kare</strong> (kitchen + bathroom) ane banne ma impressions hoy → <strong>split</strong> karo.
+3. <strong>Brand + product family</strong> ni queries 100+ impr hoy → brand sub-collection.
+4. Store ma e products <strong>hovi joie</strong>. Product vagar collection na banavo (thin page thay).
 5. Collection ne related blog sathe link karo (cluster).
 
 ### E6. Fixes kem shodhya (live audit)
 
 | Fix | Data/Audit | Kem High/Medium/Low |
 |---|---|---|
-| GA4 tracking | Revenue $0, key events 0 | **High:** SEO nu business result j map nathi thatu |
-| Countertop film product | 88/97 images alt vagar, meta 300+ chars, pos 32.8 | **High:** product page chhe, image search ane snippet banne kharab |
-| Homepage | 84/182 images alt vagar, H1 &quot;More Than Just Tools&quot; | **High:** homepage nu H1 sauthi mahatva nu signal chhe |
-| Blog schema | Fakt Organization schema | **Medium:** blogs ma sauthi vadhu impressions chhe |
+| GA4 tracking | Revenue $0, key events 0 | <strong>High:</strong> SEO nu business result j map nathi thatu |
+| Countertop film product | 88/97 images alt vagar, meta 300+ chars, pos 32.8 | <strong>High:</strong> product page chhe, image search ane snippet banne kharab |
+| Homepage | 84/182 images alt vagar, H1 &quot;More Than Just Tools&quot; | <strong>High:</strong> homepage nu H1 sauthi mahatva nu signal chhe |
+| Blog schema | Fakt Organization schema | <strong>Medium:</strong> blogs ma sauthi vadhu impressions chhe |
 | Collection schema | Fakt Organization schema | Medium |
 | Core bits 2 H1 | Audit | Medium |
 | Porcelain meta mismatch | Audit + GSC | Medium (rewrite ma cover) |
@@ -209,21 +209,21 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 | Akemi title | Audit + CTR 1.1% | Low |
 | (not set) landing | GA4 57 sessions | Low |
 
-**Fix priority rule:**
-- **High:** tracking ke indexing problem, ke paisa vala page par moti problem.
-- **Medium:** template-level (badhi blogs/collections par ek sathe lagu pade) ke page 1 ni najik vala page par.
-- **Low:** cosmetic (title length, nani wording).
+<strong>Fix priority rule:</strong>
+- <strong>High:</strong> tracking ke indexing problem, ke paisa vala page par moti problem.
+- <strong>Medium:</strong> template-level (badhi blogs/collections par ek sathe lagu pade) ke page 1 ni najik vala page par.
+- <strong>Low:</strong> cosmetic (title length, nani wording).
 
 ---
 
 ## PART F — Report ma shu batavvu, shu nahi (client psychology)
 
-1. **Upar positive:** clicks, CTR, gainers. Client pehla progress jove.
-2. **Negative honest pan solution sathe:** &quot;Revenue 0&quot; lakho, pan sathe &quot;Fix: tracking setup&quot; pan lakho.
-3. **Darek number sathe period** (Oct 6–Nov 2 vs Sep 8–Oct 5).
-4. **Darek suggestion = Why + What + Exact text.** Fakt &quot;meta sudharo&quot; na lakho, navo meta lakhi ne aapo.
-5. **Branded alag tab ma.** Client ne SEO ni saachi growth dekhay.
-6. **Google search link (Search ↗)** aapo jethi client jate position check kari shake.
+1. <strong>Upar positive:</strong> clicks, CTR, gainers. Client pehla progress jove.
+2. <strong>Negative honest pan solution sathe:</strong> &quot;Revenue 0&quot; lakho, pan sathe &quot;Fix: tracking setup&quot; pan lakho.
+3. <strong>Darek number sathe period</strong> (Oct 6–Nov 2 vs Sep 8–Oct 5).
+4. <strong>Darek suggestion = Why + What + Exact text.</strong> Fakt &quot;meta sudharo&quot; na lakho, navo meta lakhi ne aapo.
+5. <strong>Branded alag tab ma.</strong> Client ne SEO ni saachi growth dekhay.
+6. <strong>Google search link (Search ↗)</strong> aapo jethi client jate position check kari shake.
 7. Report sections no order: Overview → Blog → Other pages → What changed → Keywords → GA4 → Rewrites → Ideas → Fixes.
 
 ---
@@ -235,15 +235,15 @@ Data aavya pachhi seedha report na banavo. Pehla aa 6 sawal pucho. Darek sawal n
 Title (≤60):   &lt;Primary keyword (plural)&gt; for &lt;use 1&gt; &amp; &lt;use 2&gt; | &lt;Brand&gt; Meta (≤155):   Shop &lt;primary kw&gt; for &lt;use&gt;. &lt;Brands/types&gt;, &lt;stock/shipping USP&gt;. &lt;CTA&gt;. H1:            &lt;Primary keyword + main qualifier&gt; Intro (60–100 words): primary kw pehla 1–2 line ma, kone mate, shu malse H2: Why choose &lt;product type&gt;          → 4 bullet benefits H2: &lt;Product type&gt; for &lt;use 1&gt;         → sizes, kevi rite pasand karvu H2: &lt;Product type&gt; for &lt;use 2&gt; H2: &lt;Type A&gt; vs &lt;Type B&gt; vs &lt;Type C&gt;   → comparison table H2: How to care / install              → 2–3 line + blog link H2: FAQ                                → 4 questions (GSC ni question queries mathi) Internal links: 2–3 blogs + 1–2 related collections + 1 accessory product Schema: CollectionPage + BreadcrumbList + FAQPage ```
 
 ### G2. SEO-FOCUSED REWRITE checklist (blog)
-- [ ] GSC → aa page → Queries: **navi queries** list karo (prev = 0)
+- [ ] GSC → aa page → Queries: <strong>navi queries</strong> list karo (prev = 0)
 - [ ] Sauthi vadhu impression vali query → title + meta + intro na 100 words
-- [ ] Darek mahatvani navi query → **ek H2** (exact ke najik nu phrase)
+- [ ] Darek mahatvani navi query → <strong>ek H2</strong> (exact ke najik nu phrase)
 - [ ] Position 4–10 vali question query → H2 niche 40–50 words no direct jawab (snippet)
 - [ ] 1 table (size / comparison / steps)
 - [ ] FAQ 4 questions + FAQPage schema
 - [ ] Pehla section mathi related collection par link (descriptive anchor)
 - [ ] &quot;Last updated&quot; date badlo
-- [ ] Je bhag kaam kare chhe e **na kadho**. Fakt umero ane sudharo.
+- [ ] Je bhag kaam kare chhe e <strong>na kadho</strong>. Fakt umero ane sudharo.
 
 ### G3. NEW BLOG BRIEF template ``` Title:              &lt;question ke &quot;how to&quot; format&gt; Slug:               /blogs/news/&lt;short-keyword-slug&gt; Target keyword:     &lt;q&gt; (&lt;impr&gt; impr, pos &lt;x&gt;, 90d) Supporting kws:     &lt;q2&gt;, &lt;q3&gt;, &lt;q4&gt;  (GSC mathi j) Intent:             Informational Why (data):         &lt;reason with numbers&gt; Word count:         1,200–2,000 (top SERP results jetlu) Outline: H1: &lt;title&gt; Intro: 2–3 line ma direct jawab H2: What is / Why &lt;topic&gt; H2: &lt;main steps / types / reasons&gt; (H3 ma breakdown) H2: Common mistakes H2: Tools/products you need  → collection/product links H2: FAQ (4) Internal links IN:  2–3 existing blogs thi aa navi post par link Internal links OUT: 1 collection + 1–2 products Schema:             Article + FAQPage + BreadcrumbList E-E-A-T:            fabricator experience, real photos, author naam ```
 
@@ -259,17 +259,17 @@ Title (≤60):   &lt;Primary keyword (plural)&gt; for &lt;use 1&gt; &amp; &lt;us
 1. Report ni file `index.html` tarike save karo (ek j file, CSS ane JS andar).
 2. Navu folder banavo: `client-seo-report-nov-2026/` → emaa `index.html` muko.
 3. `&lt;head&gt;` ma `&lt;meta name=&quot;robots&quot; content=&quot;noindex, nofollow&quot;&gt;` umero.
-4. **GitHub:** github.com → New repository → naam aapo → **Private** → Create → &quot;uploading an existing file&quot; → `index.html` drag kari ne muko → Commit.
-5. **Vercel:** vercel.com → Continue with GitHub → **Add New → Project** → repo pasand karo → **Import**.
-6. Framework Preset: **Other**. Build command khali rakho. Output directory pan khali.
-7. **Deploy** → 30 second ma `your-dashboard.vercel.app` link malse.
+4. <strong>GitHub:</strong> github.com → New repository → naam aapo → <strong>Private</strong> → Create → &quot;uploading an existing file&quot; → `index.html` drag kari ne muko → Commit.
+5. <strong>Vercel:</strong> vercel.com → Continue with GitHub → <strong>Add New → Project</strong> → repo pasand karo → <strong>Import</strong>.
+6. Framework Preset: <strong>Other</strong>. Build command khali rakho. Output directory pan khali.
+7. <strong>Deploy</strong> → 30 second ma `your-dashboard.vercel.app` link malse.
 8. Navo mahino: `index.html` badli ne GitHub par upload karo. Vercel jate redeploy karshe.
 
 ### Option 2: Live report (Next.js + Composio + ChatGPT, data jate update)
 1. Project ZIP extract karo (`app/`, `lib/`, `package.json`, `.env.example`, `README.md`).
-2. GitHub par navo **private** repo banavo ane **badhi files** upload karo (ZIP nahi, `node_modules` nahi).
-3. Vercel → Import repo → Framework **Next.js** (auto detect).
-4. **Environment Variables** (Settings → Environment Variables):
+2. GitHub par navo <strong>private</strong> repo banavo ane <strong>badhi files</strong> upload karo (ZIP nahi, `node_modules` nahi).
+3. Vercel → Import repo → Framework <strong>Next.js</strong> (auto detect).
+4. <strong>Environment Variables</strong> (Settings → Environment Variables):
 
 | Name | Value |
 |---|---|
@@ -282,47 +282,47 @@ Title (≤60):   &lt;Primary keyword (plural)&gt; for &lt;use 1&gt; &amp; &lt;us
 | `BRAND_TERMS` | `brand,brand name,misspelling` |
 | `OPENAI_API_KEY` | ChatGPT key (rewrites/ideas/fixes buttons mate) |
 
-5. **Deploy.** Error aave to Vercel → Deployments → Logs juo.
-6. **Navo client = navo Vercel project.** Same GitHub repo import karo ane fakt env vars badlo.
+5. <strong>Deploy.</strong> Error aave to Vercel → Deployments → Logs juo.
+6. <strong>Navo client = navo Vercel project.</strong> Same GitHub repo import karo ane fakt env vars badlo.
 
-**Pehla check karo:** Composio ma je Google account connected chhe ema client ni GSC/GA4 property dekhay chhe ke nahi (`LIST_SITES` / `LIST_ACCOUNT_SUMMARIES`). Client A ma aa j bhool hati: connected account ma Client A j na hatu.
+<strong>Pehla check karo:</strong> Composio ma je Google account connected chhe ema client ni GSC/GA4 property dekhay chhe ke nahi (`LIST_SITES` / `LIST_ACCOUNT_SUMMARIES`). Client A ma aa j bhool hati: connected account ma Client A j na hatu.
 
 ### Security
-- Repo **private** rakho.
+- Repo <strong>private</strong> rakho.
 - Vercel link jene male e joi shake. `noindex` thi Google ma nahi aave.
-- API keys **kyarey code ma na lakho**, fakt Vercel env vars ma.
+- API keys <strong>kyarey code ma na lakho</strong>, fakt Vercel env vars ma.
 
 ---
 
 ## PART I — Darek navo report: 20-step checklist
 
-**Data**
+<strong>Data</strong>
 1. [ ] Client profile bharyu (domain, GSC property, GA4 ID, brand terms, platform)
 2. [ ] Saachu Google account (property dekhay chhe)
 3. [ ] GSC pages + queries: 7 / 28 / 90 divas, comparison sathe
 4. [ ] GA4 Organic landing pages (sessions, users, orders, revenue)
 5. [ ] Duplicate (#anchor) URLs dedupe karya
 
-**Analysis**
+<strong>Analysis</strong>
 6. [ ] Totals: upar ke niche? (Sawal 1)
 7. [ ] Blog vs other pages (Sawal 2)
 8. [ ] What changed: 6 signals (Sawal 3)
 9. [ ] Branded / non-branded split (Sawal 4)
 10. [ ] GA4 business result, revenue 0 hoy to tracking check (Sawal 5)
 
-**Decisions**
+<strong>Decisions</strong>
 11. [ ] 3 rewrite pages (decision tree mujab, paisa vala page pehla)
 12. [ ] 5–8 blog ideas (90d data, question + pos ≤10 + page nathi)
 13. [ ] 3–5 collection ideas (ek intent ni 3+ queries)
 14. [ ] Top 10 pages live audit
 15. [ ] Fixes table (High / Medium / Low)
 
-**Content &amp; build**
+<strong>Content &amp; build</strong>
 16. [ ] Darek suggestion = Why (numbers) + Shu badalvu + Exact text
 17. [ ] Report sections sacha order ma, period labels sathe
 18. [ ] QA: random 3–4 numbers GSC/GA4 sathe match, demo data nathi, mobile ma barabar
 
-**Deploy**
+<strong>Deploy</strong>
 19. [ ] GitHub private repo → Vercel deploy → `noindex`
 20. [ ] Client ne link + 3 line summary (shu vadhyu, aa mahine shu karishu, shu fix karvu)
 
@@ -330,14 +330,14 @@ Title (≤60):   &lt;Primary keyword (plural)&gt; for &lt;use 1&gt; &amp; &lt;us
 
 ## PART J — Senior SEO ni jem vicharo (yaad rakhva jevu)
 
-- **Impressions = Google no vishvas. Clicks = user no vishvas.** Impressions chhe pan clicks nathi, etle snippet ke intent ni problem chhe.
-- **Navi query = Google no hint.** Google kahe chhe &quot;aa topic mate tamne test karu chhu&quot;. Page ma eno jawab aapo.
-- **Position 8–20 = sauthi saro ROI.** Ochhi mehnat ma vadhu result male.
-- **Blog traffic laave, collection paisa laave.** Banne ne link thi jodo.
-- **Pehla sudharo, pachhi navu banavo.** Hal ni page ne rewrite karvu e navi page karta jaldi result aape.
-- **Revenue 0 = pehla tracking check karo,** SEO ne dosh na aapo.
-- **Darek suggestion data thi.** Data na hoy to suggestion na aapo, athva &quot;hypothesis&quot; lakho.
-- **Measure karo:** rewrite pachhi 2–4 week ma same page na CTR, position ane clicks sarkhavo, ane aavta report ma &quot;Rewrite impact&quot; section umero.
+- <strong>Impressions = Google no vishvas. Clicks = user no vishvas.</strong> Impressions chhe pan clicks nathi, etle snippet ke intent ni problem chhe.
+- <strong>Navi query = Google no hint.</strong> Google kahe chhe &quot;aa topic mate tamne test karu chhu&quot;. Page ma eno jawab aapo.
+- <strong>Position 8–20 = sauthi saro ROI.</strong> Ochhi mehnat ma vadhu result male.
+- <strong>Blog traffic laave, collection paisa laave.</strong> Banne ne link thi jodo.
+- <strong>Pehla sudharo, pachhi navu banavo.</strong> Hal ni page ne rewrite karvu e navi page karta jaldi result aape.
+- <strong>Revenue 0 = pehla tracking check karo,</strong> SEO ne dosh na aapo.
+- <strong>Darek suggestion data thi.</strong> Data na hoy to suggestion na aapo, athva &quot;hypothesis&quot; lakho.
+- <strong>Measure karo:</strong> rewrite pachhi 2–4 week ma same page na CTR, position ane clicks sarkhavo, ane aavta report ma &quot;Rewrite impact&quot; section umero.
 
 </code></pre></div>
 <div class="pagenav"><a href="../../..//coaches/11-client-reporting/11-8-monthly-seo-client-report/">← 11.8 Monthly SEO Client Report</a><a href="../../..//coaches/12-seo-executive-rr/12-1-seo-executive-roles-responsibilities/">12.1 Seo Executive Roles &amp; Responsibilities →</a></div>
