@@ -14,6 +14,7 @@
 <div class="tools"><button class="markdone" onclick="markDone('6.4')">☑️ Mark done</button><button class="setcur" onclick="setCurrent('6.4')">📍 Set current stop</button></div>
 <div class="sec"><p>Notebook rule: "PageSpeed Insight no use karine 90 ni upar hoy joiye". Slow site = users pacha jay ane sales ghate; Core Web Vitals Google na page experience signals no bhaag chhe (ranking ma nano factor, content pehla).</p></div><div class="sec" id="section-a"><h3><span class="letter">6.4.A</span> Kevi rite check karvu</h3><ol>
 <li>pagespeed.web.dev ma URL nakho</li>
+<li>PSI API quota over hoy (429 error) ke tool na chale to: pagespeed.web.dev browser ma manual check karo, ke GSC → Core Web Vitals report vapro — test skip NAHI karvo, "pending-manual" mark kari aagal vadho.</li>
 <li>Mobile score juvo pehla (desktop score misleading hoy)</li>
 <li>Main target: Core Web Vitals "Good" — real users nu data (GSC → Core Web Vitals report / PSI field data): LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; -1.1. PSI score 90+ = saro goal, ranking rule nahi (Shopify par mobile 60–80 hoy pan CWV pass hoy to chale).</li>
 </ol></div><div class="sec" id="section-b"><h3><span class="letter">6.4.B</span> Common fixes (sauthi vadhare impact vala pehla)</h3><ol>
