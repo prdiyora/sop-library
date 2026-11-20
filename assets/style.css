@@ -103,3 +103,11 @@ footer.site{margin-top:50px;padding:26px 0;color:var(--muted);font-size:13px;bor
 .route-stop .rs-title{font-weight:600;flex:1}
 .route-stop .rs-meta{font-size:13px;color:var(--muted);white-space:nowrap}
 .route .gate{margin:6px 0 6px 26px}
+.trainstrip{margin:30px 0 0;padding:18px 0 6px;border-top:2px solid var(--border)}
+.trainstrip .ts-line{font-size:15.5px;margin:0 4px 6px;color:var(--navy)}
+.trainstrip .ts-line b{color:var(--teal)}
+.ts-coach{min-width:150px;flex:0 0 auto}
+.ts-coach .meta{font-size:12px;color:var(--muted);margin-top:6px}
+.ts-coach.ts-cur{border-color:var(--amber);outline:3px solid var(--amber);background:#fdf6e7}
+.ts-coach.ts-cur .num{color:var(--amber)}
+.ts-badge{display:inline-block;margin-top:8px;background:var(--amber);color:var(--navy);font-weight:800;font-size:12px;padding:2px 9px;border-radius:999px;font-family:Manrope}
