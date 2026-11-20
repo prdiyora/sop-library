@@ -21,18 +21,18 @@
 <tr><td>GitHub repo</td><td>client-a-store/gsc (private)</td></tr>
 <tr><td>Data branch</td><td>main</td></tr>
 <tr><td>Vercel Preview branch</td><td>migration/vercel</td></tr>
-<tr><td>Vercel project</td><td>(vercel project — admin pase confirm karo)</td></tr>
-<tr><td>Team slug / ID</td><td>(team slug) / (team ID)</td></tr>
-<tr><td>Project ID</td><td>(project ID)</td></tr>
+<tr><td>Vercel project</td><td>team nu Vercel project (Vercel dashboard ma dekhay)</td></tr>
+<tr><td>Team slug / ID</td><td>Vercel dashboard ma dekhay</td></tr>
+<tr><td>Project ID</td><td>Vercel dashboard ma dekhay</td></tr>
 <tr><td>Plan / region</td><td>Hobby / bom1</td></tr>
-<tr><td>Preview URL</td><td>(team internal link — admin pase mangvo)</td></tr>
-<tr><td>Stable Preview alias</td><td>(team internal link — admin pase mangvo)</td></tr>
-<tr><td>Health URL</td><td>(team internal link — admin pase mangvo)</td></tr>
-<tr><td>Current dashboard</td><td>(team internal link — admin pase mangvo)</td></tr>
-<tr><td>Scheduler ID</td><td>(scheduler ID)</td></tr>
+
+
+
+
+<tr><td>Scheduler ID</td><td>team na records ma check karo</td></tr>
 <tr><td>Scheduler</td><td>Daily 05:30 Asia/Kolkata</td></tr>
 </table>
-<p>Last documented manual GSC sync: 04 Nov 2026; commit (commit ref). Ae sync pachhi Vercel Preview health pass thayo (13/13 projects valid). Netlify live endpoint ae environment ma independently verify thayu nahi — aanu matlab e nathi ke Netlify down che.</p>
+<p>Last documented manual GSC sync: 04 Nov 2026; commit (team na records ma). Ae sync pachhi Vercel Preview health pass thayo (13/13 projects valid). Netlify live endpoint ae environment ma independently verify thayu nahi — aanu matlab e nathi ke Netlify down che.</p>
 <p><b>Boundary:</b> Current Netlify production untouched. Vercel = fakt Preview/migration. Production branch, domain, alias ke promotion owner na written approval vagar NA badalvu.</p></div><div class="sec" id="section-c"><h3><span class="letter">11.4.C</span> 2. Vercel shu kare che</h3>
 <ul>
 <li>Static HTML/CSS/JS host kare.</li>
@@ -45,10 +45,10 @@
 <p><b>Important:</b> 05:30 nu GSC collection existing scheduled automation kare, Vercel Cron nahi. /api/gsc-health par Vercel Cron fakt data CHECK kare — e GSC fetch nathi kartu ke GitHub update nathi kartu.</p></div><div class="sec" id="section-d"><h3><span class="letter">11.4.D</span> 3. Repo Vercel sathe connect karo</h3>
 <ol>
 <li>vercel.com/dashboard par sign in karo.</li>
-<li>Team select karo (team slug), personal account nahi.</li>
+<li>Team select karo, personal account nahi.</li>
 <li>Add New → Project.</li>
 <li>GitHub repo client-a-store/gsc import karo.</li>
-<li>Existing project (vercel project) reuse karo — duplicate project NA banavvo.</li>
+<li>Existing project reuse karo — duplicate project NA banavvo.</li>
 <li>Framework preset: Other.</li>
 <li>Root directory: repo root.</li>
 <li>Aa plain HTML + Node API source ma root package.json ke vercel.json nathi, etle build command/install ni jarur nathi — Vercel defaults j rakho (pachhi repo ma build system aave to change).</li>
@@ -77,7 +77,7 @@ git push origin migration/vercel</code></pre></div><div class="sec" id="section-
 <li>Repository access: fakt gsc repo.</li>
 <li>Permissions: Contents Read-only; Metadata Read-only/default.</li>
 <li>Token generate karo; copy fakt Vercel ma j karo. Chat, docs, source code, HTML, screenshot ke logs ma KYAREY paste na karo.</li>
-<li>Vercel → project (vercel project) → Settings → Environment Variables.</li>
+<li>Vercel → tamaro project → Settings → Environment Variables.</li>
 <li>Name: GITHUB_TOKEN; value: token; target: Preview (branch-specific preview env use karta hoy to branch restriction migration/vercel).</li>
 <li>Save karo ane latest Preview deployment redeploy karo. Environment changes already-built deployments par automatic apply nathi thata.</li>
 <li>/api/gsc-health test karo; expected: ok:true, 13 expected/checked projects, allProjectsValid true.</li>
@@ -254,7 +254,7 @@ export default async function handler(req, res) {
 <li>Vercel Preview health endpoint call karo.</li>
 <li>/api/gsc ane dashboard smoke-test karo.</li>
 </ol>
-<p>GSC reporting ma delay hoy shake. Missing dates ne zero thi NA bharo — next scheduled run data available thay tyare backfill/merge kare. Existing scheduler ID: (scheduler ID). Approved tested migration vagar duplicate schedules NA banavvo.</p></div><div class="sec" id="section-l"><h3><span class="letter">11.4.L</span> 11. Vercel Cron — optional, current data-fetch system NAHI</h3>
+<p>GSC reporting ma delay hoy shake. Missing dates ne zero thi NA bharo — next scheduled run data available thay tyare backfill/merge kare. Existing scheduler ID team na records ma check karo. Approved tested migration vagar duplicate schedules NA banavvo.</p></div><div class="sec" id="section-l"><h3><span class="letter">11.4.L</span> 11. Vercel Cron — optional, current data-fetch system NAHI</h3>
 <p>Vercel Cron deployed route par HTTP request moke che. E GSC connect nathi kartu ke GitHub write nathi kartu. Cron /api/gsc-health call kare to fakt snapshot check thay. Full GSC ETL mate OAuth/service-account auth, API query code, merge/write logic, retries, idempotency/locking ane monitoring joie. Replacement end-to-end test thaya sudhi current working scheduler j rakho.</p></div><div class="sec" id="section-m"><h3><span class="letter">11.4.M</span> 12. Verification URLs</h3>
 <table>
 <tr><th>Check</th><th>Request</th><th>Expected</th></tr>
