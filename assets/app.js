@@ -48,7 +48,45 @@ function paintGates(s){
   const lab=box.querySelector('.gcount');if(lab&&ins.length)lab.textContent=dn+'/'+ins.length+' ✅';
  });
 }
+
+function renderTrainStrip(){
+ if(!window.COACHES||!window.TOPICS)return;
+ if(document.getElementById('train-strip'))return;
+ const footer=document.querySelector('footer.site');if(!footer)return;
+ const path=location.pathname.replace(/\/+/g,'/');
+ let curId=null,curCoachNum=null;
+ for(const id in window.TOPICS){const t=window.TOPICS[id];if(path.endsWith(t.url)){curId=id;curCoachNum=t.coach;break}}
+ if(curCoachNum==null){const c=window.COACHES.find(c=>path.endsWith(c.url));if(c)curCoachNum=c.num}
+ const order=window.COACHES;
+ const idx=order.findIndex(c=>c.num===curCoachNum);
+ let line='';
+ if(idx>=0){
+  const c=order[idx];
+  const behind=order.slice(0,idx).filter(x=>!x.engine).length;
+  const ahead=order.slice(idx+1).filter(x=>!x.engine).length;
+  const nm=c.engine?'Engine 🚂':'Dabbo '+String(c.num).padStart(2,'0');
+  if(c.engine)line='📍 Tame ahi chho: <b>Engine 🚂</b> — badha 14 dabba pachhal, aa train no end';
+  else if(curId)line='📍 Tame ahi chho: <b>'+nm+'</b> · Stop '+curId+' — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
+  else line='📍 Tame ahi chho: <b>'+nm+'</b> — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
+ } else {
+  line='🚂 Aakhi train ek nazar ma — start thi end sudhi: 14 dabba + engine';
+ }
+ let html='<div class="track">';
+ order.forEach(c=>{
+  const cur=c.num===curCoachNum;
+  const num=c.engine?'🚂':c.emoji+' '+String(c.num).padStart(2,'0');
+  html+='<a class="stop ts-coach'+(cur?' ts-cur':'')+'" href="'+B+c.url+'"><div class="num">'+num+'</div><div class="nm">'+c.title+'</div><div class="meta">'+c.topics.length+' stops</div>'+(cur&&curId?'<span class="ts-badge">📍 '+curId+'</span>':'')+'</a>';
+ });
+ html+='</div>';
+ const sec=document.createElement('section');
+ sec.className='trainstrip';sec.id='train-strip';
+ sec.innerHTML='<div class="wrap"><div class="ts-line">'+line+'</div>'+html+'</div>';
+ footer.parentNode.insertBefore(sec,footer);
+ const cur=sec.querySelector('.ts-cur');
+ if(cur){const track=sec.querySelector('.track');track.scrollLeft=cur.offsetLeft-track.clientWidth/2+cur.clientWidth/2}
+}
 document.addEventListener('DOMContentLoaded',()=>{
  const b=document.querySelector('.burger');if(b)b.onclick=()=>document.querySelector('nav.main').classList.toggle('open');
  paint();
+ renderTrainStrip();
 });
