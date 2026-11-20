@@ -69,7 +69,7 @@ function renderTrainStrip(){
   else if(curId)line='📍 Tame ahi chho: <b>'+nm+'</b> · Stop '+curId+' — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
   else line='📍 Tame ahi chho: <b>'+nm+'</b> — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
  } else {
-  line='🚂 Aakhi train ek nazar ma — start thi end sudhi: 14 dabba + engine';
+  line='🚂 Aakhi train ek nazar ma — start thi end sudhi: 13 dabba + engine';
  }
  let html='<div class="track">';
  order.forEach(c=>{
