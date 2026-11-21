@@ -28,11 +28,12 @@ function renderContinue(s){
 }
 function renderProgress(s){
  const el=document.getElementById('progress-root');if(!window.COACHES)return;
- let html='';const done=(s.done||{});
+ let html='';let cornerHdr=false;const done=(s.done||{});
  let td=0;
  window.COACHES.forEach(c=>{
   const dn=c.topics.filter(id=>done[id]).length;td+=dn;
   const pct=Math.round(100*dn/c.topics.length);
+  if(c.corner&&!cornerHdr){cornerHdr=true;html+='<div style="flex-basis:100%;margin:10px 0 2px;font-weight:700">🅿️ Corners — train mathi ALAG</div>'}
   html+=`<a class="stop" style="min-width:210px" href="${B+c.url}"><div class="num">${c.emoji}${c.engine?'':' '+String(c.num).padStart(2,'0')}</div><div class="nm">${c.title}</div><div class="bar-bg"><div class="bar-fg" style="width:${pct}%"></div></div><div class="meta" style="font-size:12px;color:var(--muted);margin-top:6px">${dn}/${c.topics.length} stops ✅</div></a>`;
  });
  let cur='';
@@ -62,14 +63,14 @@ function renderTrainStrip(){
  let line='';
  if(idx>=0){
   const c=order[idx];
-  const behind=order.slice(0,idx).filter(x=>!x.engine).length;
-  const ahead=order.slice(idx+1).filter(x=>!x.engine).length;
+  const behind=order.slice(0,idx).filter(x=>!x.engine&&!x.corner).length;
+  const ahead=order.slice(idx+1).filter(x=>!x.engine&&!x.corner).length;
   const nm=c.engine?'Engine 🚂':'Dabbo '+String(c.num).padStart(2,'0');
-  if(c.engine)line='📍 Tame ahi chho: <b>Engine 🚂</b> — badha 14 dabba pachhal, aa train no end';
-  else if(curId)line='📍 Tame ahi chho: <b>'+nm+'</b> · Stop '+curId+' — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
-  else line='📍 Tame ahi chho: <b>'+nm+'</b> — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba'+(ahead===0?'':' + engine');
+  if(c.engine||c.corner)line='📍 Tame ahi chho: <b>'+c.title+'</b> — aa CORNER chhe, train mathi alag (train = 9 dabba)';
+  else if(curId)line='📍 Tame ahi chho: <b>'+nm+'</b> · Stop '+curId+' — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba (train ma)';
+  else line='📍 Tame ahi chho: <b>'+nm+'</b> — pachhal <b>'+behind+'</b> dabba, aagal <b>'+ahead+'</b> dabba (train ma)';
  } else {
-  line='🚂 Aakhi train ek nazar ma — start thi end sudhi: 13 dabba + engine';
+  line='🚂 Aakhi train ek nazar ma: 9 dabba + 4 corners (alag)';
  }
  let html='<div class="track">';
  order.forEach(c=>{
